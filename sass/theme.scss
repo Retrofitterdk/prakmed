@@ -104,3 +104,30 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/_media.scss";
+
+/*--------------------------------------------------------------
+# Skeleton Core folder
+--------------------------------------------------------------*/
+@import "skeleton/core/_config.scss";
+@import "skeleton/core/_dependencies.scss";
+@import "skeleton/core/_functions.scss";
+@import "skeleton/core/_mixins.scss";
+
+/*--------------------------------------------------------------
+# Skeleton themes [fresh] folder
+--------------------------------------------------------------*/
+@import "skeleton/themes/fresh/marrow/_mixins.scss";
+
+@import "skeleton/themes/fresh/_base.scss";
+@import "skeleton/themes/fresh/_skeleton.scss";
+@import "skeleton/themes/fresh/_vars.scss";
+
+/*--------------------------------------------------------------
+# Skeleton themes [sphenoid] folder
+--------------------------------------------------------------*/
+@import "skeleton/themes/sphenoid/marrow/_private.scss";
+@import "skeleton/themes/sphenoid/marrow/_public.scss";
+
+@import "skeleton/themes/sphenoid/_base.scss";
+@import "skeleton/themes/sphenoid/_skeleton.scss";
+@import "skeleton/themes/sphenoid/_vars.scss";
