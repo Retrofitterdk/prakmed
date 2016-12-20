@@ -7,3 +7,35 @@
 ## Menus
 --------------------------------------------------------------*/
 @import "menus";
+
+
+
+header.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  line-height: 5rem;
+  background: red;
+  clear: both;
+  & .site-branding {
+    display: inline-block;
+    float: left;
+    & .site-title {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+  }
+}
+
+footer.site-footer {
+    display: block;
+    width: 100%;
+    background: #030303;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    z-index: 9999;
+}

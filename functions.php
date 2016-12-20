@@ -44,7 +44,9 @@ function prakmed_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'prakmed' ),
+		'primary' => esc_html__( 'Primary Menu', 'prakmed' ),
+		'header' => esc_html__( 'Header Menu', 'prakmed' ),
+		'footer' => esc_html__( 'Footer Menu', 'prakmed' ),
 	) );
 
 	/*
@@ -98,11 +100,13 @@ function prakmed_widgets_init() {
 }
 add_action( 'widgets_init', 'prakmed_widgets_init' );
 
+
+
 /**
  * Enqueue scripts and styles.
  */
 function prakmed_scripts() {
-	wp_enqueue_style( 'prakmed-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'prakmed-theme', get_template_directory_uri() . '/css/theme.css' );
 
 	wp_enqueue_script( 'prakmed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

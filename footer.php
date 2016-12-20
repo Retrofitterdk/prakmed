@@ -14,10 +14,27 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'prakmed' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'prakmed' ), 'WordPress' ); ?></a>
+		<div id="search-container" class="search-box-wrapper toggle hide">
+			<div class="search-box">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+		<div id="sharepanel-container" class="sharepanel-wrapper toggle hide">
+			<?php
+				if ( function_exists( 'sharing_display' ) ) {
+					sharing_display( '', true );
+					}
+			?>
+		</div>
+		<div id="footer-menu" class="">
+			<nav id="footer-navigation" class="footer-navigation" role="navigation">
+			<?php get_template_part( 'template-parts/menu', 'footer' ); ?>
+			</nav><!-- #footer-navigation -->
+		</div>
+		<div id="footer-info" class="site-info mobile hide">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brief' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'brief' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'prakmed' ), 'prakmed', '<a href="http://retrofitter.dk" rel="designer">Steffen Bang Nielsen</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'brief' ), 'brief', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
