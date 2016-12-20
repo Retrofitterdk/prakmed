@@ -119,16 +119,36 @@
 			display: block;
 			padding: 0.5rem 0;
 			text-align: center;
+			color: #fff;
 
 			&:before {
 				content: '\f107';
 				display: inline-block;
 				padding: 0 5px;
-				font-family: 'Genericons';
+				font-family: "brieficons";
 				font-size: 25px;
 				vertical-align: middle;
 				-webkit-font-smoothing: antialiased;
 			}
+
+			&:hover {
+				background: rgba(255,255,255, 0.1);
+			}
 		}
+	}
+	& li.home a:before {
+	    content: '\68';
+	}
+	& li.dashboard a:before {
+	    content: '\64';
+	}
+	& li.user a:before {
+	    content: '\75';
+	}
+	& li.share a:before {
+	    content: '\6f';
+	}
+	& li.search a:before {
+	    content: '\73';
 	}
 }

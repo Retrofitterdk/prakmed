@@ -371,7 +371,6 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -391,7 +390,6 @@ textarea {
   input[type="email"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
-  input[type="search"]:focus,
   input[type="number"]:focus,
   input[type="tel"]:focus,
   input[type="range"]:focus,
@@ -410,6 +408,51 @@ select {
 
 textarea {
   width: 100%; }
+
+.search-box {
+  background: #fff;
+  padding: 10px; }
+
+.search-form {
+  display: block;
+  width: 100%;
+  margin: 0; }
+
+.search-box label, .search-form label {
+  float: left;
+  width: 90%;
+  margin: 0; }
+
+.search-field {
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0; }
+
+.search-submit {
+  width: 10%;
+  margin: 3px 0 0 0;
+  padding: 0;
+  min-height: 20px;
+  height: auto;
+  line-height: 0;
+  border-radius: 0;
+  border: none;
+  vertical-align: top;
+  background: transparent; }
+
+.search-submit:before {
+  content: '\73';
+  display: inline-block;
+  padding: 0 5px;
+  font-family: 'brieficons';
+  font-size: 2.5rem;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  font-weight: normal; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -504,15 +547,28 @@ a {
       position: relative;
       display: block;
       padding: 0.5rem 0;
-      text-align: center; }
+      text-align: center;
+      color: #fff; }
       .footer-navigation ul li a:before {
         content: '\f107';
         display: inline-block;
         padding: 0 5px;
-        font-family: 'Genericons';
+        font-family: "brieficons";
         font-size: 25px;
         vertical-align: middle;
         -webkit-font-smoothing: antialiased; }
+      .footer-navigation ul li a:hover {
+        background: rgba(255, 255, 255, 0.1); }
+  .footer-navigation ul li.home a:before {
+    content: '\68'; }
+  .footer-navigation ul li.dashboard a:before {
+    content: '\64'; }
+  .footer-navigation ul li.user a:before {
+    content: '\75'; }
+  .footer-navigation ul li.share a:before {
+    content: '\6f'; }
+  .footer-navigation ul li.search a:before {
+    content: '\73'; }
 
 header.site-header {
   position: fixed;
@@ -539,6 +595,15 @@ footer.site-footer {
   bottom: 0;
   height: auto;
   z-index: 9999; }
+
+footer.site-footer > .search-box-wrapper {
+  padding: 15px; }
+
+footer.site-footer .sharepanel-wrapper,
+footer.site-footer .search-box-wrapper {
+  text-align: center;
+  border-bottom: 1px solid #222;
+  outline: 1px solid #030303; }
 
 /*--------------------------------------------------------------
 # Accessibility

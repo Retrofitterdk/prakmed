@@ -108,6 +108,10 @@ add_action( 'widgets_init', 'prakmed_widgets_init' );
 function prakmed_scripts() {
 	wp_enqueue_style( 'prakmed-theme', get_template_directory_uri() . '/css/theme.css' );
 
+	wp_enqueue_style( 'brieficons', get_template_directory_uri() . '/brieficons/brieficons.css', array(), '1.0.0' );
+
+	wp_enqueue_script( 'prakmed-custom', get_template_directory_uri() . '/js/prakmed-custom.js', array('jquery'), '20151022', true );
+
 	wp_enqueue_script( 'prakmed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'prakmed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
