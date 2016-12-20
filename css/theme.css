@@ -286,7 +286,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -429,7 +430,8 @@ textarea {
   margin: 0;
   padding: 0;
   border: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  outline: none; }
 
 .search-submit {
   width: 10%;
@@ -576,12 +578,13 @@ header.site-header {
   left: 0;
   z-index: 10;
   width: 100%;
-  line-height: 5rem;
+  line-height: 3rem;
   background: red;
   clear: both; }
   header.site-header .site-branding {
     display: inline-block;
-    float: left; }
+    float: left;
+    background: rgba(255, 255, 255, 0.3); }
     header.site-header .site-branding .site-title {
       font-size: 1.6rem;
       margin: 0; }

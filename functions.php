@@ -122,6 +122,27 @@ function prakmed_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'prakmed_scripts' );
 
+
+
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+function prakmed_search( $form ) {
+    $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >';
+		$form .= '<label>';
+		$form .= '<span class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</span>';
+		$form .= '<input type="search" value="' . get_search_query() . '" placeholder="'. esc_attr__( 'What do you wish to search for?' ) .'" name="s" id="s" class="search-field" />';
+		$form .= '</label>';
+    $form .= '<button type="submit" class="search-submit" value="'. esc_attr__( 'Search' ) .'" />';
+    $form .= '</form>';
+    return $form;
+}
+add_filter( 'get_search_form', 'prakmed_search' );
+
+
 /**
  * Implement the Custom Header feature.
  */

@@ -16,12 +16,13 @@ header.site-header {
   left: 0;
   z-index: 10;
   width: 100%;
-  line-height: 5rem;
+  line-height: 3rem;
   background: red;
   clear: both;
   & .site-branding {
     display: inline-block;
     float: left;
+    background: rgba(255,255,255, 0.3);
     & .site-title {
       font-size: 1.6rem;
       margin: 0;
