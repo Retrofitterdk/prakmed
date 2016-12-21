@@ -63,6 +63,7 @@
 
 	<aside id="primary-menu" class="desktop-show primary-menu sidebar">
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<?php get_sidebar(); ?>
 	</aside>
 
 	<div id="content" class="site-content">
