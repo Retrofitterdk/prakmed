@@ -40,10 +40,29 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'prakmed' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<nav id="site-navigation" class="desktop-hide main-navigation activate" role="navigation">
+			<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'prakmed' ); ?></span>
+			</a>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<div id="course-progress-bar" class="course-progress-bar toggle hide">
+		<h4>Oversigt</h4>
+		<ul> <!-- This UL will get populated with javascript -->
+			<li>
+				<h5>Salmon Ravioli</h5>
+				<span>1</span>
+			</li>
+			<li>
+				<h5>Salmon Ravioli</h5>
+				<span>2</span>
+			</li>
+		</ul>
+	</div><!--#course-progress-bar-->
+
+	<aside id="primary-menu" class="desktop-show primary-menu sidebar">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+	</aside>
 
 	<div id="content" class="site-content">

@@ -26,7 +26,7 @@
 					}
 			?>
 		</div>
-		<div id="footer-menu" class="">
+		<div id="footer-menu" class="desktop-hide">
 			<nav id="footer-navigation" class="footer-navigation" role="navigation">
 			<?php get_template_part( 'template-parts/menu', 'footer' ); ?>
 			</nav><!-- #footer-navigation -->

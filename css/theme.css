@@ -450,7 +450,7 @@ textarea {
   display: inline-block;
   padding: 0 5px;
   font-family: 'brieficons';
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   text-transform: none;
@@ -536,6 +536,61 @@ a {
   text-align: right;
   width: 50%; }
 
+/* HEADER MENU */
+.menu-toggle:before {
+  display: inline-block;
+  padding: 0 5px;
+  font-family: "brieficons";
+  font-size: 2.5rem;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  color: #fff; }
+
+body:not(.active-course-progress-bar) .menu-toggle:before {
+  content: '\69'; }
+
+body.active-course-progress-bar .menu-toggle:before {
+  content: 'x'; }
+
+body.active-course-progress-bar {
+  background: #fff;
+  margin: 0 !important; }
+
+body.active-course-progress-bar .course-progress-bar ul {
+  max-width: 38em;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden; }
+  body.active-course-progress-bar .course-progress-bar ul li {
+    clear: both; }
+    body.active-course-progress-bar .course-progress-bar ul li:before {
+      overflow: visible;
+      direction: ltr;
+      margin: 0;
+      content: "";
+      content: none;
+      width: auto;
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . "; }
+  body.active-course-progress-bar .course-progress-bar ul h5 {
+    display: inline-block;
+    padding-right: 0.33em;
+    margin: 0;
+    background: white;
+    text-transform: uppercase; }
+  body.active-course-progress-bar .course-progress-bar ul span {
+    float: right;
+    padding-left: 0.33em;
+    background: white; }
+
+body.active-course-progress-bar .site-content {
+  height: 0;
+  display: none; }
+
+/* FOOTER MENU */
 .footer-navigation ul {
   list-style-type: none;
   margin: 0;
@@ -550,7 +605,8 @@ a {
       display: block;
       padding: 0.5rem 0;
       text-align: center;
-      color: #fff; }
+      color: #fff;
+      border-bottom: 4px solid transparent; }
       .footer-navigation ul li a:before {
         content: '\f107';
         display: inline-block;
@@ -561,6 +617,8 @@ a {
         -webkit-font-smoothing: antialiased; }
       .footer-navigation ul li a:hover {
         background: rgba(255, 255, 255, 0.1); }
+    .footer-navigation ul li.current-menu-item a {
+      border-bottom: 4px solid #00a44e; }
   .footer-navigation ul li.home a:before {
     content: '\68'; }
   .footer-navigation ul li.dashboard a:before {
@@ -572,6 +630,9 @@ a {
   .footer-navigation ul li.search a:before {
     content: '\73'; }
 
+/*--------------------------------------------------------------
+## Header navigation
+--------------------------------------------------------------*/
 header.site-header {
   position: fixed;
   top: 0;
@@ -579,16 +640,46 @@ header.site-header {
   z-index: 10;
   width: 100%;
   line-height: 3rem;
-  background: red;
-  clear: both; }
+  background: #00a44e;
+  padding: 0 0.5rem;
+  clear: both;
+  box-sizing: border-box; }
   header.site-header .site-branding {
     display: inline-block;
-    float: left;
-    background: rgba(255, 255, 255, 0.3); }
+    float: left; }
     header.site-header .site-branding .site-title {
       font-size: 1.6rem;
       margin: 0; }
 
+/*--------------------------------------------------------------
+## Primary navigation
+--------------------------------------------------------------*/
+aside.sidebar {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 20%;
+  background: #fff;
+  height: 100%;
+  border-left: 1px solid #eee; }
+  aside.sidebar ul {
+    list-style-type: none;
+    margin: 1rem 0 0 0;
+    padding: 0; }
+    aside.sidebar ul li {
+      display: block;
+      border-bottom: 1px solid #eee; }
+      aside.sidebar ul li a {
+        display: block;
+        padding: .5rem 1.2rem; }
+
+@media screen and (min-width: 960px) {
+  .site-content {
+    width: 80%;
+    margin: 0; } }
+/*--------------------------------------------------------------
+## Footer navigation
+--------------------------------------------------------------*/
 footer.site-footer {
   display: block;
   width: 100%;
@@ -609,16 +700,27 @@ footer.site-footer .search-box-wrapper {
   outline: 1px solid #030303; }
 
 /*--------------------------------------------------------------
+## Media query
+--------------------------------------------------------------*/
+@media screen and (min-width: 960px) {
+  .desktop-hide {
+    display: none !important; }
+
+  .desktop-show {
+    display: block !important; } }
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-.screen-reader-text {
+.screen-reader-text,
+.sharing-screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden; }
-  .screen-reader-text:focus {
+  .screen-reader-text:focus,
+  .sharing-screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -814,6 +916,77 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+## Jetpack sharedaddy (sharing)
+--------------------------------------------------------------*/
+div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+  clear: both; }
+
+.sd-content ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0; }
+  .sd-content ul li {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25%;
+    padding: 0;
+    margin: 0; }
+    .sd-content ul li[class*='share-'] a, .sd-content ul li[class*='share-'] a:hover, .sd-content ul li[class*='share-'] div.option a {
+      display: inline-block;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      border: 0;
+      box-shadow: none;
+      padding: 1.5rem 0;
+      position: relative;
+      top: 0;
+      left: 0;
+      line-height: 1;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0; }
+    .sd-content ul li a.sd-button:before {
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font: normal 16px/1 'Genericons';
+      vertical-align: top;
+      position: relative;
+      top: 3px;
+      text-align: center; }
+    .sd-content ul li[class*='share-'] a.sd-button:before {
+      top: 0;
+      font-family: "brieficons";
+      color: #00a44e;
+      font-size: 2rem; }
+    .sd-content ul li.share-end {
+      display: none !important; }
+
+.sd-social-icon .sd-content ul li.share-facebook a:before,
+.sd-social-text .sd-content ul li.share-facebook a:before,
+.sd-content ul li.share-facebook div.option.option-smart-off a:before,
+.sd-social-icon-text .sd-content li.share-facebook a:before {
+  content: '\66'; }
+
+.sd-social-icon .sd-content ul li.share-linkedin a:before,
+.sd-social-text .sd-content ul li.share-linkedin a:before,
+.sd-content ul li.share-linkedin div.option.option-smart-off a:before,
+.sd-social-icon-text .sd-content li.share-linkedin a:before {
+  content: '\6c'; }
+
+.sd-social-icon .sd-content ul li.share-google-plus-1 a:before,
+.sd-social-text .sd-content ul li.share-google-plus-1 a:before,
+.sd-content ul li.share-google-plus-1 div.option.option-smart-off a:before,
+.sd-social-icon-text .sd-content li.share-google-plus-1 a:before {
+  content: '\67'; }
+
+.sd-social-icon .sd-content ul li.share-twitter a:before,
+.sd-social-text .sd-content ul li.share-twitter a:before,
+.sd-content ul li.share-twitter div.option.option-smart-off a:before,
+.sd-social-icon-text .sd-content li.share-twitter a:before {
+  content: '\74'; }
 
 /*--------------------------------------------------------------
 # Skeleton Core folder

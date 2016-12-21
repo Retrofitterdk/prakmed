@@ -105,6 +105,69 @@
 }
 
 
+/* HEADER MENU */
+.menu-toggle:before {
+	display: inline-block;
+	padding: 0 5px;
+	font-family: "brieficons";
+	font-size: 2.5rem;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	color: #fff;
+}
+body:not(.active-course-progress-bar) .menu-toggle:before {
+	content: '\69';
+}
+body.active-course-progress-bar .menu-toggle:before {
+    content: 'x';
+}
+body.active-course-progress-bar {
+    background: #fff;
+    margin: 0 !important;
+}
+body.active-course-progress-bar .course-progress-bar ul {
+    max-width: 38em;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+			& li {
+				clear: both;
+				&:before {
+					overflow: visible;
+					direction: ltr;
+					margin: 0;
+					content: "";
+					content: none;
+					width: auto;
+					float: left;
+					width: 0;
+					white-space: nowrap;
+					content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+				}
+			}
+			& h5 {
+				display: inline-block;
+				padding-right: 0.33em;
+				margin: 0;
+    		background: white;
+				text-transform: uppercase;
+			}
+			& p {
+
+			}
+			& span {
+				float: right;
+				padding-left: 0.33em;
+				background: white;
+			}
+		}
+body.active-course-progress-bar .site-content {
+    height: 0;
+    display: none;
+}
+
+/* FOOTER MENU */
 .footer-navigation ul {
 	list-style-type: none;
 	margin: 0;
@@ -120,6 +183,7 @@
 			padding: 0.5rem 0;
 			text-align: center;
 			color: #fff;
+			border-bottom: 4px solid transparent;
 
 			&:before {
 				content: '\f107';
@@ -134,8 +198,14 @@
 			&:hover {
 				background: rgba(255,255,255, 0.1);
 			}
+
+		} // a-tag
+
+		&.current-menu-item a {
+			border-bottom: 4px solid #00a44e;
 		}
-	}
+
+	} // li-tag
 	& li.home a:before {
 	    content: '\68';
 	}
@@ -151,4 +221,4 @@
 	& li.search a:before {
 	    content: '\73';
 	}
-}
+} // ul-tag
