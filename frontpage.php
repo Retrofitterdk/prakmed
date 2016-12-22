@@ -1,7 +1,7 @@
 
 <?php
 /**
-* Template Name: Homepage
+* Template Name: Frontpage
 *
 * @package WordPress
 * @subpackage prakmed
@@ -27,7 +27,7 @@ get_header(); ?>
       <h1>Introduction<h1>
       <?php get_template_part('template-parts/section', 'primary'); ?>
       <hr />
-      
+
   </main><!-- #main -->
 </div><!-- #primary -->
 
