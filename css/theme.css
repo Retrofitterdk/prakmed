@@ -808,40 +808,40 @@ footer.site-footer .search-box-wrapper {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-  display: block; }
-
-.hentry {
-  margin: 0 0 1.5em; }
-
-.byline,
-.updated:not(.published) {
-  display: none; }
-
-.single .byline,
-.group-blog .byline {
-  display: inline; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word; }
-
-.bypostauthor {
-  display: block; }
+.handbook-article {
+  background: transparent;
+  margin-top: 2rem;
+  padding: 2rem; }
+  .handbook-article header {
+    border-top: 2px solid #00a44e;
+    border-bottom: 1px solid grey;
+    padding: 0.5rem 0; }
+    .handbook-article header h1 {
+      padding: 0;
+      margin: 0;
+      color: #00a44e;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 1.6rem; }
+    .handbook-article header p.taxonomies {
+      text-transform: uppercase;
+      color: grey;
+      padding: 0;
+      margin: 0; }
+  .handbook-article .article-content {
+    border-bottom: 2px solid #00a44e;
+    margin: 0;
+    padding: 1rem 0;
+    font-family: garamond, georgia, sans-serif; }
+    .handbook-article .article-content h1, .handbook-article .article-content h2, .handbook-article .article-content h3, .handbook-article .article-content h4, .handbook-article .article-content h5, .handbook-article .article-content h6 {
+      font-weight: bold;
+      color: #00a44e;
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0; }
+    .handbook-article .article-content p {
+      padding: 0;
+      margin: 0 0 1rem 0; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
