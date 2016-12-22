@@ -650,6 +650,9 @@ header.site-header {
     header.site-header .site-branding .site-title {
       font-size: 1.6rem;
       margin: 0; }
+      header.site-header .site-branding .site-title a {
+        color: #fff;
+        text-decoration: none; }
 
 /*--------------------------------------------------------------
 ## Primary navigation

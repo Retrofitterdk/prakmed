@@ -26,6 +26,8 @@ get_header(); ?>
   <main id="main" class="site-main" role="main">
       <h1>Introduction<h1>
       <?php get_template_part('template-parts/section', 'primary'); ?>
+      <hr />
+      
   </main><!-- #main -->
 </div><!-- #primary -->
 
