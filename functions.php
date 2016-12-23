@@ -7,6 +7,7 @@
  * @package PrakMed
  */
 
+<<<<<<< HEAD
 if ( ! function_exists( 'prakmed_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -69,6 +70,11 @@ function prakmed_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'prakmed_setup' );
+=======
+ // Set up the Hybrid Core framework.
+ require_once( trailingslashit( get_template_directory() ) . 'lib/hybrid.php' );
+ new Hybrid();
+>>>>>>> refs/remotes/origin/master
 
 
 function jptweak_remove_share() {
@@ -82,22 +88,14 @@ function jptweak_remove_share() {
 add_action( 'loop_start', 'jptweak_remove_share' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
+ * Load functions for theme setup.
  */
-function prakmed_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'prakmed_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'prakmed_content_width', 0 );
+require get_template_directory() . '/inc/setup.php';
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * Enque theme-specific scripts and styles.
  */
+<<<<<<< HEAD
 function prakmed_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'prakmed' ),
@@ -134,6 +132,9 @@ function prakmed_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'prakmed_scripts' );
+=======
+require get_template_directory() . '/inc/enque.php';
+>>>>>>> refs/remotes/origin/master
 
 
 
@@ -180,3 +181,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load functions for setting up sidebars.
+ */
+require get_template_directory() . '/inc/sidebars.php';
