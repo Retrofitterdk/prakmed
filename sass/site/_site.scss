@@ -1,7 +1,11 @@
+.site-content {
+    margin: 0 0 5rem 0;
+    padding: 0 2rem;
+}
 .handbook-article {
   background: transparent;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 0;
   & header {
     border-top: 2px solid #00a44e;
     border-bottom: 1px solid grey;
@@ -36,6 +40,20 @@
     & p {
       padding: 0;
       margin: 0 0 1rem 0;
+    }
+  }
+}
+
+.pagination {
+  display: block;
+  a {
+    display: inline-block;
+    padding: 1rem 0;
+    &[rel="prev"] {
+      float: left;
+    }
+    &[rel="next"] {
+      float: right;
     }
   }
 }

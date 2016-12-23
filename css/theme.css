@@ -556,35 +556,33 @@ body.active-course-progress-bar {
   background: #fff;
   margin: 0 !important; }
 
+body.active-course-progress-bar .course-progress-bar {
+  outline: none; }
+
+body.active-course-progress-bar .course-progress-bar h1 {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #ddd; }
+
 body.active-course-progress-bar .course-progress-bar ul {
-  max-width: 38em;
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style-type: none;
   overflow: hidden; }
   body.active-course-progress-bar .course-progress-bar ul li {
+    display: block;
     clear: both; }
-    body.active-course-progress-bar .course-progress-bar ul li:before {
-      overflow: visible;
-      direction: ltr;
-      margin: 0;
-      content: "";
-      content: none;
-      width: auto;
-      float: left;
-      width: 0;
-      white-space: nowrap;
-      content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . "; }
-  body.active-course-progress-bar .course-progress-bar ul h5 {
-    display: inline-block;
-    padding-right: 0.33em;
-    margin: 0;
-    background: white;
-    text-transform: uppercase; }
-  body.active-course-progress-bar .course-progress-bar ul span {
-    float: right;
-    padding-left: 0.33em;
-    background: white; }
+    body.active-course-progress-bar .course-progress-bar ul li a {
+      display: block;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      text-decoration: none;
+      outline: none;
+      color: #909090; }
+      body.active-course-progress-bar .course-progress-bar ul li a:hover {
+        background: #eee;
+        color: #00a44e; }
 
 body.active-course-progress-bar .site-content {
   height: 0;
@@ -808,10 +806,14 @@ footer.site-footer .search-box-wrapper {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.site-content {
+  margin: 0 0 5rem 0;
+  padding: 0 2rem; }
+
 .handbook-article {
   background: transparent;
   margin-top: 2rem;
-  padding: 2rem; }
+  padding: 0; }
   .handbook-article header {
     border-top: 2px solid #00a44e;
     border-bottom: 1px solid grey;
@@ -842,6 +844,16 @@ footer.site-footer .search-box-wrapper {
     .handbook-article .article-content p {
       padding: 0;
       margin: 0 0 1rem 0; }
+
+.pagination {
+  display: block; }
+  .pagination a {
+    display: inline-block;
+    padding: 1rem 0; }
+    .pagination a[rel="prev"] {
+      float: left; }
+    .pagination a[rel="next"] {
+      float: right; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

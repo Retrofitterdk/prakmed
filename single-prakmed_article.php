@@ -44,7 +44,13 @@ get_header(); ?>
 		$output .= '<div class="article-content">';
 		$output .= $post->post_content;
 		$output .= '</article>';
+
 		echo $output;
+
+		echo "<div class='pagination'>";
+		echo  previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous feature', 'prakmed' ) . '</span> %title' );
+		echo  next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next feature', 'prakmed' ) . '</span>' );
+		echo "</div>";
 		?>
 
 		</main><!-- #main -->

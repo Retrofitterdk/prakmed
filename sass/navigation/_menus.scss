@@ -125,41 +125,35 @@ body.active-course-progress-bar {
     background: #fff;
     margin: 0 !important;
 }
+body.active-course-progress-bar .course-progress-bar {
+	outline: none;
+}
+body.active-course-progress-bar .course-progress-bar h1 {
+	padding: 1rem;
+	margin: 0;
+	font-size: 1.4rem;
+	border-bottom: 1px solid #ddd;
+}
 body.active-course-progress-bar .course-progress-bar ul {
-    max-width: 38em;
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style-type: none;
     overflow: hidden;
 			& li {
+				display: block;
 				clear: both;
-				&:before {
-					overflow: visible;
-					direction: ltr;
-					margin: 0;
-					content: "";
-					content: none;
-					width: auto;
-					float: left;
-					width: 0;
-					white-space: nowrap;
-					content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+				& a {
+					display: block;
+					padding: 1rem;
+					border-bottom: 1px solid #ddd;
+					text-decoration: none;
+					outline: none;
+					color: #909090;
+					&:hover {
+						background: #eee;
+						color: #00a44e;
+					}
 				}
-			}
-			& h5 {
-				display: inline-block;
-				padding-right: 0.33em;
-				margin: 0;
-    		background: white;
-				text-transform: uppercase;
-			}
-			& p {
-
-			}
-			& span {
-				float: right;
-				padding-left: 0.33em;
-				background: white;
 			}
 		}
 body.active-course-progress-bar .site-content {

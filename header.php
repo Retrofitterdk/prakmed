@@ -48,17 +48,8 @@
 	</header><!-- #masthead -->
 
 	<div id="course-progress-bar" class="course-progress-bar toggle hide">
-		<h4>Oversigt</h4>
-		<ul> <!-- This UL will get populated with javascript -->
-			<li>
-				<h5>Salmon Ravioli</h5>
-				<span>1</span>
-			</li>
-			<li>
-				<h5>Salmon Ravioli</h5>
-				<span>2</span>
-			</li>
-		</ul>
+		<h1>Oversigt</h1>
+		<ul></ul><!-- This UL will get populated with javascript -->
 	</div><!--#course-progress-bar-->
 
 	<aside id="primary-menu" class="desktop-show primary-menu sidebar">
