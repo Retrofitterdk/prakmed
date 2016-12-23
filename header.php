@@ -35,15 +35,26 @@
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'prakmed' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<nav id="site-navigation" class="desktop-hide main-navigation activate" role="navigation">
+			<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'prakmed' ); ?></span>
+			</a>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<div id="course-progress-bar" class="course-progress-bar toggle hide">
+		<h1>Oversigt</h1>
+		<ul></ul><!-- This UL will get populated with javascript -->
+	</div><!--#course-progress-bar-->
+
+	<aside id="primary-menu" class="desktop-show primary-menu sidebar">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<?php get_sidebar(); ?>
+	</aside>
 
 	<div id="content" class="site-content">

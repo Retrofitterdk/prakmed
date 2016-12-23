@@ -1,5 +1,6 @@
 /* Text meant only for screen readers. */
-.screen-reader-text {
+.screen-reader-text,
+.sharing-screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 	height: 1px;
@@ -29,4 +30,11 @@
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
+}
+
+.hide {
+	display: none;
+}
+@media only screen and (min-width:960px){
+
 }
