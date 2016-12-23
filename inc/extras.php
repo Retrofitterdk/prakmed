@@ -66,3 +66,18 @@ function jptweak_remove_share() {
     }
 }
 add_action( 'loop_start', 'jptweak_remove_share' );
+
+// Add a WP Editor to the Paragraph Text field
+add_action( 'gform_field_input', 'gforms_wp_editor', 10, 5 );
+function gforms_wp_editor( $input, $field, $value, $lead_id, $form_id ) {
+	if( $field["cssClass"] == 'gf_html' ) {
+		ob_start();
+		wp_editor( $value, "input_{$form_id}_{$field['id']}",
+		array(
+			'media_buttons' => true,
+			'textarea_name' => "input_{$field['id']}"
+		)	);
+		$input = ob_get_clean();
+	}
+	return $input;
+}
