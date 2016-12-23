@@ -814,6 +814,8 @@ footer.site-footer .search-box-wrapper {
   background: transparent;
   margin-top: 2rem;
   padding: 0; }
+  .handbook-article figure {
+    margin: -2rem -2rem 2rem -2rem !important; }
   .handbook-article header {
     border-top: 2px solid #00a44e;
     border-bottom: 1px solid grey;
@@ -849,7 +851,11 @@ footer.site-footer .search-box-wrapper {
   display: block; }
   .pagination a {
     display: inline-block;
-    padding: 1rem 0; }
+    padding: 1rem 0;
+    color: #909090;
+    text-decoration: none; }
+    .pagination a:hover {
+      color: #00a44e; }
     .pagination a[rel="prev"] {
       float: left; }
     .pagination a[rel="next"] {

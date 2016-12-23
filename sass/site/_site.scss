@@ -6,6 +6,9 @@
   background: transparent;
   margin-top: 2rem;
   padding: 0;
+  & figure {
+    margin: -2rem -2rem 2rem -2rem !important;
+  }
   & header {
     border-top: 2px solid #00a44e;
     border-bottom: 1px solid grey;
@@ -49,6 +52,11 @@
   a {
     display: inline-block;
     padding: 1rem 0;
+    color: #909090;
+    text-decoration: none;
+    &:hover {
+      color: #00a44e;
+    }
     &[rel="prev"] {
       float: left;
     }

@@ -21,22 +21,22 @@ get_header(); ?>
 
 		$output = '';
 		$output .= '<article id=' . $post->ID . ' class="handbook-article">';
-
+		$output .= "<figure>" . get_the_post_thumbnail( $post->ID ) . "</figure>";
 		$output .= '<header>';
 		$output .= '<h1>' . $post->post_title . '</h1>';
 
 		$output .= '<p class="taxonomies">';
-		$output .= '<strong>ICD-10</strong>';
+		$output .= '<strong>ICD-10</strong> ';
 		foreach($IDC_10_terms as $IDC_10_term) {
-		$output .= $IDC_10_term->name . '';
+		$output .= $IDC_10_term->name . ' ';
 		}
-		$output .= ' <strong>ICPC-2</strong>';
+		$output .= ' <strong>ICPC-2</strong> ';
 		foreach($ICPC_2_terms as $ICPC_2_term) {
-		$output .= $ICPC_2_term->name . '';
+		$output .= $ICPC_2_term->name . ' ';
 		}
-		$output .= ' <strong>DSM-5</strong>';
+		$output .= ' <strong>DSM-5</strong> ';
 		foreach($DSM_5_terms as $DSM_5_term) {
-		$output .= $DSM_5_term->name . '';
+		$output .= $DSM_5_term->name . ' ';
 		}
 		$output .= '</p>';
 		$output .= '</header>';
