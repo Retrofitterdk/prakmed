@@ -1,8 +1,6 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: inline-block;
+	float: right;
 
 	ul {
 		display: none;
@@ -105,3 +103,116 @@
 		width: 50%;
 	}
 }
+
+
+/* HEADER MENU */
+.menu-toggle:before {
+	display: inline-block;
+	padding: 0 5px;
+	font-family: "brieficons";
+	font-size: 2.5rem;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	color: #fff;
+}
+body:not(.active-course-progress-bar) .menu-toggle:before {
+	content: '\69';
+}
+body.active-course-progress-bar .menu-toggle:before {
+    content: 'x';
+}
+body.active-course-progress-bar {
+    background: #fff;
+    margin: 0 !important;
+}
+body.active-course-progress-bar .course-progress-bar {
+	outline: none;
+}
+body.active-course-progress-bar .course-progress-bar h1 {
+	padding: 1rem;
+	margin: 0;
+	font-size: 1.4rem;
+	border-bottom: 1px solid #ddd;
+}
+body.active-course-progress-bar .course-progress-bar ul {
+    padding: 0 0 3.5rem 0;
+    margin: 0;
+    list-style-type: none;
+    overflow-y: auto;
+			& li {
+				display: block;
+				clear: both;
+				& a {
+					display: block;
+					padding: 1rem;
+					border-bottom: 1px solid #ddd;
+					text-decoration: none;
+					outline: none;
+					color: #909090;
+					&:hover {
+						background: #eee;
+						color: #00a44e;
+					}
+				}
+			}
+		}
+body.active-course-progress-bar .site-content {
+    height: 0;
+    display: none;
+}
+
+/* FOOTER MENU */
+.footer-navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	& li {
+		display: inline-block;
+		float: left;
+		width: 20%;
+		& a {
+			position: relative;
+			display: block;
+			padding: 0.5rem 0;
+			text-align: center;
+			color: #fff;
+			border-bottom: 4px solid transparent;
+
+			&:before {
+				content: '\f107';
+				display: inline-block;
+				padding: 0 5px;
+				font-family: "brieficons";
+				font-size: 25px;
+				vertical-align: middle;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			&:hover {
+				background: rgba(255,255,255, 0.1);
+			}
+
+		} // a-tag
+
+		&.current-menu-item a {
+			border-bottom: 4px solid #00a44e;
+		}
+
+	} // li-tag
+	& li.home a:before {
+	    content: '\68';
+	}
+	& li.dashboard a:before {
+	    content: '\64';
+	}
+	& li.user a:before {
+	    content: '\75';
+	}
+	& li.share a:before {
+	    content: '\6f';
+	}
+	& li.search a:before {
+	    content: '\73';
+	}
+} // ul-tag

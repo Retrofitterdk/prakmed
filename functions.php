@@ -44,7 +44,9 @@ function prakmed_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'prakmed' ),
+		'primary' => esc_html__( 'Primary Menu', 'prakmed' ),
+		'header' => esc_html__( 'Header Menu', 'prakmed' ),
+		'footer' => esc_html__( 'Footer Menu', 'prakmed' ),
 	) );
 
 	/*
@@ -67,6 +69,17 @@ function prakmed_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'prakmed_setup' );
+
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+
+add_action( 'loop_start', 'jptweak_remove_share' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -98,11 +111,19 @@ function prakmed_widgets_init() {
 }
 add_action( 'widgets_init', 'prakmed_widgets_init' );
 
+
+
 /**
  * Enqueue scripts and styles.
  */
 function prakmed_scripts() {
-	wp_enqueue_style( 'prakmed-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'prakmed-theme', get_template_directory_uri() . '/css/theme.css' );
+
+	wp_enqueue_style( 'brieficons', get_template_directory_uri() . '/brieficons/brieficons.css', array(), '1.0.0' );
+
+	wp_enqueue_script( 'prakmed-custom', get_template_directory_uri() . '/js/prakmed-custom.js', array('jquery'), '20151022', true );
+
+	wp_enqueue_script( 'prakmed-touchSwipe', get_template_directory_uri() . '/js/touchSwipe.min.js', array('jquery'), '20151119', true );
 
 	wp_enqueue_script( 'prakmed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -113,6 +134,27 @@ function prakmed_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'prakmed_scripts' );
+
+
+
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+function prakmed_search( $form ) {
+    $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >';
+		$form .= '<label>';
+		$form .= '<span class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</span>';
+		$form .= '<input type="search" value="' . get_search_query() . '" placeholder="'. esc_attr__( 'What do you wish to search for?' ) .'" name="s" id="s" class="search-field" />';
+		$form .= '</label>';
+    $form .= '<button type="submit" class="search-submit" value="'. esc_attr__( 'Search' ) .'" />';
+    $form .= '</form>';
+    return $form;
+}
+add_filter( 'get_search_form', 'prakmed_search' );
+
 
 /**
  * Implement the Custom Header feature.
