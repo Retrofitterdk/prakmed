@@ -3,7 +3,13 @@
  * Enqueue scripts and styles.
  */
 function prakmed_scripts() {
-	wp_enqueue_style( 'prakmed-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'prakmed-theme', get_template_directory_uri() . '/css/theme.css' );
+
+	wp_enqueue_style( 'brieficons', get_template_directory_uri() . '/brieficons/brieficons.css', array(), '1.0.0' );
+
+	wp_enqueue_script( 'prakmed-custom', get_template_directory_uri() . '/js/prakmed-custom.js', array('jquery'), '20151022', true );
+
+	wp_enqueue_script( 'prakmed-touchSwipe', get_template_directory_uri() . '/js/touchSwipe.min.js', array('jquery'), '20151119', true );
 
 	wp_enqueue_script( 'prakmed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

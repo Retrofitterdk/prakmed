@@ -37,3 +37,32 @@ function prakmed_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'prakmed_pingback_header' );
+
+
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+function prakmed_search( $form ) {
+    $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >';
+		$form .= '<label>';
+		$form .= '<span class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</span>';
+		$form .= '<input type="search" value="' . get_search_query() . '" placeholder="'. esc_attr__( 'What do you wish to search for?' ) .'" name="s" id="s" class="search-field" />';
+		$form .= '</label>';
+    $form .= '<button type="submit" class="search-submit" value="'. esc_attr__( 'Search' ) .'" />';
+    $form .= '</form>';
+    return $form;
+}
+add_filter( 'get_search_form', 'prakmed_search' );
+
+/* REMOVE SHARE FROM THE_CONTENT AND THE_EXCERPT */
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+add_action( 'loop_start', 'jptweak_remove_share' );

@@ -36,7 +36,9 @@ function prakmed_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'prakmed' ),
+		'primary' => esc_html__( 'Primary Menu', 'prakmed' ),
+		'header' => esc_html__( 'Header Menu', 'prakmed' ),
+		'footer' => esc_html__( 'Footer Menu', 'prakmed' ),
 	) );
 
 	/*
