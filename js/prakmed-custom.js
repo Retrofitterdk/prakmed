@@ -8,7 +8,6 @@ jQuery(function($) {
 		var grabIDnew = $(this).attr("href").replace('#', 'active-');
 		var div = '.toggle';
 		var target = div + grabID;
-		console.log(target);
 
 		//	RESET DIVS
 		$(div).not(target).addClass('hide');
