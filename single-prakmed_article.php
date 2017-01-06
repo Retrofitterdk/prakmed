@@ -16,9 +16,9 @@ get_header(); ?>
 		<?php
 		global $post;
 		while ( have_posts() ) : the_post();
-		$IDC_10_terms = get_the_term_list( $post->ID, 'ICD-10', __( 'ICD-10: ', 'prakmed' ) );
-		$ICPC_2_terms = get_the_term_list( $post->ID, 'ICPC-2', __( 'ICPC-2: ', 'prakmed' ) );
-		$DSM_5_terms = get_the_term_list( $post->ID, 'DSM-5', __( 'DSM-5: ', 'prakmed' ) );
+		$IDC_10_terms = get_the_term_list( $post->ID, 'ICD-10', __( '<strong>ICD-10:</strong>', 'prakmed' ) );
+		$ICPC_2_terms = get_the_term_list( $post->ID, 'ICPC-2', __( '<strong>ICPC-2:</strong>', 'prakmed' ) );
+		$DSM_5_terms = get_the_term_list( $post->ID, 'DSM-5', __( '<strong>DSM-5:</strong>', 'prakmed' ) );
 
 		echo "<article id=". $post->ID ." class='handbook-article'>";
 
@@ -50,12 +50,6 @@ get_header(); ?>
 		/* === POST CONTENT === */
 		echo "<div class='article-content'>";
 		the_content();
-		echo "</div>";
-
-		/* === POST PAGINATION === */
-		echo "<div class='pagination'>";
-		echo  previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous feature', 'prakmed' ) . '</span> %title' );
-		echo  next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next feature', 'prakmed' ) . '</span>' );
 		echo "</div>";
 
 	endwhile; // End loop.
