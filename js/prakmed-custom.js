@@ -1,11 +1,5 @@
 jQuery(function($) {
 
-	//TESTING PLATFORM
-	function isMobile() {
-		try{ document.createEvent("TouchEvent"); return true; }
-		catch(e){ return false; }
-	}
-
 	$(".activate a").on("click", function(e) {
 		e.preventDefault;
 
