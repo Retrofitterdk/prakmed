@@ -832,6 +832,16 @@ footer.site-footer .search-box-wrapper {
       color: grey;
       padding: 0;
       margin: 0; }
+      .handbook-article header p.taxonomies strong {
+        margin-right: 0.2rem; }
+      .handbook-article header p.taxonomies a {
+        display: inline-block;
+        color: grey;
+        text-decoration: none;
+        outline: none;
+        margin-right: 0.5rem; }
+        .handbook-article header p.taxonomies a:hover {
+          color: #00a44e; }
   .handbook-article .article-content {
     border-bottom: 2px solid #00a44e;
     margin: 0;
