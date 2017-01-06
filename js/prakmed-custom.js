@@ -40,7 +40,7 @@ jQuery(function($) {
 	});
 
 	// RENDER TABLE OF CONTENT BASED ON H1 HEADLINES IN ARTICLE
-	$(".article-content h1").each(function( ) {
+	$(".article-content h2").each(function( ) {
 		var _this = $(this);
 		var value = $(this).text();
 		_this.attr("id", value);
