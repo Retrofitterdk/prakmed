@@ -47,7 +47,7 @@ jQuery(function($) {
 		$("body").removeClass("active-course-progress-bar");
 		$(".course-progress-bar").addClass("hide");
 		var goTo = $(this).text();
-		$(document).scrollTop( $("#"+goTo+"").offset().top );
+		$('html, body').animate({scrollTop: $("#"+goTo+"").offset().top -60 }, 'slow');
 	});
 
 });
