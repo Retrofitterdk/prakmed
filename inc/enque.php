@@ -5,7 +5,7 @@
 function prakmed_scripts() {
 	wp_enqueue_style( 'prakmed-theme', get_template_directory_uri() . '/css/theme.css' );
 
-	wp_enqueue_style( 'brieficons', get_template_directory_uri() . '/brieficons/brieficons.css', array(), '1.0.0' );
+	wp_enqueue_style( 'prakmed-brieficons', get_template_directory_uri() . '/brieficons/brieficons.css', array(), '1.0.0' );
 
 	wp_enqueue_script( 'prakmed-custom', get_template_directory_uri() . '/js/prakmed-custom.js', array('jquery'), '20170106', true );
 
