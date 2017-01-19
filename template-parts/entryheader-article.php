@@ -12,6 +12,9 @@ if ( is_singular() ) :
 			endif;
 			?>
 			<div class="entry-meta">
-				<?php prakmed_entry_meta(); ?>
+				<?php
+				prakmed_entry_meta();
+				prakmed_posted_by()
+				?>
 			</div>
 		</header>
