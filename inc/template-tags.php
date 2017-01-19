@@ -39,25 +39,51 @@ if ( ! function_exists( 'prakmed_posted_on' ) ) :
 }
 endif;
 
+if ( ! function_exists( 'prakmed_posted_by' ) ) :
+	/**
+	* Prints HTML with meta information for the current author.
+	*/
+	function prakmed_posted_by() {
+		if ( function_exists( 'coauthors_posts_links' ) ) {
+			$betweenLast =  sprintf(
+				_x( '%s og %s', 'before last post author', 'prakmed' ), '</a></span>', '<span class="author vcard">'
+			);
+			$between =  sprintf(
+				_x( '%s, %s', 'between post authors', 'prakmed' ), '</span>', '<span class="author vcard">'
+			);
+			$byline = coauthors_posts_links( $between, $betweenLast, '<span class="author vcard">', '</span>', false );
+		} else {
+			$byline = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		}
+		echo '<div class="byline">' . sprintf( _x( '<strong>Editor:</strong> %s', 'post author', 'prakmed' ),$byline ) . '</div>';
+	}
+endif;
+
 if ( ! function_exists( 'prakmed_entry_meta' ) ) :
 	function prakmed_entry_meta() {
 		if ( 'prakmed_article' === get_post_type() ) {
-			$prakmed_section = get_the_term_list( get_the_ID(), 'section', __( '<strong>Section: </strong>', 'prakmed' ),', ',' ' );
-			$IDC_10_terms = get_the_term_list( get_the_ID(), 'ICD-10', __( '<strong>ICD-10: </strong>', 'prakmed' ),', ',' ' );
-			$ICPC_2_terms = get_the_term_list( get_the_ID(), 'ICPC-2', __( '<strong>ICPC-2: </strong>', 'prakmed' ),', ',' ' );
-			$DSM_5_terms = get_the_term_list( get_the_ID(), 'DSM-5', __( '<strong>DSM-5: </strong>', 'prakmed' ),', ',' ' );
+			$prakmed_section = get_the_term_list( get_the_ID(), 'section', __( '<strong>Section: </strong>', 'prakmed' ),', ','' );
+			$prakmed_subjects = get_the_term_list( get_the_ID(), 'prakmed_subjects', __( '<strong>Subjects: </strong>', 'prakmed' ),', ','' );
+			$IDC_10_terms = get_the_term_list( get_the_ID(), 'ICD-10', __( '<strong>ICD-10: </strong>', 'prakmed' ),', ','' );
+			$ICPC_2_terms = get_the_term_list( get_the_ID(), 'ICPC-2', __( '<strong>ICPC-2: </strong>', 'prakmed' ),', ','' );
+			$DSM_5_terms = get_the_term_list( get_the_ID(), 'DSM-5', __( '<strong>DSM-5: </strong>', 'prakmed' ),', ','' );
+			echo '<div class="taxonomies">';
 			if ( $prakmed_section ) {
-				printf( '<span class="Section">' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_section );
+				printf( '<span id="Section" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_section );
+			}
+			if ( $prakmed_subjects ) {
+				printf( '<span id="Subjects" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_subjects );
 			}
 			if ( $IDC_10_terms ) {
-				printf( '<span class="ICD-10">' . __( '%1$s', 'prakmed' ) . '</span>', $IDC_10_terms );
+				printf( '<span id="ICD-10" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $IDC_10_terms );
 			}
 			if ( $ICPC_2_terms ) {
-				printf( '<span class="ICPC-2">' . __( '%1$s', 'prakmed' ) . '</span>', $ICPC_2_terms );
+				printf( '<span id="ICPC-2" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $ICPC_2_terms );
 			}
 			if ( $DSM_5_terms ) {
-				printf( '<span class="DSM-5">' . __( '%1$s', 'prakmed' ) . '</span>', $DSM_5_terms );
+				printf( '<span id="DSM-5" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $DSM_5_terms );
 			}
+			echo '</div>';
 		}
 	}
 endif;
