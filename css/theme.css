@@ -494,7 +494,8 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
@@ -516,19 +517,21 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
-
   .main-navigation ul {
     display: block; } }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
+
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
+
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -678,6 +681,7 @@ header.site-header {
   .site-content {
     width: 80%;
     margin: 0; } }
+
 /*--------------------------------------------------------------
 ## Footer navigation
 --------------------------------------------------------------*/
@@ -706,9 +710,9 @@ footer.site-footer .search-box-wrapper {
 @media screen and (min-width: 960px) {
   .desktop-hide {
     display: none !important; }
-
   .desktop-show {
     display: block !important; } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -810,50 +814,50 @@ footer.site-footer .search-box-wrapper {
   margin: 0 0 5rem 0;
   padding: 0 2rem; }
 
-.handbook-article {
+.prakmed_article {
   background: transparent;
   margin-top: 2rem;
   padding: 0; }
-  .handbook-article figure {
+  .prakmed_article figure {
     margin: -2rem -2rem 2rem -2rem !important; }
-  .handbook-article header {
+  .prakmed_article header {
     border-top: 2px solid #00a44e;
     border-bottom: 1px solid grey;
     padding: 0.5rem 0; }
-    .handbook-article header h1 {
+    .prakmed_article header h1 {
       padding: 0;
       margin: 0;
       color: #00a44e;
       text-transform: uppercase;
       font-weight: normal;
       font-size: 1.6rem; }
-    .handbook-article header p.taxonomies {
+    .prakmed_article header p.taxonomies {
       text-transform: uppercase;
       color: grey;
       padding: 0;
       margin: 0; }
-      .handbook-article header p.taxonomies strong {
+      .prakmed_article header p.taxonomies strong {
         margin-right: 0.2rem; }
-      .handbook-article header p.taxonomies a {
+      .prakmed_article header p.taxonomies a {
         display: inline-block;
         color: grey;
         text-decoration: none;
         outline: none;
         margin-right: 0.5rem; }
-        .handbook-article header p.taxonomies a:hover {
+        .prakmed_article header p.taxonomies a:hover {
           color: #00a44e; }
-  .handbook-article .article-content {
+  .prakmed_article .article-content {
     border-bottom: 2px solid #00a44e;
     margin: 0;
     padding: 1rem 0;
     font-family: garamond, georgia, sans-serif; }
-    .handbook-article .article-content h1, .handbook-article .article-content h2, .handbook-article .article-content h3, .handbook-article .article-content h4, .handbook-article .article-content h5, .handbook-article .article-content h6 {
+    .prakmed_article .article-content h1, .prakmed_article .article-content h2, .prakmed_article .article-content h3, .prakmed_article .article-content h4, .prakmed_article .article-content h5, .prakmed_article .article-content h6 {
       font-weight: bold;
       color: #00a44e;
       font-size: 1.2rem;
       margin: 0;
       padding: 0; }
-    .handbook-article .article-content p {
+    .prakmed_article .article-content p {
       padding: 0;
       margin: 0 0 1rem 0; }
 
@@ -964,7 +968,9 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
     width: 25%;
     padding: 0;
     margin: 0; }
-    .sd-content ul li[class*='share-'] a, .sd-content ul li[class*='share-'] a:hover, .sd-content ul li[class*='share-'] div.option a {
+    .sd-content ul li[class*='share-'] a,
+    .sd-content ul li[class*='share-'] a:hover,
+    .sd-content ul li[class*='share-'] div.option a {
       display: inline-block;
       border-radius: 0;
       -webkit-border-radius: 0;
