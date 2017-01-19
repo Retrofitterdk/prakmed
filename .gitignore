@@ -1,2 +1,6 @@
 
 *.codekit3
+
+*.map
+
+css/theme.css.map
