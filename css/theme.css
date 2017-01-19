@@ -831,20 +831,19 @@ footer.site-footer .search-box-wrapper {
       text-transform: uppercase;
       font-weight: normal;
       font-size: 1.6rem; }
-    .prakmed_article header p.taxonomies {
+    .prakmed_article header .entry-meta {
       text-transform: uppercase;
       color: grey;
       padding: 0;
       margin: 0; }
-      .prakmed_article header p.taxonomies strong {
-        margin-right: 0.2rem; }
-      .prakmed_article header p.taxonomies a {
+      .prakmed_article header .entry-meta span.taxonomy {
+        display: block; }
+      .prakmed_article header .entry-meta a {
         display: inline-block;
         color: grey;
         text-decoration: none;
-        outline: none;
-        margin-right: 0.5rem; }
-        .prakmed_article header p.taxonomies a:hover {
+        outline: none; }
+        .prakmed_article header .entry-meta a:hover {
           color: #00a44e; }
   .prakmed_article .article-content {
     border-bottom: 2px solid #00a44e;

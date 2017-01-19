@@ -21,20 +21,19 @@
       font-weight: normal;
       font-size: 1.6rem;
     }
-    & p.taxonomies {
+    & .entry-meta {
       text-transform: uppercase;
       color: grey;
       padding: 0;
       margin: 0;
-      & strong {
-        margin-right: 0.2rem;
+      & span.taxonomy {
+        display: block;
       }
       & a {
         display: inline-block;
         color: grey;
         text-decoration: none;
         outline: none;
-        margin-right: 0.5rem;
         &:hover {
           color: #00a44e;
         }
