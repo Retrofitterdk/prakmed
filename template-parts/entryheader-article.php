@@ -14,7 +14,7 @@ if ( is_singular() ) :
 			<div class="entry-meta">
 				<?php
 				prakmed_entry_meta();
-				prakmed_posted_by()
+				prakmed_posted_by();
 				?>
 			</div>
 		</header>
