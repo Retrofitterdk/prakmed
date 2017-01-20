@@ -3,8 +3,8 @@
 /**
  * The front page template file
  *
- * Just a script to make sure editors always gets to choose
- * between static front page and a dynamic homepage
+ * Just a script to make sure editors always gets to
+ * choose between static front page and a dynamic homepage
  *
 * @package WordPress
 * @subpackage prakmed
