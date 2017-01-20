@@ -88,6 +88,32 @@ if ( ! function_exists( 'prakmed_entry_meta' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'prakmed_the_sections' ) ) :
+	function prakmed_the_sections() {
+		$sections = get_terms( array(
+			'taxonomy' => 'section',
+			'hide_empty' => false,
+			'parent' => 0,
+			'orderby' => 'name',
+	    'order'   => 'ASC'
+		) );
+		echo '<ul>';
+		foreach( $sections as $section ) {
+
+			    $section_link = get_term_link( $section );
+
+			    // If there was an error, continue to the next term.
+			    if ( is_wp_error( $section_link ) ) {
+			        continue;
+			    }
+
+			    // We successfully got a link. Print it out.
+			    echo '<li><a href="' . esc_url( $section_link ) . '">' . $section->name . '</a></li>';
+			}
+
+			echo '</ul>';
+		}
+endif;
 
 if ( ! function_exists( 'prakmed_entry_footer' ) ) :
 	/**
