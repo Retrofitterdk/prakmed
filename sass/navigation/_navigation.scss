@@ -41,11 +41,11 @@ header.site-header {
 /*--------------------------------------------------------------
 ## Primary navigation
 --------------------------------------------------------------*/
-.sidebar {
+.primary-menu {
     display: none;
-    position: fixed;
-    right: 0;
-    width: 20%;
+    // position: fixed;
+    // right: 0;
+    // width: 20%;
     background: #fff;
     height: 100%;
     border-left: 1px solid #eee;
@@ -63,12 +63,7 @@ header.site-header {
       }
     }
 }
-@media screen and (min-width: 960px) {
-  .site-content {
-    width: 80%;
-    margin: 0;
-  }
-}
+
 /*--------------------------------------------------------------
 ## Footer navigation
 --------------------------------------------------------------*/

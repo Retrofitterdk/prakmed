@@ -42,6 +42,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*=============================================================
+Container // Grid
+=============================================================*/
+/*==============================================================
+3.0 Basic Structure
+==============================================================*/
+.wrap {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+  position: relative; }
+
+@media (min-width: 640px) {
+  .wrap {
+    padding: 0 2rem; } }
+
+@media (min-width: 960px) {
+  .wrap {
+    padding: 0 4rem; } }
+
+/*=============================================================
 Ads config
 Example: percentage(number/number);
 Number = aspect ratio
@@ -594,9 +615,14 @@ body.active-course-progress-bar .course-progress-bar h1 {
   font-size: 1.4rem;
   border-bottom: 1px solid #ddd; }
 
-body.active-course-progress-bar .course-progress-bar ul {
-  padding: 0 0 3.5rem 0;
+body.active-course-progress-bar .course-progress-bar h2 {
+  padding: 1rem;
   margin: 0;
+  border-bottom: 1px solid #ddd; }
+
+body.active-course-progress-bar .course-progress-bar ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   overflow-y: auto; }
   body.active-course-progress-bar .course-progress-bar ul li {
@@ -684,29 +710,21 @@ header.site-header {
 /*--------------------------------------------------------------
 ## Primary navigation
 --------------------------------------------------------------*/
-.sidebar {
+.primary-menu {
   display: none;
-  position: fixed;
-  right: 0;
-  width: 20%;
   background: #fff;
   height: 100%;
   border-left: 1px solid #eee; }
-  .sidebar ul {
+  .primary-menu ul {
     list-style-type: none;
     margin: 1rem 0 0 0;
     padding: 0; }
-    .sidebar ul li {
+    .primary-menu ul li {
       display: block;
       border-bottom: 1px solid #eee; }
-      .sidebar ul li a {
+      .primary-menu ul li a {
         display: block;
         padding: .5rem 1.2rem; }
-
-@media screen and (min-width: 960px) {
-  .site-content {
-    width: 80%;
-    margin: 0; } }
 
 /*--------------------------------------------------------------
 ## Footer navigation
@@ -827,9 +845,10 @@ footer.site-footer .search-box-wrapper {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-.site-content {
-  margin: 0 0 5rem 0;
-  padding: 0 2rem; }
+.site-content,
+.course-progress-bar {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 .prakmed_article {
   background: transparent;
@@ -890,6 +909,119 @@ footer.site-footer .search-box-wrapper {
       float: left; }
     .pagination a[rel="next"] {
       float: right; }
+
+/*==============================================================
+Larger than tablet
+==============================================================*/
+/*==============================================================
+numToString is borrowed
+from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dependencies.scss
+==============================================================*/
+@media (min-width: 960px) {
+  /*==============================================================
+Normalize grid
+==============================================================*/
+  .column,
+  .columns {
+    margin-left: 4%;
+    box-sizing: border-box; }
+  .column:first-child,
+  .columns:first-child,
+  #content-column {
+    margin-left: 0; }
+  /*==============================================================
+Grid
+==============================================================*/
+  .one.column {
+    width: 4.6666666667%; }
+  .two.column,
+  .two.columns {
+    width: 13.3333333333%; }
+  .three.column,
+  .three.columns {
+    width: 22%; }
+  .four.column,
+  .four.columns {
+    width: 30.6666666667%; }
+  .five.column,
+  .five.columns {
+    width: 39.3333333333%; }
+  .six.column,
+  .six.columns {
+    width: 48%; }
+  .seven.column,
+  .seven.columns {
+    width: 56.6666666667%; }
+  .eight.column,
+  .eight.columns {
+    width: 65.3333333333%; }
+  .nine.column,
+  .nine.columns {
+    width: 74%; }
+  .ten.column,
+  .ten.columns {
+    width: 82.6666666667%; }
+  .eleven.column,
+  .eleven.columns {
+    width: 91.3333333333%; }
+  .twelve.column,
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; }
+  .one-third.column {
+    width: 30.6666666667%; }
+  .two-third.column,
+  .two-third.columns {
+    width: 65.3333333333%; }
+  .one-half.column,
+  .one-half.columns {
+    width: 48%;
+    margin-left: 0;
+    margin-right: 0; }
+  /*==============================================================
+Offsets
+==============================================================*/
+  .offset-by-one {
+    margin-left: 8.6666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 26%; }
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 52%; }
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 78%; }
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 95.3333333333%; }
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-third.columns {
+    margin-left: 69.3333333333%; }
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns {
+    margin-left: 52%; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
