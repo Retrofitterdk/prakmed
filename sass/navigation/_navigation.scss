@@ -93,14 +93,3 @@ footer.site-footer .search-box-wrapper {
     border-bottom: 1px solid #222;
     outline: 1px solid #030303;
 }
-/*--------------------------------------------------------------
-## Media query
---------------------------------------------------------------*/
-@media screen and (min-width: 960px) {
-  .desktop-hide {
-    display: none !important;
-  }
-  .desktop-show {
-    display: block !important;
-  }
-}

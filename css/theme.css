@@ -348,6 +348,18 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+.hide {
+  display: none; }
+
+.desktop.hide {
+  display: block; }
+
+@media screen and (min-width: 960px) {
+  .mobile.hide {
+    display: block; }
+  .desktop.hide {
+    display: none; } }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -717,15 +729,6 @@ footer.site-footer .search-box-wrapper {
   text-align: center;
   border-bottom: 1px solid #222;
   outline: 1px solid #030303; }
-
-/*--------------------------------------------------------------
-## Media query
---------------------------------------------------------------*/
-@media screen and (min-width: 960px) {
-  .desktop-hide {
-    display: none !important; }
-  .desktop-show {
-    display: block !important; } }
 
 /*--------------------------------------------------------------
 # Accessibility
