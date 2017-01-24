@@ -1,3 +1,7 @@
+html {
+	font-size: $font__base-size;
+}
+
 body,
 button,
 input,
@@ -5,8 +9,13 @@ select,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1);
+	font-size: $font__default-size;
 	line-height: $font__line-height-body;
+}
+
+.site-branding {
+	font-family: $font__branding;
+	font-size: 2.6rem;
 }
 
 @import "headings";
