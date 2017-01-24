@@ -108,7 +108,7 @@ if ( ! function_exists( 'prakmed_the_sections' ) ) :
 			    }
 
 			    // We successfully got a link. Print it out.
-			    echo '<li><a href="' . esc_url( $section_link ) . '">' . $section->name . '</a></li>';
+			    echo '<li class="button primary"><a href="' . esc_url( $section_link ) . '">' . $section->name . '</a></li>';
 			}
 
 			echo '</ul>';

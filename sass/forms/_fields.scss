@@ -1,3 +1,4 @@
+input[type="search"],
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -12,11 +13,15 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+select {
+	font-family: $font__heading;
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
+	border-radius: 2px;
+	padding: 0.6rem 1rem;
+	box-shadow: none;
+	box-sizing: border-box;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -29,51 +34,94 @@ select {
 
 textarea {
 	width: 100%;
+	min-height: 6.5rem;
+	padding-top: .6rem;
+	padding-bottom: .6rem;
 }
 
-.search-box {
-	background: #fff;
-	padding: 10px;
-}
-.search-form {
-    display: block;
-    width: 100%;
-    margin: 0;
-}
-.search-box label, .search-form label {
-    float: left;
-    width: 90%;
-    margin: 0;
-}
-.search-field {
-    font-size: 16px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-		border-radius: 0;
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; }
+
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="search"]:focus,
+	input[type="text"]:focus,
+	input[type="tel"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	textarea:focus,
+	select:focus {
+		border: 1px solid #33C3F0;
+		outline: 0;
+	}
+
+	label,
+	legend {
+		display: block;
+		margin-bottom: .5rem;
+		font-weight: 600;
+	}
+
+	fieldset {
+		padding: 0;
+		border-width: 0;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: inline;
+	}
+
+	label > .label-body {
+		display: inline-block;
+		margin-left: .5rem;
+		font-weight: normal;
+	}
+
+	.search-form {
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+	.search-box label, .search-form label {
+		float: left;
+		width: 80%;
+		margin: 0;
+	}
+	input.search-field {
+		font-size: 2rem;
+		width: 100%;
+		border-radius: 2px 0 0 2px;
 		outline: none;
-}
-.search-submit {
-    width: 10%;
-    margin: 3px 0 0 0;
-    padding: 0;
-    min-height: 20px;
-    height: auto;
-    line-height: 0;
-    border-radius: 0;
-    border: none;
-    vertical-align: top;
-    background: transparent;
-}
-.search-submit:before {
-    content: '\73';
-    display: inline-block;
-    padding: 0 5px;
-    font-family: 'brieficons';
-    font-size: 1.8rem;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    text-transform: none;
-    font-weight: normal;
-}
+	}
+	.search-submit {
+		width: 20%;
+		margin: 0;
+		height: auto;
+		line-height: 1;
+		border-radius: 0 2px 2px 0;
+		border: none;
+		vertical-align: top;
+		background: $color__brand;
+	}
+	.search-submit:before {
+		content: '\73';
+		display: inline-block;
+		padding: 0 .5rem;
+		font-family: 'brieficons';
+		font-size: 3rem;
+		vertical-align: middle;
+		-webkit-font-smoothing: antialiased;
+		text-transform: none;
+		font-weight: normal;
+	}

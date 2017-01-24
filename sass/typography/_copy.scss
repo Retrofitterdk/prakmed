@@ -14,6 +14,8 @@ address {
 	margin: 0 0 1.5em;
 }
 
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
@@ -26,8 +28,19 @@ pre {
 }
 
 code, kbd, tt, var {
+	padding: .2rem .5rem;
+	margin: 0 .2rem;
+	white-space: nowrap;
+	background: #F1F1F1;
+	border: 1px solid #E1E1E1;
+	border-radius: 4px;
 	font-family: $font__code;
 	@include font-size(0.9375);
+}
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
 }
 
 abbr, acronym {
