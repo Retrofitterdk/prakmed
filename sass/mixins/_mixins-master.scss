@@ -22,3 +22,105 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+/*=============================================================
+Ads config
+Example: percentage(number/number);
+Number = aspect ratio
+=============================================================*/
+$dagens_ad_config: (
+	mobile: (
+			panorama: percentage(300/600),
+			rectangle: percentage(240/600),
+			rectangle-lower: percentage(300/600),
+			skyscraper: percentage(240/600),
+			skyscraper-tall: percentage(300/600),
+	),
+	phablet: (
+			panorama: percentage(200/1200),
+			rectangle: percentage(300/600),
+			rectangle-lower: percentage(240/600),
+			skyscraper: percentage(400/300),
+			skyscraper-tall: percentage(600/300),
+	),
+	tablet: (
+			panorama: percentage(210/1100),
+			rectangle: percentage(300/600),
+			rectangle-lower: percentage(240/600),
+			skyscraper: percentage(400/300),
+			skyscraper-tall: percentage(300/600),
+	),
+	desktop: (
+			panorama: percentage(210/1100),
+			rectangle: percentage(300/600),
+			rectangle-lower: percentage(240/600),
+			skyscraper: percentage(400/300),
+			skyscraper-tall: percentage(600/300),
+	),
+);
+/*=============================================================
+Ads Mixin
+=============================================================*/
+@mixin dagens_ads($map, $keys...){
+		$i: 1;
+		$length: length($keys);
+
+		@while $length >= $i  {
+				$map: map-get($map, nth($keys, $i));
+				$i: $i + 1;
+		}
+
+		@each $property, $value in $map {
+				@if type-of($value) != map {
+						.ad.#{$property} {
+								padding-bottom: $value;
+						}
+				}
+		}
+}
+
+/*=============================================================
+Breakpoints config
+=============================================================*/
+$dagens_breakpoint_config: (
+	mobile: (
+			larger-than-mobile: '(min-width: 460px)',
+	),
+	phablet: (
+			larget-than-phablet: '(min-width: 460px)',
+	),
+	tablet: (
+			larger-than-tablet: '(min-width: 640px)',
+	),
+	desktop: (
+			larger-than-desktop: '(min-width: 960px)',
+	),
+  desktop-hd: (
+      larger-than-desktop-hd: '(min-width: 1200px)',
+  ),
+);
+/*=============================================================
+breakpoints Mixin
+=============================================================*/
+@mixin dagens_breakpoints($map, $keys, $cssprop, $cssvalue){
+		$i: 1;
+		$length: length($keys);
+
+		@while $length >= $i  {
+				$map: map-get($map, nth($keys, $i));
+				$i: $i + 1;
+		}
+
+		@each $property, $value in $map {
+				@if type-of($value) != map {
+          /*==============================================================
+          #{$property} => #{$value}
+          ==============================================================*/
+						@media #{$value} {
+                  #{$cssprop}: $cssvalue;
+						}
+				}
+		}
+
+
+}
