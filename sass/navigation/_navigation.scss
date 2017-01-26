@@ -12,27 +12,17 @@
 ## Primary navigation
 --------------------------------------------------------------*/
 ul#primary-menu {
-    // // display: none;
-    // // position: fixed;
-    // // right: 0;
-    // // width: 20%;
-    // background: #fff;
-    // height: 100%;
-    // border-left: 1px solid #eee;
-    // & ul {
       list-style-type: none;
-      margin: 1rem 0 0 0;
+      margin: 0 0 0 0;
       padding: 0;
       & li {
         @extend .button;
-        display: block;
-        margin: 0 0 0 0;
-        border-top: 0;
-        border-radius: 0;
+        border-color: #fff;
+        float: right;
+        margin-top: 1.55rem;
         & a {
           display: block;
-          padding: .5rem 1.2rem;
-        color: $color__brand;
+        color: #fff;
         }
       }
     }
