@@ -257,9 +257,6 @@ textarea {
   font-family: "trajan-pro-3", Georgia, serif;
   font-size: 2.6rem; }
 
-.article-content p {
-  font-family: "adobe-garamond-pro", Georgia, serif; }
-
 .entry-header, h1, h2, h3, h4, h5, h6,
 .entry-meta {
   font-family: "franklin-gothic-urw", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -284,15 +281,17 @@ h2 {
   line-height: 1.25;
   letter-spacing: -.1rem; }
 
-.article-content h2 {
+#toc, .article-content h2 {
   font-size: 1.8rem;
   line-height: 1;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 0.8rem 0 0.8rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
   text-decoration: underline;
   -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
   text-decoration-color: #00A44E;
-  font-weight: 400; }
+  letter-spacing: 0; }
 
 h3 {
   font-size: 3.0rem;
@@ -326,7 +325,8 @@ p {
 
 .article-content p, ol, ul {
   font-family: "adobe-garamond-pro", Georgia, serif;
-  margin: 0 0 1rem 0; }
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -465,7 +465,7 @@ td:last-child {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-.button, ul#primary-menu li,
+.button, .course-progress-bar ul li, ul#primary-menu li,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -489,13 +489,13 @@ input[type="button"] {
   white-space: nowrap;
   cursor: pointer;
   box-sizing: border-box; }
-  .button:hover, ul#primary-menu li:hover,
+  .button:hover, .course-progress-bar ul li:hover, ul#primary-menu li:hover,
   button:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover {
     border-color: #007136; }
-  .button:active, ul#primary-menu li:active, .button:focus, ul#primary-menu li:focus,
+  .button:active, .course-progress-bar ul li:active, ul#primary-menu li:active, .button:focus, .course-progress-bar ul li:focus, ul#primary-menu li:focus,
   button:active,
   button:focus,
   input[type="submit"]:active,
@@ -505,21 +505,21 @@ input[type="button"] {
   input[type="button"]:active,
   input[type="button"]:focus {
     border-color: #007136; }
-  .button a, ul#primary-menu li a,
+  .button a, .course-progress-bar ul li a, ul#primary-menu li a,
   button a,
   input[type="submit"] a,
   input[type="reset"] a,
   input[type="button"] a {
     text-decoration: none; }
 
-.button.primary, ul#primary-menu li.primary,
+.button.primary, .course-progress-bar ul li.primary, ul#primary-menu li.primary,
 button.primary,
 input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary {
   border-color: #36B371;
   background: #00A44E; }
-  .button.primary:hover, ul#primary-menu li.primary:hover, .button.primary:active, ul#primary-menu li.primary:active, .button.primary:focus, ul#primary-menu li.primary:focus,
+  .button.primary:hover, .course-progress-bar ul li.primary:hover, ul#primary-menu li.primary:hover, .button.primary:active, .course-progress-bar ul li.primary:active, ul#primary-menu li.primary:active, .button.primary:focus, .course-progress-bar ul li.primary:focus, ul#primary-menu li.primary:focus,
   button.primary:hover,
   button.primary:active,
   button.primary:focus,
@@ -533,9 +533,9 @@ input[type="button"].primary {
   input[type="button"].primary:active,
   input[type="button"].primary:focus {
     border-color: #007136; }
-  .button.primary a, ul#primary-menu li.primary a,
-  .button.primary a:visited, ul#primary-menu li.primary a:visited,
-  .button.primary a:hover, ul#primary-menu li.primary a:hover,
+  .button.primary a, .course-progress-bar ul li.primary a, ul#primary-menu li.primary a,
+  .button.primary a:visited, .course-progress-bar ul li.primary a:visited, ul#primary-menu li.primary a:visited,
+  .button.primary a:hover, .course-progress-bar ul li.primary a:hover, ul#primary-menu li.primary a:hover,
   button.primary a,
   button.primary a:visited,
   button.primary a:hover,
@@ -792,39 +792,36 @@ body.active-course-progress-bar {
 body.active-course-progress-bar .course-progress-bar {
   outline: none; }
 
-body.active-course-progress-bar .course-progress-bar h1 {
-  padding: 1rem;
+body.active-course-progress-bar .site-content {
+  height: 0;
+  display: none; }
+
+.course-progress-bar h1 {
   margin: 0;
   font-size: 1.4rem;
   border-bottom: 1px solid #ddd; }
 
-body.active-course-progress-bar .course-progress-bar h2 {
-  padding: 1rem;
+.course-progress-bar h2 {
   margin: 0;
   border-bottom: 1px solid #ddd; }
 
-body.active-course-progress-bar .course-progress-bar ul {
+.course-progress-bar ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   overflow-y: auto; }
-  body.active-course-progress-bar .course-progress-bar ul li {
+  .course-progress-bar ul li {
     display: block;
-    clear: both; }
-    body.active-course-progress-bar .course-progress-bar ul li a {
+    clear: both;
+    border-bottom: 1px solid #ddd; }
+    .course-progress-bar ul li a {
       display: block;
-      padding: 1rem;
-      border-bottom: 1px solid #ddd;
       text-decoration: none;
       outline: none;
       color: #909090; }
-      body.active-course-progress-bar .course-progress-bar ul li a:hover {
+      .course-progress-bar ul li a:hover {
         background: #eee;
         color: #00a44e; }
-
-body.active-course-progress-bar .site-content {
-  height: 0;
-  display: none; }
 
 /* FOOTER MENU */
 .footer-navigation ul {
@@ -1118,8 +1115,7 @@ header.site-header {
     #sidebar-top {
       margin-top: 1rem; } }
 
-.site-content,
-.course-progress-bar {
+.site-content {
   margin-top: 3rem;
   margin-bottom: 3rem; }
 

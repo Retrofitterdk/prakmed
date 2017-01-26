@@ -26,15 +26,30 @@ h2 {
 	line-height: 1.25;
 	letter-spacing: -.1rem;
 }
-
-.article-content h2 {
+#toc {
 	font-size: 1.8rem;
 	line-height: 1;
-	margin: 0.5rem 0 0.5rem 0;
+	margin: 0.8rem 0 0.8rem 0;
+	text-transform: uppercase;
+	font-weight: 600;
 	text-decoration: underline;
 	-moz-text-decoration-color: $color__brand; /* Code for Firefox */
-text-decoration-color: $color__brand;
-font-weight: 400;
+	text-decoration-color: $color__brand;
+	letter-spacing: 0;
+}
+
+
+.article-content h2 {
+	@extend #toc;
+	// font-size: 1.8rem;
+	// line-height: 1;
+	// margin: 0.8rem 0 0.8rem 0;
+	// text-transform: uppercase;
+	// font-weight: 600;
+	// text-decoration: underline;
+	// -moz-text-decoration-color: $color__brand; /* Code for Firefox */
+	// text-decoration-color: $color__brand;
+	// letter-spacing: 0;
 }
 
 h3 {

@@ -44,7 +44,7 @@
 		</div><!-- .site-branding -->
 		<nav id="primary-menu-container" class="mobile hide menu" role="navigation">
 		<?php get_template_part( 'template-parts/menu', 'primary' ); ?>
-		</nav><!-- #footer-navigation -->
+	</nav><!-- #primary-navigation -->
 		<?php if ( is_singular('prakmed_article') ) : ?>
 			<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
 				<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -54,11 +54,5 @@
 		<?php endif; ?>
 	</div><!-- .wrap -->
 </header><!-- #masthead -->
-
-<div id="course-progress-bar" class="course-progress-bar toggle hide">
-	<h2>
-		<?php echo get_the_title( get_the_ID() ); ?>
-	</h2>
-	<ul></ul><!-- This UL will get populated with javascript -->
-</div><!--#course-progress-bar-->
+<?php get_template_part( 'template-parts/toc', 'header' ); ?>
 <div id="content" class="site-content wrap">

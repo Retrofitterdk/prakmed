@@ -9,11 +9,8 @@
 ?>
 <aside id="secondary" class="sidebar widget-area three columns" role="complementary">
   <div id="course-progress-bar" class="course-progress-bar">
-    <h2>
-      <?php esc_html_e( 'Table of content', 'prakmed' ); ?>  	</h2>
-      <ul></ul><!-- This UL will get populated with javascript -->
-    </div><!--#course-progress-bar-->
     <?php
+    get_template_part( 'template-parts/toc', 'sidebar' ); 
     if ( ! is_active_sidebar( 'sidebar-3' ) ) {
       return;
     }
