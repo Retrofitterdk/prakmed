@@ -108,12 +108,16 @@
 /* HEADER MENU */
 .menu-toggle:before {
 	display: inline-block;
-	padding: 0 5px;
+	// padding: 0 5px;
 	font-family: "brieficons";
-	font-size: 2.5rem;
+	font-size: 2.4rem;
+	line-height: 4rem;
 	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	color: #fff;
+	@media screen and (min-width: $phablet) {
+		font-size: 3.6rem;
+}
 }
 body:not(.active-course-progress-bar) .menu-toggle:before {
 	content: '\69';

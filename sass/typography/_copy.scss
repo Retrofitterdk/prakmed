@@ -2,7 +2,8 @@ p {
 	margin-bottom: 1.5em;
 }
 
-.article-content p {
+.article-content
+& p, ol, ul {
 	font-family: $font__body;
 	margin: 0 0 1rem 0;
 }

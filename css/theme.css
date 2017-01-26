@@ -289,9 +289,9 @@ h2 {
   line-height: 1;
   margin: 0.5rem 0 0.5rem 0;
   text-decoration: underline;
+  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  -webkit-text-decoration-color: #00A44E;
-          text-decoration-color: #00A44E;
+  text-decoration-color: #00A44E;
   font-weight: 400; }
 
 h3 {
@@ -324,7 +324,7 @@ h6 {
 p {
   margin-bottom: 1.5em; }
 
-.article-content p {
+.article-content p, ol, ul {
   font-family: "adobe-garamond-pro", Georgia, serif;
   margin: 0 0 1rem 0; }
 
@@ -769,12 +769,15 @@ a {
 /* HEADER MENU */
 .menu-toggle:before {
   display: inline-block;
-  padding: 0 5px;
   font-family: "brieficons";
-  font-size: 2.5rem;
+  font-size: 2.4rem;
+  line-height: 4rem;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   color: #fff; }
+  @media screen and (min-width: 460px) {
+    .menu-toggle:before {
+      font-size: 3.6rem; } }
 
 body:not(.active-course-progress-bar) .menu-toggle:before {
   content: '\69'; }
@@ -868,17 +871,15 @@ body.active-course-progress-bar .site-content {
 --------------------------------------------------------------*/
 ul#primary-menu {
   list-style-type: none;
-  margin: 1rem 0 0 0;
+  margin: 0 0 0 0;
   padding: 0; }
   ul#primary-menu li {
-    display: block;
-    margin: 0 0 0 0;
-    border-top: 0;
-    border-radius: 0; }
+    border-color: #fff;
+    float: right;
+    margin-top: 1.55rem; }
     ul#primary-menu li a {
       display: block;
-      padding: .5rem 1.2rem;
-      color: #00A44E; }
+      color: #fff; }
 
 /*--------------------------------------------------------------
 ## Footer navigation
@@ -1069,7 +1070,8 @@ form {
 @media screen and (min-width: 960px) {
   #primary {
     float: right;
-    padding: 4% 4% 4% 0; }
+    margin: 0;
+    padding: 0; }
   #secondary {
     float: left;
     margin: 0;
@@ -1084,23 +1086,37 @@ header.site-header {
   left: 0;
   z-index: 10;
   width: 100%;
-  line-height: 4rem;
   background: #00a44e;
-  padding: 0 0.5rem;
   clear: both;
   box-sizing: border-box; }
+  @media screen and (min-width: 960px) {
+    header.site-header {
+      position: relative;
+      top: auto;
+      left: auto; } }
   header.site-header .site-branding {
     display: inline-block;
     float: left; }
     header.site-header .site-branding .site-title {
       font-size: 2.1rem;
+      line-height: 4rem;
       margin: 0; }
       @media screen and (min-width: 460px) {
         header.site-header .site-branding .site-title {
           font-size: 2.6rem; } }
+      @media screen and (min-width: 960px) {
+        header.site-header .site-branding .site-title {
+          font-size: 3rem;
+          line-height: 6rem; } }
       header.site-header .site-branding .site-title a {
         color: #fff;
         text-decoration: none; }
+
+#sidebar-top {
+  margin-top: 5rem; }
+  @media screen and (min-width: 960px) {
+    #sidebar-top {
+      margin-top: 1rem; } }
 
 .site-content,
 .course-progress-bar {
@@ -1393,4 +1409,5 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
+
 /*# sourceMappingURL=theme.css.map */

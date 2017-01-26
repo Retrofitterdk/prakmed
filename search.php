@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area nine columns">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -44,5 +44,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+get_sidebar( 'search');
 get_footer();

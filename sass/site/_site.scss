@@ -18,8 +18,10 @@
 @media screen and (min-width: $desktop) {
   #primary {
     float: right;
-    padding: 4% 4% 4% 0;
+    margin: 0;
+    padding: 0;
   }
+  
   #secondary {
     float: left;
     margin: 0;
@@ -36,19 +38,28 @@ header.site-header {
   left: 0;
   z-index: 10;
   width: 100%;
-  line-height: 4rem;
+  // line-height: 4rem;
   background: #00a44e;
-  padding: 0 0.5rem;
   clear: both;
   box-sizing: border-box;
+  @media screen and (min-width: $desktop) {
+    position: relative;;
+    top: auto;
+    left: auto;
+  }
   & .site-branding {
     display: inline-block;
     float: left;
     & .site-title {
       font-size: 2.1rem;
+      line-height: 4rem;
       margin: 0;
       @media screen and (min-width: $phablet) {
         font-size: 2.6rem;
+      }
+      @media screen and (min-width: $desktop) {
+        font-size: 3rem;
+        line-height: 6rem;
       }
       & a {
         color: #fff;
@@ -56,6 +67,13 @@ header.site-header {
       }
     }
   }
+}
+
+#sidebar-top {
+    margin-top: 5rem;
+    @media screen and (min-width: $desktop) {
+      margin-top: 1rem;
+}
 }
 
 .site-content,
