@@ -7,3 +7,11 @@ $columnMargin: 4%;
 $columnAmount: 12;
 $colCount: 16;
 $single-column-width: (100% - ($columnMargin * ($columnAmount - 1))) /$columnAmount;
+
+/*=============================================================
+Breakpoints
+=============================================================*/
+$phablet: 460px;
+$tablet: 640px;
+$desktop: 960px;
+$desktop-hd: 1200px;

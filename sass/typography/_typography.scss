@@ -18,6 +18,10 @@ textarea {
 	font-size: 2.6rem;
 }
 
+.article-content p {
+	font-family: $font__body;	
+}
+
 @import "headings";
 
 @import "copy";

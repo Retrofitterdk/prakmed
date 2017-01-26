@@ -8,85 +8,61 @@
   max-width: $container-width;
   padding: 0 1rem;
   position: relative;
-}
-
-@media (min-width: 640px) {
-  .wrap {
+  @media screen and (min-width: $tablet) {
     padding: 0 2rem;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 0 4rem;
+  }
+}
+@media screen and (min-width: $desktop) {
+  #primary {
+    float: right;
+    padding: 4% 4% 4% 0;
+  }
+  #secondary {
+    float: left;
+    margin: 0;
+    padding: 0;
   }
 }
 
-@media (min-width: 960px) {
-  .wrap {
-    padding: 0 4rem;
+/*--------------------------------------------------------------
+## Header navigation
+--------------------------------------------------------------*/
+header.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  line-height: 4rem;
+  background: #00a44e;
+  padding: 0 0.5rem;
+  clear: both;
+  box-sizing: border-box;
+  & .site-branding {
+    display: inline-block;
+    float: left;
+    & .site-title {
+      font-size: 2.1rem;
+      margin: 0;
+      @media screen and (min-width: $phablet) {
+        font-size: 2.6rem;
+      }
+      & a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
 }
 
 .site-content,
 .course-progress-bar {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-// .prakmed_article {
-//   background: transparent;
-//   margin-top: 2rem;
-//   padding: 0;
-//   & figure {
-//     margin: -2rem -2rem 2rem -2rem !important;
-//   }
-  // & header {
-  //   border-top: 2px solid #00a44e;
-  //   border-bottom: 1px solid grey;
-  //   padding: 0.5rem 0;
-  //   & h1 {
-  //     padding: 0;
-  //     margin: 0;
-  //     color: #00a44e;
-  //     text-transform: uppercase;
-  //     font-weight: normal;
-  //     font-size: 1.6rem;
-  //   }
-  //   & .entry-meta {
-  //     text-transform: uppercase;
-  //     color: grey;
-  //     padding: 0;
-  //     margin: 0;
-  //     & span.taxonomy {
-  //       display: block;
-  //     }
-  //     & a {
-  //       display: inline-block;
-  //       color: grey;
-  //       text-decoration: none;
-  //       outline: none;
-  //       &:hover {
-  //         color: #00a44e;
-  //       }
-  //     }
-  //   }
-  // }
-//   & .article-content {
-//     border-bottom: 2px solid #00a44e;
-//     margin: 0;
-//     padding: 1rem 0;
-//     & h1, h2,h3,h4,h5,h6 {
-//       font-weight: bold;
-//       color: #00a44e;
-//       margin: 0;
-//       padding: 0;
-//     }
-//     & h1 {
-//         font-size: 1rem;
-//     }
-//     & h2 {
-//       font-size: 1.2rem;
-//     }
-//     & p {
-//       padding: 0;
-//       margin: 0 0 1rem 0;
-//     }
-//   }
-// }
 
 .pagination {
   display: block;
@@ -115,85 +91,85 @@ numToString is borrowed
 from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dependencies.scss
 ==============================================================*/
 @function numToString($int) {
-	// set up lists
-	$ones: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine";
-	$teens: "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen";
-	$tens: "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety";
+  // set up lists
+  $ones: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine";
+  $teens: "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen";
+  $tens: "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety";
 
-	$int: abs($int); // no nonnegative numbers
-	$number: "";
-	$temp: $int / 10;
-	$temp: floor($temp);
-	@if($int >= 1 and $int <= 100) {
-		@if($temp < 1) { // it's a one!
-			$number: nth($ones, $int % 10);
-		}
-		@if($temp == 1) { // in the teen range
-			@if($int % 10 == 0) {
-				$number: "ten";
-			} @else {
-				$number: nth($teens, $int % 10);
-			}
-		}
-		@if($temp >= 2 and $temp <= 9) { // more than our teens
-			@if($int % 10 == 0) {
-				// means it's a number evenly divisible by 10
-				$number: nth($tens, $int / 10);
-			} @else {
-				$number: "#{nth($tens, floor($int / 10))}-#{nth($ones, $int % 10)}";
-			}
-		}
-		@if($temp == 10) { // this is the end...
-			$number: "one-hundred";
-		}
-	} @else {
-		$number: "Invalid parameter passed. Number must be between 1 and 100."
-	}
-	@return $number;
+  $int: abs($int); // no nonnegative numbers
+  $number: "";
+  $temp: $int / 10;
+  $temp: floor($temp);
+  @if($int >= 1 and $int <= 100) {
+    @if($temp < 1) { // it's a one!
+      $number: nth($ones, $int % 10);
+    }
+    @if($temp == 1) { // in the teen range
+      @if($int % 10 == 0) {
+        $number: "ten";
+      } @else {
+        $number: nth($teens, $int % 10);
+      }
+    }
+    @if($temp >= 2 and $temp <= 9) { // more than our teens
+      @if($int % 10 == 0) {
+        // means it's a number evenly divisible by 10
+        $number: nth($tens, $int / 10);
+      } @else {
+        $number: "#{nth($tens, floor($int / 10))}-#{nth($ones, $int % 10)}";
+      }
+    }
+    @if($temp == 10) { // this is the end...
+      $number: "one-hundred";
+    }
+  } @else {
+    $number: "Invalid parameter passed. Number must be between 1 and 100."
+  }
+  @return $number;
 }
 
 @media (min-width: 960px) {
-/*==============================================================
-Normalize grid
-==============================================================*/
+  /*==============================================================
+  Normalize grid
+  ==============================================================*/
   .column,
   .columns {
-      margin-left: $columnMargin;
-      box-sizing: border-box;
+    margin-left: $columnMargin;
+    box-sizing: border-box;
   }
   .column:first-child,
   .columns:first-child,
   #content-column {
-      margin-left: 0;
+    margin-left: 0;
   }
-/*==============================================================
-Grid
-==============================================================*/
+  /*==============================================================
+  Grid
+  ==============================================================*/
   @for $i from 1 through $columnAmount {
     $column-width: ($single-column-width*$i)+($columnMargin*($i - 1));
-      @if ($i == 1) {
-        .#{numToString($i)}.column {
-          width: $column-width;
-        }
-      } @else if ($i == $columnAmount) {
-        .#{numToString($i)}.column,
-        .#{numToString($i)}.columns {
-            width: $column-width;
-            margin-left: 0;
-        }
-      } @else {
-        .#{numToString($i)}.column,
-        .#{numToString($i)}.columns {
-            width: $column-width;
-        }
+    @if ($i == 1) {
+      .#{numToString($i)}.column {
+        width: $column-width;
       }
+    } @else if ($i == $columnAmount) {
+      .#{numToString($i)}.column,
+      .#{numToString($i)}.columns {
+        width: $column-width;
+        margin-left: 0;
+      }
+    } @else {
+      .#{numToString($i)}.column,
+      .#{numToString($i)}.columns {
+        width: $column-width;
+      }
+    }
   }
   .one-third.column {
-      width: (98% * (1 / 3)) - 2;
+    width: (98% * (1 / 3)) - 2;
   }
   .two-third.column,
   .two-third.columns {
-      width: (98% * (2 / 3));
+    width: (98% * (2 / 3));
   }
   .one-half.column,
   .one-half.columns {
@@ -201,30 +177,30 @@ Grid
     margin-left: 0;
     margin-right: 0;
   }
-/*==============================================================
-Offsets
-==============================================================*/
+  /*==============================================================
+  Offsets
+  ==============================================================*/
   @for $i from 1 through $columnAmount {
-      @if ($i == 1) {
-        .offset-by-#{numToString($i)} {
-            margin-left: ((100% - ($columnAmount / $i - 1) * $columnMargin) / $columnAmount * $i) + $columnMargin;
-        }
-      } @else if ($i == $columnAmount) {
-        // do not apply .offset-by-twelve
-      } @else {
-        .offset-by-#{numToString($i)}.column,
-        .offset-by-#{numToString($i)}.columns {
-            margin-left: ((100% - ($columnAmount / $i - 1) * $columnMargin) / $columnAmount * $i) + $columnMargin;
-        }
+    @if ($i == 1) {
+      .offset-by-#{numToString($i)} {
+        margin-left: ((100% - ($columnAmount / $i - 1) * $columnMargin) / $columnAmount * $i) + $columnMargin;
       }
+    } @else if ($i == $columnAmount) {
+      // do not apply .offset-by-twelve
+    } @else {
+      .offset-by-#{numToString($i)}.column,
+      .offset-by-#{numToString($i)}.columns {
+        margin-left: ((100% - ($columnAmount / $i - 1) * $columnMargin) / $columnAmount * $i) + $columnMargin;
+      }
+    }
   }
   .offset-by-one-third.column,
   .offset-by-one-third.columns {
-      margin-left: (98% * (1 / 3)) + 2;
+    margin-left: (98% * (1 / 3)) + 2;
   }
   .offset-by-two-thirds.column,
   .offset-by-two-third.columns {
-      margin-left: (98% * (2 / 3)) + 4;
+    margin-left: (98% * (2 / 3)) + 4;
   }
   .offset-by-one-half.column,
   .offset-by-one-half.columns {
