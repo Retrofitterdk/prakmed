@@ -22,7 +22,9 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'prakmed' ); ?></a>
-
+		<div id="sidebar-top" class="wrap sidebar">
+			<?php get_sidebar( 'top' ); ?>
+		</div>
 		<header id="masthead" class="site-header" role="banner">
 			<div id="topbar" class="wrap">
 				<div class="site-branding">
@@ -40,6 +42,9 @@
 				<?php
 			endif; ?>
 		</div><!-- .site-branding -->
+		<nav id="primary-menu-container" class="mobile hide menu" role="navigation">
+		<?php get_template_part( 'template-parts/menu', 'primary' ); ?>
+		</nav><!-- #footer-navigation -->
 		<?php if ( is_singular('prakmed_article') ) : ?>
 			<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
 				<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
