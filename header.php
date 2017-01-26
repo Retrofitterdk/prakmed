@@ -24,28 +24,30 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'prakmed' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding wrap">
-				<?php
-				if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+			<div id="topbar" class="wrap">
+				<div class="site-branding">
+					<?php
+					if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-			<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
-			<?php
-		endif; ?>
-	</div><!-- .site-branding -->
-	<?php if ( is_singular('prakmed_article') ) : ?>
-		<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
-			<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<span class="screen-reader-text"><?php esc_html_e( 'Table of content', 'prakmed' ); ?></span>
-			</a>
-		</nav><!-- #site-navigation -->
-	<?php endif; ?>
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+				<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
+				<?php
+			endif; ?>
+		</div><!-- .site-branding -->
+		<?php if ( is_singular('prakmed_article') ) : ?>
+			<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
+				<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="screen-reader-text"><?php esc_html_e( 'Table of content', 'prakmed' ); ?></span>
+				</a>
+			</nav><!-- #site-navigation -->
+		<?php endif; ?>
+	</div><!-- .wrap -->
 </header><!-- #masthead -->
 
 <div id="course-progress-bar" class="course-progress-bar toggle hide">
