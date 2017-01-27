@@ -1,0 +1,49 @@
+/* Hide elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hide {
+  display: none;
+}
+.desktop.hide {
+  display: block;
+}
+@media screen and (min-width: 960px) {
+  .mobile.hide {
+    display: block;
+  }
+  .desktop.hide {
+    display: none;
+  }
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}

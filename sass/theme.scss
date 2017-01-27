@@ -76,6 +76,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/_accessibility.scss";
 
 /*--------------------------------------------------------------
+# Patterns
+--------------------------------------------------------------*/
+@import "modules/_patterns.scss";
+
+/*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
 @import "modules/_alignments.scss";
@@ -108,10 +113,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Skeleton Core folder
 --------------------------------------------------------------*/
-@import "skeleton/core/_config.scss";
-@import "skeleton/core/_dependencies.scss";
-@import "skeleton/core/_functions.scss";
-@import "skeleton/core/_mixins.scss";
+// @import "skeleton/core/_config.scss";
+// @import "skeleton/core/_dependencies.scss";
+// @import "skeleton/core/_functions.scss";
+// @import "skeleton/core/_mixins.scss";
 
 /*--------------------------------------------------------------
 # Skeleton themes [fresh] folder

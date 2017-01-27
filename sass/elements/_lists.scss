@@ -1,19 +1,26 @@
-ul, ol {
-	margin: 0 0 1.5em 3em;
-}
-
 ul {
-	list-style: disc;
+	list-style: circle inside;
 }
 
 ol {
-	list-style: decimal;
+	list-style: decimal inside;
 }
 
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+ol, ul {
+	padding-left: 0;
+	margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin: 1.5rem 0 1.5rem 3rem;
+	font-size: 90%;
+}
+
+li {
+	margin-bottom: 1rem;
 }
 
 dt {

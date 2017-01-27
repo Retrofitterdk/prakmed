@@ -108,12 +108,15 @@
 /* HEADER MENU */
 .menu-toggle:before {
 	display: inline-block;
-	padding: 0 5px;
 	font-family: "brieficons";
-	font-size: 2.5rem;
+	font-size: 2.4rem;
+	line-height: 4rem;
 	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	color: #fff;
+	@media screen and (min-width: $phablet) {
+		font-size: 3.6rem;
+}
 }
 body:not(.active-course-progress-bar) .menu-toggle:before {
 	content: '\69';
@@ -128,24 +131,35 @@ body.active-course-progress-bar {
 body.active-course-progress-bar .course-progress-bar {
 	outline: none;
 }
-body.active-course-progress-bar .course-progress-bar h1 {
-	padding: 1rem;
+
+body.active-course-progress-bar .site-content {
+    height: 0;
+    display: none;
+}
+
+.course-progress-bar h1 {
 	margin: 0;
 	font-size: 1.4rem;
 	border-bottom: 1px solid #ddd;
 }
-body.active-course-progress-bar .course-progress-bar ul {
-    padding: 0 0 3.5rem 0;
+
+.course-progress-bar h2 {
+	margin: 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.course-progress-bar ul {
     margin: 0;
+		padding: 0;
     list-style-type: none;
     overflow-y: auto;
 			& li {
+				@extend .button;
 				display: block;
 				clear: both;
+				border-bottom: 1px solid #ddd;
 				& a {
 					display: block;
-					padding: 1rem;
-					border-bottom: 1px solid #ddd;
 					text-decoration: none;
 					outline: none;
 					color: #909090;
@@ -156,10 +170,7 @@ body.active-course-progress-bar .course-progress-bar ul {
 				}
 			}
 		}
-body.active-course-progress-bar .site-content {
-    height: 0;
-    display: none;
-}
+
 
 /* FOOTER MENU */
 .footer-navigation ul {

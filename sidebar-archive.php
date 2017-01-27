@@ -9,9 +9,9 @@
 ?>
 <aside id="secondary" class="sidebar widget-area three columns" role="complementary">
     <?php
-    if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+    if ( ! is_active_sidebar( 'sidebar-2' ) ) {
       return;
     }
-    dynamic_sidebar( 'sidebar-1' );
+    dynamic_sidebar( 'sidebar-2' );
     ?>
   </aside><!-- #secondary -->

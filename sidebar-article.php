@@ -8,10 +8,12 @@
 */
 ?>
 <aside id="secondary" class="sidebar widget-area three columns" role="complementary">
+  <div id="course-progress-bar" class="course-progress-bar">
     <?php
-    if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+    get_template_part( 'template-parts/toc', 'sidebar' ); 
+    if ( ! is_active_sidebar( 'sidebar-3' ) ) {
       return;
     }
-    dynamic_sidebar( 'sidebar-1' );
+    dynamic_sidebar( 'sidebar-3' );
     ?>
   </aside><!-- #secondary -->

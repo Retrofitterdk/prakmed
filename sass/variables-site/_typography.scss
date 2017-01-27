@@ -1,5 +1,10 @@
-$font__main: sans-serif;
+$font__main: "franklin-gothic-urw",'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+$font__body: "adobe-garamond-pro", Georgia, serif;
+$font__heading: "franklin-gothic-urw",'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+$font__branding: "trajan-pro-3", Georgia, serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__base-size: 62.5%;
+$font__default-size: 1.7em;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;

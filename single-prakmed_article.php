@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area nine columns">
 	<main id="main" class="site-main" role="main">
 		<?php
 		global $post;
@@ -21,5 +21,5 @@ get_header(); ?>
 </div><!-- #primary -->
 <?php
 
-get_sidebar();
+get_sidebar( 'article');
 get_footer();
