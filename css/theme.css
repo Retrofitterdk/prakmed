@@ -825,6 +825,13 @@ body.active-course-progress-bar .site-content {
         .course-progress-bar ul li a {
           padding: 1.2rem 0;
           line-height: 1.2; } }
+      .course-progress-bar ul li a:before {
+        font-family: "brieficons";
+        content: 'w';
+        color: #00A44E;
+        padding-right: 1.2rem;
+        font-size: 1.6rem;
+        line-height: 1; }
       .course-progress-bar ul li a:hover {
         background: #eee;
         color: #00a44e; }

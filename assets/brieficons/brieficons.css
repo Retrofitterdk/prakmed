@@ -104,9 +104,6 @@
 .brief-chat:before {
   content: "\6a";
 }
-.brief-link:before {
-  content: "\77";
-}
 .brief-quote:before {
   content: "\71";
 }
@@ -125,6 +122,6 @@
 .brief-navicon-round:before {
   content: "\49";
 }
-.brief-disc:before {
-  content: "\45";
+.brief-link:before {
+  content: "\77";
 }
