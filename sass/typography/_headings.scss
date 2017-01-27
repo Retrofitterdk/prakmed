@@ -6,11 +6,6 @@
 	margin-bottom: 2rem;
 }
 
-.entry-header.singular h1,
-.entry-meta {
-	font-weight: 300;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	@extend .entry-header;
 	font-weight: 600;
@@ -26,6 +21,13 @@ h2 {
 	line-height: 1.25;
 	letter-spacing: -.1rem;
 }
+
+.singular-prakmed_article h1.entry-title,
+.singular-prakmed_article h2.entry-title,
+.singular-prakmed_article .entry-meta {
+	font-weight: 300;
+}
+
 #toc {
 	font-size: 1.8rem;
 	line-height: 1;

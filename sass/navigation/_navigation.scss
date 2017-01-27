@@ -12,43 +12,43 @@
 ## Primary navigation
 --------------------------------------------------------------*/
 ul#primary-menu {
-      list-style-type: none;
-      margin: 0 0 0 0;
-      padding: 0;
-      & li {
-        @extend .button;
-        border-color: #fff;
-        float: right;
-        margin-top: 1.55rem;
-        & a {
-          display: block;
-        color: #fff;
-        }
-      }
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  & li {
+    @extend .button;
+    border-color: #fff;
+    float: right;
+    margin-top: 1.55rem;
+    & a {
+      display: block;
+      color: #fff;
     }
+  }
+}
 
 
 /*--------------------------------------------------------------
 ## Footer navigation
 --------------------------------------------------------------*/
 footer.site-footer {
-    display: block;
-    width: 100%;
-    background: #030303;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: auto;
-    z-index: 9999;
+  display: block;
+  width: 100%;
+  background: #030303;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 9999;
 }
 
 footer.site-footer > .search-box-wrapper {
-    padding: 15px;
+  padding: 15px;
 }
 
 footer.site-footer .sharepanel-wrapper,
 footer.site-footer .search-box-wrapper {
-    text-align: center;
-    border-bottom: 1px solid #222;
-    outline: 1px solid #030303;
+  text-align: center;
+  border-bottom: 1px solid #222;
+  outline: 1px solid #030303;
 }

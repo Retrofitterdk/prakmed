@@ -154,7 +154,7 @@ body.active-course-progress-bar .site-content {
     list-style-type: none;
     overflow-y: auto;
 			& li {
-				@extend .button;
+				// @extend .button;
 				display: block;
 				clear: both;
 				border-bottom: 1px solid #ddd;
