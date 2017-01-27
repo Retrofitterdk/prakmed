@@ -116,60 +116,59 @@
 	color: #fff;
 	@media screen and (min-width: $phablet) {
 		font-size: 3.6rem;
-}
+	}
 }
 body:not(.active-course-progress-bar) .menu-toggle:before {
 	content: '\69';
 }
 body.active-course-progress-bar .menu-toggle:before {
-    content: 'x';
+	content: 'x';
 }
 body.active-course-progress-bar {
-    background: #fff;
-    margin: 0 !important;
+	background: #fff;
+	margin: 0 !important;
 }
 body.active-course-progress-bar .course-progress-bar {
 	outline: none;
 }
 
 body.active-course-progress-bar .site-content {
-    height: 0;
-    display: none;
+	height: 0;
+	display: none;
 }
-
-.course-progress-bar h1 {
-	margin: 0;
-	font-size: 1.4rem;
-	border-bottom: 1px solid #ddd;
-}
-
-.course-progress-bar h2 {
-	margin: 0;
-	border-bottom: 1px solid #ddd;
+.active-course-progress-bar .course-progress-bar h2.entry-title,
+.active-course-progress-bar .course-progress-bar ul li a {
+	@extend .wrap;
 }
 
 .course-progress-bar ul {
-    margin: 0;
-		padding: 0;
-    list-style-type: none;
-    overflow-y: auto;
-			& li {
-				// @extend .button;
-				display: block;
-				clear: both;
-				border-bottom: 1px solid #ddd;
-				& a {
-					display: block;
-					text-decoration: none;
-					outline: none;
-					color: #909090;
-					&:hover {
-						background: #eee;
-						color: #00a44e;
-					}
-				}
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow-y: auto;
+	& li {
+		@extend .menu;
+		display: block;
+		clear: both;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 0;
+		& a {
+			display: block;
+			text-decoration: none;
+			outline: none;
+			color: #909090;
+			line-height: 4rem;
+			@media screen and (min-width: $desktop) {
+				padding: 1.2rem 0;
+				line-height: 1.2;
+			}
+			&:hover {
+				background: #eee;
+				color: #00a44e;
 			}
 		}
+	}
+}
 
 
 /* FOOTER MENU */
@@ -212,18 +211,18 @@ body.active-course-progress-bar .site-content {
 
 	} // li-tag
 	& li.home a:before {
-	    content: '\68';
+		content: '\68';
 	}
 	& li.dashboard a:before {
-	    content: '\64';
+		content: '\64';
 	}
 	& li.user a:before {
-	    content: '\75';
+		content: '\75';
 	}
 	& li.share a:before {
-	    content: '\6f';
+		content: '\6f';
 	}
 	& li.search a:before {
-	    content: '\73';
+		content: '\73';
 	}
 } // ul-tag

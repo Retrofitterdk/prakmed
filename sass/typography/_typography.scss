@@ -19,6 +19,15 @@ textarea {
 	text-transform: uppercase;
 }
 
+.menu {
+	font-family: $font__heading;
+	line-height: 1;
+	text-transform: uppercase;
+	& a {
+		text-decoration: none;
+	}
+}
+
 @import "headings";
 
 @import "copy";

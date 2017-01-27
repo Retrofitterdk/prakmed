@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "brieficons";
-  src:url("brieficons.eot");
-  src:url("brieficons.eot?#iefix") format("embedded-opentype"),
-    url("brieficons.woff") format("woff"),
-    url("brieficons.ttf") format("truetype"),
-    url("brieficons.svg#brieficons") format("svg");
+  src:url("fonts/brieficons.eot");
+  src:url("fonts/brieficons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/brieficons.woff") format("woff"),
+    url("fonts/brieficons.ttf") format("truetype"),
+    url("fonts/brieficons.svg#brieficons") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -115,4 +115,16 @@
 }
 .brief-question:before {
   content: "\7a";
+}
+.brief-phone:before {
+  content: "\43";
+}
+.brief-options:before {
+  content: "\41";
+}
+.brief-navicon-round:before {
+  content: "\49";
+}
+.brief-disc:before {
+  content: "\45";
 }
