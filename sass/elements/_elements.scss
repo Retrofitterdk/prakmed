@@ -72,7 +72,7 @@ Mobile (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 /*=============================================================
 Phablet (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 =============================================================*/
-@media (min-width: $phablet) {
+@media (min-width: $phablet ) {
 	@include prakmed_ads($prakmed_ad_config, phablet);
 }
 /*=============================================================
