@@ -125,3 +125,6 @@
 .brief-link:before {
   content: "\77";
 }
+.brief-stop:before {
+  content: "\42";
+}
