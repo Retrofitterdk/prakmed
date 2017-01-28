@@ -323,7 +323,7 @@ h6 {
 p {
   margin-bottom: 1.5em; }
 
-.article-content p, ol, ul {
+.article-content p, .article-content ol, .article-content ul {
   font-family: "adobe-garamond-pro", Georgia, serif;
   margin: 0 0 1rem 0;
   font-size: 1.8rem; }
@@ -338,7 +338,7 @@ address {
   margin: 0 0 1.5em; }
 
 /* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -443,7 +443,7 @@ figure {
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
 /* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -462,6 +462,100 @@ th:last-child,
 td:last-child {
   padding-right: 0; }
 
+/*=============================================================
+#.# Responsive ads
+=============================================================*/
+.ad {
+  position: relative;
+  padding-top: 0rem;
+  height: 0;
+  overflow: hidden; }
+
+.ad iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.top-sidebar aside.ad-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+/*=============================================================
+Mobile (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
+=============================================================*/
+.ad.panorama {
+  padding-bottom: 50%; }
+
+.ad.rectangle {
+  padding-bottom: 40%; }
+
+.ad.rectangle-lower {
+  padding-bottom: 50%; }
+
+.ad.skyscraper {
+  padding-bottom: 40%; }
+
+.ad.skyscraper-tall {
+  padding-bottom: 50%; }
+
+/*=============================================================
+Phablet (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
+=============================================================*/
+@media (min-width: 460px) {
+  .ad.panorama {
+    padding-bottom: 16.66667%; }
+
+  .ad.rectangle {
+    padding-bottom: 50%; }
+
+  .ad.rectangle-lower {
+    padding-bottom: 40%; }
+
+  .ad.skyscraper {
+    padding-bottom: 133.33333%; }
+
+  .ad.skyscraper-tall {
+    padding-bottom: 200%; } }
+/*=============================================================
+Tablet (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
+=============================================================*/
+@media (min-width: 640px) {
+  .ad.panorama {
+    padding-bottom: 19.09091%; }
+
+  .ad.rectangle {
+    padding-bottom: 50%; }
+
+  .ad.rectangle-lower {
+    padding-bottom: 40%; }
+
+  .ad.skyscraper {
+    padding-bottom: 133.33333%; }
+
+  .ad.skyscraper-tall {
+    padding-bottom: 50%; } }
+/*=============================================================
+Desktop (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
+=============================================================*/
+@media (min-width: 960px) {
+  .ad.panorama {
+    padding-bottom: 19.09091%; }
+
+  .ad.rectangle {
+    padding-bottom: 50%; }
+
+  .ad.rectangle-lower {
+    padding-bottom: 40%; }
+
+  .ad.skyscraper {
+    padding-bottom: 133.33333%; }
+
+  .ad.skyscraper-tall {
+    padding-bottom: 200%; } }
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -534,8 +628,12 @@ input[type="button"].primary {
   input[type="button"].primary:focus {
     border-color: #007136; }
   .button.primary a, .course-progress-bar ul li.primary a, ul#primary-menu li.primary a,
-  .button.primary a:visited, .course-progress-bar ul li.primary a:visited, ul#primary-menu li.primary a:visited,
-  .button.primary a:hover, .course-progress-bar ul li.primary a:hover, ul#primary-menu li.primary a:hover,
+  .button.primary a:visited,
+  .course-progress-bar ul li.primary a:visited,
+  ul#primary-menu li.primary a:visited,
+  .button.primary a:hover,
+  .course-progress-bar ul li.primary a:hover,
+  ul#primary-menu li.primary a:hover,
   button.primary a,
   button.primary a:visited,
   button.primary a:hover,
@@ -721,8 +819,7 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
@@ -744,21 +841,19 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
+
   .main-navigation ul {
     display: block; } }
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
-
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
-
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -943,7 +1038,7 @@ footer.site-footer .search-box-wrapper {
 # Patterns
 --------------------------------------------------------------*/
 /* Hide elements
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
 .hide {
   display: none; }
 
@@ -953,11 +1048,11 @@ footer.site-footer .search-box-wrapper {
 @media screen and (min-width: 960px) {
   .mobile.hide {
     display: block; }
+
   .desktop.hide {
     display: none; } }
-
 /* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
 input,
 textarea,
 select,
@@ -976,7 +1071,7 @@ form {
   margin-bottom: 2.5rem; }
 
 /* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -1069,11 +1164,11 @@ form {
     float: right;
     margin: 0;
     padding: 0; }
+
   #secondary {
     float: left;
     margin: 0;
     padding: 0; } }
-
 /*--------------------------------------------------------------
 ## Header navigation
 --------------------------------------------------------------*/
@@ -1148,104 +1243,133 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   .columns {
     margin-left: 4%;
     box-sizing: border-box; }
+
   .column:first-child,
   .columns:first-child,
   #content-column {
     margin-left: 0; }
+
   /*==============================================================
   Grid
   ==============================================================*/
   .one.column {
-    width: 4.6666666667%; }
+    width: 4.66667%; }
+
   .two.column,
   .two.columns {
-    width: 13.3333333333%; }
+    width: 13.33333%; }
+
   .three.column,
   .three.columns {
     width: 22%; }
+
   .four.column,
   .four.columns {
-    width: 30.6666666667%; }
+    width: 30.66667%; }
+
   .five.column,
   .five.columns {
-    width: 39.3333333333%; }
+    width: 39.33333%; }
+
   .six.column,
   .six.columns {
     width: 48%; }
+
   .seven.column,
   .seven.columns {
-    width: 56.6666666667%; }
+    width: 56.66667%; }
+
   .eight.column,
   .eight.columns {
-    width: 65.3333333333%; }
+    width: 65.33333%; }
+
   .nine.column,
   .nine.columns {
     width: 74%; }
+
   .ten.column,
   .ten.columns {
-    width: 82.6666666667%; }
+    width: 82.66667%; }
+
   .eleven.column,
   .eleven.columns {
-    width: 91.3333333333%; }
+    width: 91.33333%; }
+
   .twelve.column,
   .twelve.columns {
     width: 100%;
     margin-left: 0; }
+
   .one-third.column {
-    width: 30.6666666667%; }
+    width: 30.66667%; }
+
   .two-third.column,
   .two-third.columns {
-    width: 65.3333333333%; }
+    width: 65.33333%; }
+
   .one-half.column,
   .one-half.columns {
     width: 48%;
     margin-left: 0;
     margin-right: 0; }
+
   /*==============================================================
   Offsets
   ==============================================================*/
   .offset-by-one {
-    margin-left: 8.6666666667%; }
+    margin-left: 8.66667%; }
+
   .offset-by-two.column,
   .offset-by-two.columns {
-    margin-left: 17.3333333333%; }
+    margin-left: 17.33333%; }
+
   .offset-by-three.column,
   .offset-by-three.columns {
     margin-left: 26%; }
+
   .offset-by-four.column,
   .offset-by-four.columns {
-    margin-left: 34.6666666667%; }
+    margin-left: 34.66667%; }
+
   .offset-by-five.column,
   .offset-by-five.columns {
-    margin-left: 43.3333333333%; }
+    margin-left: 43.33333%; }
+
   .offset-by-six.column,
   .offset-by-six.columns {
     margin-left: 52%; }
+
   .offset-by-seven.column,
   .offset-by-seven.columns {
-    margin-left: 60.6666666667%; }
+    margin-left: 60.66667%; }
+
   .offset-by-eight.column,
   .offset-by-eight.columns {
-    margin-left: 69.3333333333%; }
+    margin-left: 69.33333%; }
+
   .offset-by-nine.column,
   .offset-by-nine.columns {
     margin-left: 78%; }
+
   .offset-by-ten.column,
   .offset-by-ten.columns {
-    margin-left: 86.6666666667%; }
+    margin-left: 86.66667%; }
+
   .offset-by-eleven.column,
   .offset-by-eleven.columns {
-    margin-left: 95.3333333333%; }
+    margin-left: 95.33333%; }
+
   .offset-by-one-third.column,
   .offset-by-one-third.columns {
-    margin-left: 34.6666666667%; }
+    margin-left: 34.66667%; }
+
   .offset-by-two-thirds.column,
   .offset-by-two-third.columns {
-    margin-left: 69.3333333333%; }
+    margin-left: 69.33333%; }
+
   .offset-by-one-half.column,
   .offset-by-one-half.columns {
     margin-left: 52%; } }
-
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1339,9 +1463,7 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
     width: 25%;
     padding: 0;
     margin: 0; }
-    .sd-content ul li[class*='share-'] a,
-    .sd-content ul li[class*='share-'] a:hover,
-    .sd-content ul li[class*='share-'] div.option a {
+    .sd-content ul li[class*='share-'] a, .sd-content ul li[class*='share-'] a:hover, .sd-content ul li[class*='share-'] div.option a {
       display: inline-block;
       border-radius: 0;
       -webkit-border-radius: 0;
