@@ -346,8 +346,7 @@ blockquote {
 address {
   margin: 0 0 1.5em; }
 
-/* Code
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+/* Code */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -451,8 +450,7 @@ figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
-/* Tables
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+/* Tables */
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -636,11 +634,6 @@ input[type="button"].primary {
   input[type="button"].primary:active,
   input[type="button"].primary:focus {
     border-color: #007136; }
-<<<<<<< HEAD
-  .button.primary a, ul#primary-menu li.primary a,
-  .button.primary a:visited, ul#primary-menu li.primary a:visited,
-  .button.primary a:hover, ul#primary-menu li.primary a:hover,
-=======
   .button.primary a, .course-progress-bar ul li.primary a, ul#primary-menu li.primary a,
   .button.primary a:visited,
   .course-progress-bar ul li.primary a:visited,
@@ -648,7 +641,6 @@ input[type="button"].primary {
   .button.primary a:hover,
   .course-progress-bar ul li.primary a:hover,
   ul#primary-menu li.primary a:hover,
->>>>>>> master
   button.primary a,
   button.primary a:visited,
   button.primary a:hover,
@@ -1056,8 +1048,7 @@ footer.site-footer .search-box-wrapper {
 /*--------------------------------------------------------------
 # Patterns
 --------------------------------------------------------------*/
-/* Hide elements
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+/* Hide elements */
 .hide {
   display: none; }
 
@@ -1070,8 +1061,7 @@ footer.site-footer .search-box-wrapper {
 
   .desktop.hide {
     display: none; } }
-/* Spacing
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+/* Spacing */
 input,
 textarea,
 select,
@@ -1089,8 +1079,7 @@ ol,
 form {
   margin-bottom: 2.5rem; }
 
-/* Utilities
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+/* Utilities */
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
