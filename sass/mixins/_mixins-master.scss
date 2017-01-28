@@ -28,7 +28,7 @@ Ads config
 Example: percentage(number/number);
 Number = aspect ratio
 =============================================================*/
-$dagens_ad_config: (
+$prakmed_ad_config: (
 	mobile: (
 			panorama: percentage(300/600),
 			rectangle: percentage(240/600),
@@ -61,7 +61,7 @@ $dagens_ad_config: (
 /*=============================================================
 Ads Mixin
 =============================================================*/
-@mixin dagens_ads($map, $keys...){
+@mixin prakmed_ads($map, $keys...){
 		$i: 1;
 		$length: length($keys);
 

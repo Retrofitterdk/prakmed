@@ -2,13 +2,13 @@ p {
 	margin-bottom: 1.5em;
 }
 
-.article-content
-& p, ol, ul {
-	font-family: $font__body;
-	margin: 0 0 1rem 0;
-	font-size: 1.8rem;
+.article-content {
+	& p, ol, ul {
+		font-family: $font__body;
+		margin: 0 0 1rem 0;
+		font-size: 1.8rem;
+	}
 }
-
 dfn, cite, em, i {
 	font-style: italic;
 }
