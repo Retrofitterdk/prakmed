@@ -152,6 +152,9 @@ body.active-course-progress-bar .site-content {
 		clear: both;
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 0;
+		&:first-of-type {
+			border-top: 1px solid #ddd;
+		}
 		& a {
 			display: block;
 			text-decoration: none;
@@ -163,12 +166,7 @@ body.active-course-progress-bar .site-content {
 				line-height: 1.2;
 			}
 			&:before {
-				font-family: $font__icon;
-				content: 'x';
-				color: $color__brand;
-				padding-right: 1.2rem;
-				font-size: 1.6rem;
-				line-height: 1;
+				@extend #toc-element;
 			}
 			&:hover {
 				background: #eee;
