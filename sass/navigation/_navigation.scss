@@ -52,3 +52,24 @@ footer.site-footer .search-box-wrapper {
   border-bottom: 1px solid #222;
   outline: 1px solid #030303;
 }
+
+#sections ul li.button {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+#primary #sections ul li.button {
+  @media screen and (min-width: $phablet) {
+    width: 49%;
+    &:nth-child(even) {
+      margin-left: 2%
+    }
+}
+@media screen and (min-width: $desktop) {
+  width: 32%;
+  margin-left: 2%;
+  &:nth-child(3n+1) {
+    margin-left: 0;
+  }
+}
+}

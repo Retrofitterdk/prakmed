@@ -13,6 +13,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area nine columns">
 	<main id="main" class="site-main" role="main">
+		<?php
+		do_action('before_main_content');
+		 ?>
 		<div id="search" class="search">
 			<?php get_search_form(); ?>
 		</div>

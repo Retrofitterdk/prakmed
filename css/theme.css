@@ -484,6 +484,19 @@ td:last-child {
   padding-right: 0; }
 
 /*=============================================================
+#.# Woocommerce
+=============================================================*/
+.claim-access .checkout_coupon,
+.buy-book .checkout_coupon {
+  display: block !important; }
+
+li.product-item {
+  list-style: none; }
+
+li.product-item label {
+  display: inline-block; }
+
+/*=============================================================
 #.# Responsive ads
 =============================================================*/
 .ad {
@@ -1004,6 +1017,23 @@ footer.site-footer .search-box-wrapper {
   text-align: center;
   border-bottom: 1px solid #222;
   outline: 1px solid #030303; }
+
+#sections ul li.button, #sections ul#primary-menu li {
+  width: 100%;
+  margin: 0.5rem 0; }
+
+@media screen and (min-width: 460px) {
+  #primary #sections ul li.button, #primary #sections ul#primary-menu li {
+    width: 49%; }
+    #primary #sections ul li.button:nth-child(even), #primary #sections ul#primary-menu li:nth-child(even) {
+      margin-left: 2%; } }
+
+@media screen and (min-width: 960px) {
+  #primary #sections ul li.button, #primary #sections ul#primary-menu li {
+    width: 32%;
+    margin-left: 2%; }
+    #primary #sections ul li.button:nth-child(3n+1), #primary #sections ul#primary-menu li:nth-child(3n+1) {
+      margin-left: 0; } }
 
 /*--------------------------------------------------------------
 # Accessibility
