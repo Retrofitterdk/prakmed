@@ -6,11 +6,6 @@
 	margin-bottom: 2rem;
 }
 
-.entry-header.singular h1,
-.entry-meta {
-	font-weight: 300;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	@extend .entry-header;
 	font-weight: 600;
@@ -26,30 +21,40 @@ h2 {
 	line-height: 1.25;
 	letter-spacing: -.1rem;
 }
-#toc {
+
+.singular-prakmed_article h1.entry-title,
+.singular-prakmed_article h2.entry-title,
+.singular-prakmed_article .entry-meta {
+	font-weight: 400;
+}
+
+#toc-title {
 	font-size: 1.8rem;
 	line-height: 1;
-	margin: 0.8rem 0 0.8rem 0;
+	margin: 0.8rem 0 1.8rem 0;
 	text-transform: uppercase;
-	font-weight: 600;
 	text-decoration: underline;
 	-moz-text-decoration-color: $color__brand; /* Code for Firefox */
 	text-decoration-color: $color__brand;
+	font-weight: 600;
 	letter-spacing: 0;
 }
-
+#toc-element {
+	font-family: $font__icon;
+	content: 'B';
+	color: $color__brand;
+	padding-right: 1.2rem;
+	text-transform: none;
+	vertical-align: top;
+}
 
 .article-content h2 {
-	@extend #toc;
-	// font-size: 1.8rem;
-	// line-height: 1;
-	// margin: 0.8rem 0 0.8rem 0;
-	// text-transform: uppercase;
-	// font-weight: 600;
-	// text-decoration: underline;
-	// -moz-text-decoration-color: $color__brand; /* Code for Firefox */
-	// text-decoration-color: $color__brand;
-	// letter-spacing: 0;
+	@extend #toc-title;
+	margin: 0.8rem 0 0.8rem 0;
+	text-decoration: none;
+	&::before {
+		@extend #toc-element;
+	}
 }
 
 h3 {

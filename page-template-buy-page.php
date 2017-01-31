@@ -1,12 +1,12 @@
 <?php
 /**
-* Template Name: form-template
-* Product Template: form-template
+* Template Name: Buy Book
+* Product Template: buy-book
 */
 get_header();
 ?>
 
-	<div id="primary" class="content-area columns">
+	<div id="primary" class="content-area buy-book columns">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

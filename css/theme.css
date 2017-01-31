@@ -255,7 +255,15 @@ textarea {
 
 .site-branding {
   font-family: "trajan-pro-3", Georgia, serif;
-  font-size: 2.6rem; }
+  font-size: 2.6rem;
+  text-transform: uppercase; }
+
+.menu, .course-progress-bar ul li {
+  font-family: "franklin-gothic-urw", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  line-height: 1;
+  text-transform: uppercase; }
+  .menu a, .course-progress-bar ul li a {
+    text-decoration: none; }
 
 .entry-header, h1, h2, h3, h4, h5, h6,
 .entry-meta {
@@ -263,10 +271,6 @@ textarea {
   clear: both;
   margin-top: 0;
   margin-bottom: 2rem; }
-
-.entry-header.singular h1, h1.singular h1, h2.singular h1, h3.singular h1, h4.singular h1, h5.singular h1, h6.singular h1,
-.entry-meta {
-  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }
@@ -281,17 +285,34 @@ h2 {
   line-height: 1.25;
   letter-spacing: -.1rem; }
 
-#toc, .article-content h2 {
+.singular-prakmed_article h1.entry-title,
+.singular-prakmed_article h2.entry-title,
+.singular-prakmed_article .entry-meta {
+  font-weight: 400; }
+
+#toc-title, .article-content h2 {
   font-size: 1.8rem;
   line-height: 1;
-  margin: 0.8rem 0 0.8rem 0;
+  margin: 0.8rem 0 1.8rem 0;
   text-transform: uppercase;
-  font-weight: 600;
   text-decoration: underline;
-  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  text-decoration-color: #00A44E;
+  -webkit-text-decoration-color: #00A44E;
+          text-decoration-color: #00A44E;
+  font-weight: 600;
   letter-spacing: 0; }
+
+#toc-element, .article-content h2::before, .course-progress-bar ul li a:before {
+  font-family: "brieficons";
+  content: 'B';
+  color: #00A44E;
+  padding-right: 1.2rem;
+  text-transform: none;
+  vertical-align: top; }
+
+.article-content h2 {
+  margin: 0.8rem 0 0.8rem 0;
+  text-decoration: none; }
 
 h3 {
   font-size: 3.0rem;
@@ -338,7 +359,7 @@ address {
   margin: 0 0 1.5em; }
 
 /* Code
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -443,7 +464,7 @@ figure {
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
 /* Tables
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -461,6 +482,19 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0; }
+
+/*=============================================================
+#.# Woocommerce
+=============================================================*/
+.claim-access .checkout_coupon,
+.buy-book .checkout_coupon {
+  display: block !important; }
+
+li.product-item {
+  list-style: none; }
+
+li.product-item label {
+  display: inline-block; }
 
 /*=============================================================
 #.# Responsive ads
@@ -507,59 +541,50 @@ Phablet (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 =============================================================*/
 @media (min-width: 460px) {
   .ad.panorama {
-    padding-bottom: 16.66667%; }
-
+    padding-bottom: 16.6666666667%; }
   .ad.rectangle {
     padding-bottom: 50%; }
-
   .ad.rectangle-lower {
     padding-bottom: 40%; }
-
   .ad.skyscraper {
-    padding-bottom: 133.33333%; }
-
+    padding-bottom: 133.333333333%; }
   .ad.skyscraper-tall {
     padding-bottom: 200%; } }
+
 /*=============================================================
 Tablet (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 =============================================================*/
 @media (min-width: 640px) {
   .ad.panorama {
-    padding-bottom: 19.09091%; }
-
+    padding-bottom: 19.0909090909%; }
   .ad.rectangle {
     padding-bottom: 50%; }
-
   .ad.rectangle-lower {
     padding-bottom: 40%; }
-
   .ad.skyscraper {
-    padding-bottom: 133.33333%; }
-
+    padding-bottom: 133.333333333%; }
   .ad.skyscraper-tall {
     padding-bottom: 50%; } }
+
 /*=============================================================
 Desktop (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 =============================================================*/
 @media (min-width: 960px) {
   .ad.panorama {
-    padding-bottom: 19.09091%; }
-
+    padding-bottom: 19.0909090909%; }
   .ad.rectangle {
     padding-bottom: 50%; }
-
   .ad.rectangle-lower {
     padding-bottom: 40%; }
-
   .ad.skyscraper {
-    padding-bottom: 133.33333%; }
-
+    padding-bottom: 133.333333333%; }
   .ad.skyscraper-tall {
     padding-bottom: 200%; } }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-.button, .course-progress-bar ul li, ul#primary-menu li,
+.button, ul#primary-menu li,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -583,13 +608,13 @@ input[type="button"] {
   white-space: nowrap;
   cursor: pointer;
   box-sizing: border-box; }
-  .button:hover, .course-progress-bar ul li:hover, ul#primary-menu li:hover,
+  .button:hover, ul#primary-menu li:hover,
   button:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover {
     border-color: #007136; }
-  .button:active, .course-progress-bar ul li:active, ul#primary-menu li:active, .button:focus, .course-progress-bar ul li:focus, ul#primary-menu li:focus,
+  .button:active, ul#primary-menu li:active, .button:focus, ul#primary-menu li:focus,
   button:active,
   button:focus,
   input[type="submit"]:active,
@@ -599,21 +624,21 @@ input[type="button"] {
   input[type="button"]:active,
   input[type="button"]:focus {
     border-color: #007136; }
-  .button a, .course-progress-bar ul li a, ul#primary-menu li a,
+  .button a, ul#primary-menu li a,
   button a,
   input[type="submit"] a,
   input[type="reset"] a,
   input[type="button"] a {
     text-decoration: none; }
 
-.button.primary, .course-progress-bar ul li.primary, ul#primary-menu li.primary,
+.button.primary, ul#primary-menu li.primary,
 button.primary,
 input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary {
   border-color: #36B371;
   background: #00A44E; }
-  .button.primary:hover, .course-progress-bar ul li.primary:hover, ul#primary-menu li.primary:hover, .button.primary:active, .course-progress-bar ul li.primary:active, ul#primary-menu li.primary:active, .button.primary:focus, .course-progress-bar ul li.primary:focus, ul#primary-menu li.primary:focus,
+  .button.primary:hover, ul#primary-menu li.primary:hover, .button.primary:active, ul#primary-menu li.primary:active, .button.primary:focus, ul#primary-menu li.primary:focus,
   button.primary:hover,
   button.primary:active,
   button.primary:focus,
@@ -627,13 +652,9 @@ input[type="button"].primary {
   input[type="button"].primary:active,
   input[type="button"].primary:focus {
     border-color: #007136; }
-  .button.primary a, .course-progress-bar ul li.primary a, ul#primary-menu li.primary a,
-  .button.primary a:visited,
-  .course-progress-bar ul li.primary a:visited,
-  ul#primary-menu li.primary a:visited,
-  .button.primary a:hover,
-  .course-progress-bar ul li.primary a:hover,
-  ul#primary-menu li.primary a:hover,
+  .button.primary a, ul#primary-menu li.primary a,
+  .button.primary a:visited, ul#primary-menu li.primary a:visited,
+  .button.primary a:hover, ul#primary-menu li.primary a:hover,
   button.primary a,
   button.primary a:visited,
   button.primary a:hover,
@@ -819,7 +840,8 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
@@ -841,19 +863,21 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
-
   .main-navigation ul {
     display: block; } }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
+
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
+
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -891,15 +915,6 @@ body.active-course-progress-bar .site-content {
   height: 0;
   display: none; }
 
-.course-progress-bar h1 {
-  margin: 0;
-  font-size: 1.4rem;
-  border-bottom: 1px solid #ddd; }
-
-.course-progress-bar h2 {
-  margin: 0;
-  border-bottom: 1px solid #ddd; }
-
 .course-progress-bar ul {
   margin: 0;
   padding: 0;
@@ -908,12 +923,20 @@ body.active-course-progress-bar .site-content {
   .course-progress-bar ul li {
     display: block;
     clear: both;
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0; }
+    .course-progress-bar ul li:first-of-type {
+      border-top: 1px solid #ddd; }
     .course-progress-bar ul li a {
       display: block;
       text-decoration: none;
       outline: none;
-      color: #909090; }
+      color: #909090;
+      line-height: 4rem; }
+      @media screen and (min-width: 960px) {
+        .course-progress-bar ul li a {
+          padding: 1.2rem 0;
+          line-height: 1.2; } }
       .course-progress-bar ul li a:hover {
         background: #eee;
         color: #00a44e; }
@@ -995,6 +1018,23 @@ footer.site-footer .search-box-wrapper {
   border-bottom: 1px solid #222;
   outline: 1px solid #030303; }
 
+#sections ul li.button, #sections ul#primary-menu li {
+  width: 100%;
+  margin: 0.5rem 0; }
+
+@media screen and (min-width: 460px) {
+  #primary #sections ul li.button, #primary #sections ul#primary-menu li {
+    width: 49%; }
+    #primary #sections ul li.button:nth-child(even), #primary #sections ul#primary-menu li:nth-child(even) {
+      margin-left: 2%; } }
+
+@media screen and (min-width: 960px) {
+  #primary #sections ul li.button, #primary #sections ul#primary-menu li {
+    width: 32%;
+    margin-left: 2%; }
+    #primary #sections ul li.button:nth-child(3n+1), #primary #sections ul#primary-menu li:nth-child(3n+1) {
+      margin-left: 0; } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1038,7 +1078,7 @@ footer.site-footer .search-box-wrapper {
 # Patterns
 --------------------------------------------------------------*/
 /* Hide elements
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .hide {
   display: none; }
 
@@ -1048,11 +1088,11 @@ footer.site-footer .search-box-wrapper {
 @media screen and (min-width: 960px) {
   .mobile.hide {
     display: block; }
-
   .desktop.hide {
     display: none; } }
+
 /* Spacing
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 input,
 textarea,
 select,
@@ -1071,7 +1111,7 @@ form {
   margin-bottom: 2.5rem; }
 
 /* Utilities
-ÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇôÔÇô */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -1145,7 +1185,8 @@ form {
 /*==============================================================
 3.0 Basic Structure
 ==============================================================*/
-.wrap {
+.wrap, .active-course-progress-bar .course-progress-bar h2.entry-title,
+.active-course-progress-bar .course-progress-bar ul li a {
   clear: both;
   margin: 0 auto;
   width: 100%;
@@ -1153,10 +1194,12 @@ form {
   padding: 0 1rem;
   position: relative; }
   @media screen and (min-width: 640px) {
-    .wrap {
+    .wrap, .active-course-progress-bar .course-progress-bar h2.entry-title,
+    .active-course-progress-bar .course-progress-bar ul li a {
       padding: 0 2rem; } }
   @media screen and (min-width: 960px) {
-    .wrap {
+    .wrap, .active-course-progress-bar .course-progress-bar h2.entry-title,
+    .active-course-progress-bar .course-progress-bar ul li a {
       padding: 0 4rem; } }
 
 @media screen and (min-width: 960px) {
@@ -1164,11 +1207,11 @@ form {
     float: right;
     margin: 0;
     padding: 0; }
-
   #secondary {
     float: left;
     margin: 0;
     padding: 0; } }
+
 /*--------------------------------------------------------------
 ## Header navigation
 --------------------------------------------------------------*/
@@ -1243,133 +1286,104 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   .columns {
     margin-left: 4%;
     box-sizing: border-box; }
-
   .column:first-child,
   .columns:first-child,
   #content-column {
     margin-left: 0; }
-
   /*==============================================================
   Grid
   ==============================================================*/
   .one.column {
-    width: 4.66667%; }
-
+    width: 4.6666666667%; }
   .two.column,
   .two.columns {
-    width: 13.33333%; }
-
+    width: 13.3333333333%; }
   .three.column,
   .three.columns {
     width: 22%; }
-
   .four.column,
   .four.columns {
-    width: 30.66667%; }
-
+    width: 30.6666666667%; }
   .five.column,
   .five.columns {
-    width: 39.33333%; }
-
+    width: 39.3333333333%; }
   .six.column,
   .six.columns {
     width: 48%; }
-
   .seven.column,
   .seven.columns {
-    width: 56.66667%; }
-
+    width: 56.6666666667%; }
   .eight.column,
   .eight.columns {
-    width: 65.33333%; }
-
+    width: 65.3333333333%; }
   .nine.column,
   .nine.columns {
     width: 74%; }
-
   .ten.column,
   .ten.columns {
-    width: 82.66667%; }
-
+    width: 82.6666666667%; }
   .eleven.column,
   .eleven.columns {
-    width: 91.33333%; }
-
+    width: 91.3333333333%; }
   .twelve.column,
   .twelve.columns {
     width: 100%;
     margin-left: 0; }
-
   .one-third.column {
-    width: 30.66667%; }
-
+    width: 30.6666666667%; }
   .two-third.column,
   .two-third.columns {
-    width: 65.33333%; }
-
+    width: 65.3333333333%; }
   .one-half.column,
   .one-half.columns {
     width: 48%;
     margin-left: 0;
     margin-right: 0; }
-
   /*==============================================================
   Offsets
   ==============================================================*/
   .offset-by-one {
-    margin-left: 8.66667%; }
-
+    margin-left: 8.6666666667%; }
   .offset-by-two.column,
   .offset-by-two.columns {
-    margin-left: 17.33333%; }
-
+    margin-left: 17.3333333333%; }
   .offset-by-three.column,
   .offset-by-three.columns {
     margin-left: 26%; }
-
   .offset-by-four.column,
   .offset-by-four.columns {
-    margin-left: 34.66667%; }
-
+    margin-left: 34.6666666667%; }
   .offset-by-five.column,
   .offset-by-five.columns {
-    margin-left: 43.33333%; }
-
+    margin-left: 43.3333333333%; }
   .offset-by-six.column,
   .offset-by-six.columns {
     margin-left: 52%; }
-
   .offset-by-seven.column,
   .offset-by-seven.columns {
-    margin-left: 60.66667%; }
-
+    margin-left: 60.6666666667%; }
   .offset-by-eight.column,
   .offset-by-eight.columns {
-    margin-left: 69.33333%; }
-
+    margin-left: 69.3333333333%; }
   .offset-by-nine.column,
   .offset-by-nine.columns {
     margin-left: 78%; }
-
   .offset-by-ten.column,
   .offset-by-ten.columns {
-    margin-left: 86.66667%; }
-
+    margin-left: 86.6666666667%; }
   .offset-by-eleven.column,
   .offset-by-eleven.columns {
-    margin-left: 95.33333%; }
-
+    margin-left: 95.3333333333%; }
   .offset-by-one-third.column,
   .offset-by-one-third.columns {
-    margin-left: 34.66667%; }
-
+    margin-left: 34.6666666667%; }
   .offset-by-two-thirds.column,
   .offset-by-two-third.columns {
-    margin-left: 69.33333%; }
-
+    margin-left: 69.3333333333%; }
   .offset-by-one-half.column,
   .offset-by-one-half.columns {
     margin-left: 52%; } }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1463,7 +1477,9 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
     width: 25%;
     padding: 0;
     margin: 0; }
-    .sd-content ul li[class*='share-'] a, .sd-content ul li[class*='share-'] a:hover, .sd-content ul li[class*='share-'] div.option a {
+    .sd-content ul li[class*='share-'] a,
+    .sd-content ul li[class*='share-'] a:hover,
+    .sd-content ul li[class*='share-'] div.option a {
       display: inline-block;
       border-radius: 0;
       -webkit-border-radius: 0;
@@ -1527,5 +1543,4 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
-
 /*# sourceMappingURL=theme.css.map */
