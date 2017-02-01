@@ -2,12 +2,16 @@
 	display: block;
 }
 
-.article-content,
-.article-content p,
-.article-content h2 {
-    max-width: 68rem;
+.article-content {
+	@include center-block;
+	@media screen and (min-width: $desktop) {
+		float: left;
+	}
+	& p,
+	& h2 {
+		max-width: 70rem;
+	}
 }
-
 .hentry {
 	margin: 0 0 1.5em;
 }

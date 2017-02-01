@@ -1456,6 +1456,46 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   .offset-by-one-half.columns {
     margin-left: 52%; } }
 
+.sticky {
+  display: block; }
+
+.article-content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 960px) {
+    .article-content {
+      float: left; } }
+  .article-content p,
+  .article-content h2 {
+    max-width: 70rem; }
+
+.hentry {
+  margin: 0 0 1.5em; }
+
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
