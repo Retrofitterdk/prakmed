@@ -26,11 +26,9 @@
 					}
 			?>
 		</div>
-		<div id="footer-menu" class="desktop wrap hide">
-			<nav id="footer-navigation" class="footer-navigation" role="navigation">
+			<nav id="footer-menu-container" class="footer-navigation menu wrap desktop hide" role="navigation">
 			<?php get_template_part( 'template-parts/menu', 'footer' ); ?>
 			</nav><!-- #footer-navigation -->
-		</div>
 		<div id="footer-info" class="site-info wrap mobile hide">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brief' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'brief' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

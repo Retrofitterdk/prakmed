@@ -1,4 +1,4 @@
-<nav id="course-progress-bar" class="course-progress-bar" role="navigation">
+<nav id="course-progress-bar" class="course-progress-bar menu" role="navigation">
 	<h2 id="toc-title">
 		<?php esc_html_e( 'Table of content', 'prakmed' ); ?>
 	</h2>

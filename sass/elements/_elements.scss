@@ -27,7 +27,7 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-top: 3rem;
-  margin-bottom: 3.5rem;
+	margin-bottom: 3.5rem;
 }
 
 @import "lists";
@@ -48,44 +48,82 @@ figure {
 =============================================================*/
 .claim-access .checkout_coupon,
 .buy-book .checkout_coupon, {
-    display: block !important;
+	display: block !important;
 }
 li.product-item {
 	list-style: none;
 }
 
 li.product-item label {
-    display: inline-block;
+	display: inline-block;
+}
+
+/*=============================================================
+#.# Login
+=============================================================*/
+.login-wrapper.header {
+	position: absolute;
+	right: 4rem;
+	width: 290px;
+	z-index: 99;
+	padding: 1.2rem;
+	& form {
+		margin-bottom: 1rem;
+		& label {
+			color: $color__text-white;
+		}
+		& input[type="submit"] {
+			&.button-primary {
+				border-color: $color__brand-lighter;
+				background-color: #fff;
+				margin: 0;
+			}
+		}
+	}
+	& a {
+		color: $color__text-white;
+	}
+}
+
+#user-box .button {
+    width: 100%;
+    margin-left: 0;
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: $color__brand-light;
+		}
+
 }
 
 /*=============================================================
 #.# Responsive ads
 =============================================================*/
 .ad {
-		position: relative;
-		padding-top: 0rem;
-		height: 0;
-		overflow: hidden;
+	position: relative;
+	padding-top: 0rem;
+	height: 0;
+	overflow: hidden;
 }
 .ad iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 .top-sidebar aside.ad-container {
-    max-width: 1100px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 
 /*=============================================================
 Mobile (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 =============================================================*/
-	@include prakmed_ads($prakmed_ad_config, mobile);
+@include prakmed_ads($prakmed_ad_config, mobile);
 /*=============================================================
 Phablet (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 =============================================================*/

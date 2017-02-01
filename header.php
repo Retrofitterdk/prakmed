@@ -42,17 +42,23 @@
 				<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-		<nav id="primary-menu-container" class="mobile hide menu" role="navigation">
-		<?php get_template_part( 'template-parts/menu', 'primary' ); ?>
+		<nav id="header-menu-container" class="mobile hide menu" role="navigation">
+		<?php get_template_part( 'template-parts/menu', 'header' ); ?>
 	</nav><!-- #primary-navigation -->
 		<?php if ( is_singular('prakmed_article') ) : ?>
 			<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
-				<a href="#course-progress-bar" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<a href="#course-progress-bar" class="menu-toggle" aria-controls="article-menu" aria-expanded="false">
 					<span class="screen-reader-text"><?php esc_html_e( 'Table of content', 'prakmed' ); ?></span>
 				</a>
 			</nav><!-- #site-navigation -->
 		<?php endif; ?>
 	</div><!-- .wrap -->
 </header><!-- #masthead -->
+<div id="header-login" class="login-container wrap toggle hide">
+		<?php get_template_part( 'template-parts/login', 'header' ); ?>
+</div>
+<nav id="primary-menu-container" class="mobile hide menu" role="navigation">
+<?php get_template_part( 'template-parts/menu', 'primary' ); ?>
+</nav><!-- #primary-navigation -->
 <?php get_template_part( 'template-parts/toc', 'header' ); ?>
 <div id="content" class="site-content wrap">

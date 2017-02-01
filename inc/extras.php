@@ -55,7 +55,7 @@ function prakmed_search( $form ) {
     $form .= '</form>';
     return $form;
 }
-add_filter( 'get_search_form', 'prakmed_search' );
+// add_filter( 'get_search_form', 'prakmed_search' );
 
 /* REMOVE SHARE FROM THE_CONTENT AND THE_EXCERPT */
 function jptweak_remove_share() {
