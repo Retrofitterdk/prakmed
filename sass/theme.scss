@@ -99,6 +99,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Content
 --------------------------------------------------------------*/
 @import "site/_site.scss";
+@import "site/primary/_posts-and-pages.scss";
+@import "site/primary/_comments.scss";
 
 /*--------------------------------------------------------------
 # Infinite scroll

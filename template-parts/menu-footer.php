@@ -3,9 +3,7 @@
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'footer',
-			'container'       => 'div',
-			'container_id'    => 'footer-menu-container',
-			'container_class' => 'menu',
+			'container'       => false,
 			'menu_id'         => 'footer-menu',
 			'menu_class'      => 'menu-items',
 			'depth'           => -1,

@@ -9,17 +9,20 @@
 @import "menus";
 
 /*--------------------------------------------------------------
-## Primary navigation
+## Header navigation
 --------------------------------------------------------------*/
-ul#primary-menu {
+ul#header-menu {
   list-style-type: none;
   margin: 0 0 0 0;
   padding: 0;
+  float: right;
   & li {
     @extend .button;
     border-color: #fff;
-    float: right;
     margin-top: 1.55rem;
+    &.login-toggle {
+      margin-right: 0;
+    }
     & a {
       display: block;
       color: #fff;
@@ -54,8 +57,8 @@ footer.site-footer .search-box-wrapper {
 }
 
 #sections ul li.button {
-    width: 100%;
-    margin: 0.5rem 0;
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
 #primary #sections ul li.button {
@@ -64,12 +67,12 @@ footer.site-footer .search-box-wrapper {
     &:nth-child(even) {
       margin-left: 2%
     }
-}
-@media screen and (min-width: $desktop) {
-  width: 32%;
-  margin-left: 2%;
-  &:nth-child(3n+1) {
-    margin-left: 0;
   }
-}
+  @media screen and (min-width: $desktop) {
+    width: 32%;
+    margin-left: 2%;
+    &:nth-child(3n+1) {
+      margin-left: 0;
+    }
+  }
 }

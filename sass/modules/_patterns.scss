@@ -47,3 +47,23 @@ form {
   max-width: 100%;
   box-sizing: border-box;
 }
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// Background
+.bg {
+  background-color: $color__brand;
+}
+
+.bg.light {
+  background-color: $color__brand-light;
+}
+
+.bg.lighter {
+  background-color: $color__brand-lighter;
+}
+
+.bg.dark {
+  background-color: $color__brand-dark;
+}

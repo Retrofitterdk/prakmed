@@ -24,11 +24,13 @@ input[type="button"] {
 
 	&:hover {
 		border-color: $color__border-button-hover;
+		opacity: .8;
 	}
 
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+		opacity: .8;
 	}
 	& a {
 		text-decoration: none;
@@ -42,12 +44,13 @@ input[type="reset"],
 input[type="button"] {
 	&.primary {
 		border-color: $color__brand-light;
-		background: $color__brand;
+		background-color: $color__brand;
 
 		&:hover,
 		&:active,
 		&:focus {
 			border-color: $color__brand-dark;
+			opacity: .8;
 		}
 
 		& a,
