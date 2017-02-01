@@ -52,8 +52,16 @@ function prakmed_custom_coupon_message() {
     if( $_get_access_product_id == $_product->id ) {
       return '<i class="fa fa-ticket" aria-hidden="true"></i> Have a coupon from book? – enter it below';
     }
-else {
-  return;
+    else {
+      return;
+    }
+  }
 }
-}
+
+// display an 'Out of Stock' label on archive pages
+add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_stock', 10 );
+function woocommerce_template_loop_stock() {
+    global $product;
+    if ( ! $product->managing_stock() && ! $product->is_in_stock() )
+        echo '<p class="stock out-of-stock">Out of Stock</p>';
 }
