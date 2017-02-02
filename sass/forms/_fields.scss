@@ -30,7 +30,7 @@ select {
 	box-sizing: border-box;
 	height: 4rem;
 	max-width: 100%;
-
+	font-size: 1.8rem;
 	&:focus {
 		color: $color__text-input-focus;
 	}

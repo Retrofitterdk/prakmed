@@ -496,6 +496,44 @@ li.product-item {
 li.product-item label {
   display: inline-block; }
 
+.out-of-stock::before,
+li.outofstock::before {
+  content: 'Udsolgt';
+  position: absolute;
+  background: red;
+  padding: 0 2rem;
+  color: #fff;
+  text-transform: uppercase; }
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+  width: 100%; }
+  @media screen and (min-width: 640px) {
+    .woocommerce form .form-row-first,
+    .woocommerce form .form-row-last,
+    .woocommerce-page form .form-row-first,
+    .woocommerce-page form .form-row-last {
+      width: 47%; } }
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  background-color: #00A44E; }
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background-color: #36B371; }
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+  border-radius: 2px; }
+
 /*=============================================================
 #.# Login
 =============================================================*/
@@ -726,7 +764,8 @@ select {
   box-shadow: none;
   box-sizing: border-box;
   height: 4rem;
-  max-width: 100%; }
+  max-width: 100%;
+  font-size: 1.8rem; }
   input[type="search"]:focus,
   input[type="text"]:focus,
   input[type="email"]:focus,
