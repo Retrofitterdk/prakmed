@@ -296,9 +296,9 @@ h2 {
   margin: 0.8rem 0 1.8rem 0;
   text-transform: uppercase;
   text-decoration: underline;
+  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  -webkit-text-decoration-color: #00A44E;
-          text-decoration-color: #00A44E;
+  text-decoration-color: #00A44E;
   font-weight: 600;
   letter-spacing: 0; }
 
@@ -486,8 +486,7 @@ td:last-child {
 /*=============================================================
 #.# Woocommerce
 =============================================================*/
-.claim-access .checkout_coupon,
-.buy-book .checkout_coupon {
+.checkout_coupon {
   display: block !important; }
 
 li.product-item {
@@ -1694,4 +1693,5 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
+
 /*# sourceMappingURL=theme.css.map */

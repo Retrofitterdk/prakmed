@@ -13,6 +13,8 @@ function prakmed_get_access() {
   }
 
   $user_id = get_current_user_id();
+  $_get_access_product_id = get_option( 'woocommerce_prakmed_access_with_code', 1 );
+
 
   // Bail if the user already has active membership
   if ( wc_memberships_is_user_active_member( $user_id, 'access' )) {
@@ -25,7 +27,7 @@ function prakmed_get_access() {
     $get_access  = '<h1>' . esc_html__( 'How to get access', 'prakmed' ) . '</h1>';
     $get_access .= '<p>';
     $get_access .= '<span>' . esc_html__('If you have code from book', 'prakmed');
-    $get_access .= '</span><a href="http://prakmed.dev/faa-adgang/?add-to-cart=1981" class="button">' . esc_html__('Get access here', 'prakmed') . '</a>';
+    $get_access .= '</span><a href="http://prakmed.dev/faa-adgang/?add-to-cart=' . $_get_access_product_id . '" class="button">' . esc_html__('Get access here', 'prakmed') . '</a>';
     $get_access .= '</p>';
 
     $get_access .= '<p>';
@@ -39,29 +41,48 @@ function prakmed_get_access() {
 add_action( 'before_main_content', 'prakmed_get_access' );
 
 
-/**
-* Change the add to cart text on single product pages
-*/
-add_filter( 'woocommerce_checkout_coupon_message', 'prakmed_custom_coupon_message');
-function prakmed_custom_coupon_message() {
-
-  foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
-    $_product = $values['data'];
-    $_get_access_product_id = '1978';
-
-    if( $_get_access_product_id == $_product->id ) {
-      return '<i class="fa fa-ticket" aria-hidden="true"></i> Have a coupon from book? – enter it below';
-    }
-    else {
-      return;
-    }
-  }
+// rename the "Have a Coupon?" message on the checkout page
+function woocommerce_rename_coupon_message_on_checkout() {
+	return __( 'Have a coupon from the book? – enter it below' );
 }
+// add_filter( 'woocommerce_checkout_coupon_message', 'woocommerce_rename_coupon_message_on_checkout' );
 
-// display an 'Out of Stock' label on archive pages
-add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_stock', 10 );
-function woocommerce_template_loop_stock() {
-    global $product;
-    if ( ! $product->managing_stock() && ! $product->is_in_stock() )
-        echo '<p class="stock out-of-stock">Out of Stock</p>';
+
+// rename the coupon field on the checkout page
+function woocommerce_rename_coupon_field_on_checkout( $translated_text, $text, $text_domain ) {
+	// bail if not modifying frontend woocommerce text
+	if ( is_admin() || 'woocommerce' !== $text_domain ) {
+		return $translated_text;
+	}
+	if ( 'Kuponkode' === $text ) {
+		$translated_text = 'Kode fra bog';
+
+	} elseif ( 'Anvend kupon' === $text ) {
+		$translated_text = 'Brug kode';
+	}
+	return $translated_text;
+}
+// add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_checkout', 10, 3 );
+
+
+add_filter( 'woocommerce_product_settings', 'prakmed_add_a_setting' );
+function prakmed_add_a_setting( $settings ) {
+
+  $settings[] = array( 'name' => __( 'Featured products', 'prakmed' ), 'type' => 'title', 'desc' => '', 'id' => 'woocommerce_prakmed_settings' );
+
+  $settings[] = array(
+    'title'    	=> __( 'Product to buy with code from book', 'prakmed' ),
+    'desc'     	=> '',
+    'id'       	=> 'woocommerce_prakmed_access_with_code',
+    'desc'  	=> __( 'Add ID for product, that can be bought for free with book code', 'prakmed' ),
+    'type'     	=> 'text',
+    'default'	=> '',
+    'desc_tip'	=> false,
+    'placeholder' => __( 'Product ID', 'prakmed' ),
+  );
+
+  $settings[] = array( 'type' => 'sectionend', 'id' => 'woocommerce_prakmed_settings');
+
+  return $settings;
+
 }
