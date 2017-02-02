@@ -5,16 +5,18 @@
 * Example: Add a restricted product notice
 * Display a top notice to non-members for members-only products
 */
+add_action( 'before_main_content', 'prakmed_get_access' );
 function prakmed_get_access() {
 
   // bail if Memberships isn't active
   if ( ! function_exists( 'wc_memberships' ) ) {
     return;
   }
-
+  
   $user_id = get_current_user_id();
   $_get_access_product_id = get_option( 'woocommerce_prakmed_access_with_code', 1 );
 
+  add_action( 'before_main_content', 'prakmed_get_access' );
 
   // Bail if the user already has active membership
   if ( wc_memberships_is_user_active_member( $user_id, 'access' )) {
@@ -38,32 +40,6 @@ function prakmed_get_access() {
 
   }
 }
-add_action( 'before_main_content', 'prakmed_get_access' );
-
-
-// rename the "Have a Coupon?" message on the checkout page
-function woocommerce_rename_coupon_message_on_checkout() {
-	return __( 'Have a coupon from the book? – enter it below' );
-}
-// add_filter( 'woocommerce_checkout_coupon_message', 'woocommerce_rename_coupon_message_on_checkout' );
-
-
-// rename the coupon field on the checkout page
-function woocommerce_rename_coupon_field_on_checkout( $translated_text, $text, $text_domain ) {
-	// bail if not modifying frontend woocommerce text
-	if ( is_admin() || 'woocommerce' !== $text_domain ) {
-		return $translated_text;
-	}
-	if ( 'Kuponkode' === $text ) {
-		$translated_text = 'Kode fra bog';
-
-	} elseif ( 'Anvend kupon' === $text ) {
-		$translated_text = 'Brug kode';
-	}
-	return $translated_text;
-}
-// add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_checkout', 10, 3 );
-
 
 add_filter( 'woocommerce_product_settings', 'prakmed_add_a_setting' );
 function prakmed_add_a_setting( $settings ) {
