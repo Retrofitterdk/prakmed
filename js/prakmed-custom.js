@@ -1,36 +1,37 @@
+
 jQuery(function($) {
+$(".activate a").on("click", function(e) {
+e.preventDefault;
+/*==============================================================
+VARIABLES DEFINED
+================================================================*/
+var grabID = $(this).attr("data-toggled");
+if(grabID == 'course-progress-bar') {
+  $("body").toggleClass("active-course-progress-bar");
+}
+var div = '.toggle';
+var target = div + "#"+ grabID;
+console.log("target", target);
 
-	$(".activate a").on("click", function(e) {
-		e.preventDefault;
+/*==============================================================
+RESET DIVS
+================================================================*/
+$(div).not(target).addClass('hide');
+$(".entry-author-article-list").removeClass('hide');
+$(".author-menu-items a").removeClass('active');
+$("a:contains('Recent articles')").addClass("active");
+$(document).find(".activate").removeClass("active");
 
-		//	VARIABLES DEFINED
-		var grabID = $(this).attr("href");
-		var grabIDnew = $(this).attr("href").replace('#', 'active-');
-		var div = '.toggle';
-		var target = div + grabID;
-
-		//	RESET DIVS
-		$(div).not(target).addClass('hide');
-		$("body").removeClass("active-course-progress-bar");
-		$("li.menu-item").removeClass("current-menu-item");
-
-		// 	CHECK ELEMENT
-		if($(target).is('.hide')) {
-			$(target).toggleClass("hide");
-			$(this).parent().addClass("current-menu-item");
-
-			if(grabID == '#course-progress-bar') {
-				$("body").toggleClass(grabIDnew);
-			} else if(grabID != '#course-progress-bar') {
-				$("body").removeClass(grabIDnew);
-			}
-		}
-		else {
-			$(target).toggleClass("hide");
-			$(this).parent().removeClass("current-menu-item");
-			$("body").removeClass("active-course-progress-bar");
-		}
-	});
+/*==============================================================
+CHECK ELEMENT
+================================================================*/
+if( $(target).is('.hide') ) {
+  $(target).toggleClass("hide");
+  $(this).parent().toggleClass("active");
+} else {
+  $(target).toggleClass("hide");
+}
+});
 
 	// RENDER TABLE OF CONTENT BASED ON H1 HEADLINES IN ARTICLE
 	$(".article-content h2").each(function( ) {
@@ -45,7 +46,11 @@ jQuery(function($) {
 	// WHEN TABLE OF CONTENT IS OPEN AND YOU CLICK A ELEMENT
 	$("ul li a").on("click", function() {
 		$("body").removeClass("active-course-progress-bar");
-		$(".course-progress-bar").addClass("hide");
+		parent_element = $(this).parent().parent().parent().attr("id");
+		console.log(parent_element);
+		if(parent_element == 'course-progress-bar') {
+			$(".course-progress-bar").addClass("hide");
+		}
 		var goTo = $(this).text();
 		$('html, body').animate({scrollTop: $("#"+goTo+"").offset().top -60 }, 'slow');
 	});

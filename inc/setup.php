@@ -80,12 +80,12 @@ if ( ! function_exists( 'prakmed_setup' ) ) :
 		if( $args->theme_location == 'header' ) {
 			if ( ! is_user_logged_in() ) {
 				$login_item  = '<li class="menu-item login-toggle button featured activate mobile hide">';
-				$login_item .= '<a href="#header-login" class="login" aria-controls="article-menu" aria-expanded="false">';
+				$login_item .= '<a href="javascript: return false;" data-toggled="header-login" class="login" aria-controls="article-menu" aria-expanded="false">';
 				$login_item .= __( 'Login', 'prakmed_setup' );
 			}
 			else { // If logged in:
 				$login_item  = '<li class="menu-item user button featured activate mobile hide">';
-				$login_item .= '<a href="#header-login" class="user" aria-controls="article-menu" aria-expanded="false">';
+				$login_item .= '<a href="javascript: return false;" data-toggled="header-login" class="user" aria-controls="article-menu" aria-expanded="false">';
 				$login_item .= '' . wp_get_current_user()->display_name . "\n";
 			}
 			$login_item .= '</a></li>';
