@@ -43,6 +43,18 @@ if( $(target).is('.hide') ) {
 
 	});
 
+
+/* ===== MAKE TABLE OF CONTENT IN DESKTOP FOLLOW SCROLL ==== */
+	var stickySidebar = $('#secondary').offset().top;
+	$(window).scroll(function() {
+	    if ($(window).scrollTop() > stickySidebar) {
+	        $('#secondary').addClass('follow-me');
+	    }
+	    else {
+	        $('#secondary').removeClass('follow-me');
+	    }
+	});
+
 	// WHEN TABLE OF CONTENT IS OPEN AND YOU CLICK A ELEMENT
 	$("ul li a").on("click", function() {
 		$("body").removeClass("active-course-progress-bar");
