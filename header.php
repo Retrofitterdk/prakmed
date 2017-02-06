@@ -42,12 +42,14 @@
 				<?php
 			endif; ?>
 		</div><!-- .site-branding -->
+
 		<nav id="header-menu-container" class="mobile hide menu" role="navigation">
 		<?php get_template_part( 'template-parts/menu', 'header' ); ?>
 	</nav><!-- #primary-navigation -->
+
 		<?php if ( is_singular('prakmed_article') ) : ?>
 			<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
-				<a href="#course-progress-bar" class="menu-toggle" aria-controls="article-menu" aria-expanded="false">
+				<a href="javascript: return false;" data-toggled="course-progress-bar" class="menu-toggle" aria-controls="article-menu" aria-expanded="false">
 					<span class="screen-reader-text"><?php esc_html_e( 'Table of content', 'prakmed' ); ?></span>
 				</a>
 			</nav><!-- #site-navigation -->
