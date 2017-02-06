@@ -536,21 +536,21 @@ li.outofstock::before {
 /*=============================================================
 #.# Login
 =============================================================*/
-.login-wrapper.header {
+#header-login > div {
   position: absolute;
   right: 4rem;
   width: 290px;
   z-index: 99;
   padding: 1.2rem; }
-  .login-wrapper.header form {
-    margin-bottom: 1rem; }
-    .login-wrapper.header form label {
+  #header-login > div form {
+    margin: 1rem 0; }
+    #header-login > div form label {
       color: #fff; }
-    .login-wrapper.header form input[type="submit"].button-primary {
+    #header-login > div form input[type="submit"].button-primary {
       border-color: #00F072;
       background-color: #fff;
       margin: 0; }
-  .login-wrapper.header a {
+  #header-login > div a {
     color: #fff; }
 
 #user-box .button, #user-box ul#header-menu li, ul#header-menu #user-box li {
