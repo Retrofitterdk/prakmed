@@ -12,11 +12,17 @@ get_header(); ?>
 	<section id="primary" class="content-area nine columns">
 		<main id="main" class="site-main" role="main">
 
+		<div id="search" class="search">
+			<?php get_search_form(); ?>
+		</div>
 		<?php
+
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'prakmed' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title">
+					<?php printf( esc_html__( 'Search Results for: %s', 'prakmed' ), '<span>' . get_search_query() . '</span>' ); ?>
+					</h1>
 			</header><!-- .page-header -->
 
 			<?php

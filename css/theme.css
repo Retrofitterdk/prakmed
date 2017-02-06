@@ -296,9 +296,9 @@ h2 {
   margin: 0.8rem 0 1.8rem 0;
   text-transform: uppercase;
   text-decoration: underline;
-  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  text-decoration-color: #00A44E;
+  -webkit-text-decoration-color: #00A44E;
+          text-decoration-color: #00A44E;
   font-weight: 600;
   letter-spacing: 0; }
 
@@ -853,7 +853,9 @@ input.search-field {
   border-radius: 2px 0 0 2px;
   outline: none; }
 
-.search-submit {
+input.search-submit,
+button.search-submit,
+input[type="submit"] {
   width: 20%;
   margin: 0;
   height: auto;
@@ -861,9 +863,11 @@ input.search-field {
   border-radius: 0 2px 2px 0;
   border: none;
   vertical-align: top;
-  background: #00A44E; }
+  background: #00A44E;
+  height: 4rem; }
 
-.search-submit:before {
+input.search-submit:before,
+button.search-submit:before {
   content: '\73';
   display: inline-block;
   padding: 0 .5rem;
@@ -1046,7 +1050,8 @@ body.active-course-progress-bar .site-content {
   .footer-navigation ul li {
     display: inline-block;
     float: left;
-    width: 20%; }
+    width: 25%;
+    margin: 0; }
     .footer-navigation ul li a {
       position: relative;
       display: block;
@@ -1110,9 +1115,7 @@ footer.site-footer > .search-box-wrapper {
 
 footer.site-footer .sharepanel-wrapper,
 footer.site-footer .search-box-wrapper {
-  text-align: center;
-  border-bottom: 1px solid #222;
-  outline: 1px solid #030303; }
+  text-align: center; }
 
 #sections ul li.button, #sections ul#header-menu li {
   width: 100%;
@@ -1693,5 +1696,4 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
-
 /*# sourceMappingURL=theme.css.map */
