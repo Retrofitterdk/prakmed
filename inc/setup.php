@@ -80,12 +80,12 @@ if ( ! function_exists( 'prakmed_setup' ) ) :
 		if( $args->theme_location == 'header' ) {
 			if ( ! is_user_logged_in() ) {
 				$login_item  = '<li class="menu-item login-toggle button featured activate mobile hide">';
-				$login_item .= '<a href="#header-login" class="login" aria-controls="article-menu" aria-expanded="false">';
+				$login_item .= '<a href="javascript: return false;" data-toggled="header-login" class="login" aria-controls="article-menu" aria-expanded="false">';
 				$login_item .= __( 'Login', 'prakmed_setup' );
 			}
 			else { // If logged in:
 				$login_item  = '<li class="menu-item user button featured activate mobile hide">';
-				$login_item .= '<a href="#header-login" class="user" aria-controls="article-menu" aria-expanded="false">';
+				$login_item .= '<a href="javascript: return false;" data-toggled="header-login" class="user" aria-controls="article-menu" aria-expanded="false">';
 				$login_item .= '' . wp_get_current_user()->display_name . "\n";
 			}
 			$login_item .= '</a></li>';
@@ -96,3 +96,75 @@ if ( ! function_exists( 'prakmed_setup' ) ) :
 		return $items;
 	}
 	add_filter('wp_nav_menu_items', 'prakmed_add_user_content_navitem', 10, 2);
+
+	function prakmed_add_footer_navitem($items, $args ) {
+		if( $args->theme_location == 'footer' ) {
+			$login_item  = '<li class="activate share menu-item menu-item-type-post_type menu-item-object-page menu-item-sharepanel menu-item-sharepanel">';
+			$login_item .= '<a href="javascript: return false;" data-toggled="sharepanel-container" class="" aria-controls="article-menu" aria-expanded="false">';
+			$login_item .= '<span class="screen-reader-text">' . __( 'sharepanel', 'prakmed_setup' ) . '</span>';
+			$login_item .= '</a></li>';
+			$login_item .= '<li class="activate search menu-item menu-item-type-post_type menu-item-object-page menu-item-search menu-item-search">';
+			$login_item .= '<a href="javascript: return false;" data-toggled="search-container" class="" aria-controls="article-menu" aria-expanded="false">';
+			$login_item .= '<span class="screen-reader-text">' . __( 'search', 'prakmed_setup' ) . '</span>';
+			$login_item .= '</a></li>';
+		}
+		if (isset($login_item)) {
+			$items .= $login_item;
+		}
+		return $items;
+		}
+		add_filter('wp_nav_menu_items', 'prakmed_add_footer_navitem', 10, 2);
+
+
+	// class Menu_With_Description extends Walker_Nav_Menu {
+	// 	function start_el(&$output, $item, $depth, $args) {
+	// 		global $wp_query;
+	// 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+	//
+	// 		//var_dump($item);
+	//
+	// 		$class_names = $value = '';
+	//
+	// 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+	//
+	// 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+	// 		$class_names = ' class="brick ' . esc_attr( $class_names ) . '"';
+	//
+	// 		$output .= '<ul id="footer-menu" class="' . $value . $class_names .'">';
+	//
+	// 		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+	// 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+	// 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
+	// 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
+	//
+	// 		//$item_output = $args->before;
+	// 		if($item->title == 'share') {
+	// 			$item_output .= '<li class="activate ' . $class_names . '">';
+	// 			$item_output .= '<a href="javascript:return false;" data-toggled="sharepanel-container" class="' . $class_names . '">';
+	// 			$item_output .= $item->title;
+	// 			$item_output .= '<span class="screen-reader-text">' . $item->title . '</span>';
+	// 			$item_output .= '</a>';
+	// 			$item_output .= '</li>';
+	// 		}
+	// 		if ($item->title == 'search') {
+	// 			$item_output .= '<li class="activate ' . $class_names . '">';
+	// 			$item_output .= '<a href="javascript:return false;" data-toggled="search-container" class="' . $class_names . '">';
+	// 			$item_output .= $item->title;
+	// 			$item_output .= '<span class="screen-reader-text">' . $item->title . '</span>';
+	// 			$item_output .= '</a>';
+	// 			$item_output .= '</li>';
+	// 		} else {
+	// 			$item_output .= '<li class="TESTERBEDSTER' . $class_names . '">';
+	// 			$item_output .= '<a href="' . $item->url . '" class="' . $class_names . '">' . $item->title . '</a>';
+	// 			$item_output .= '<li class="' . $class_names . '">';
+	// 			$item_output .= '<a href="' . $item->url . '" class="' . $class_names . '">';
+	// 			$item_output .= $item->title;
+	// 			$item_output .= '<span class="screen-reader-text">' . $item->title . '</span>';
+	// 			$item_output .= '</a>';
+	// 			$item_output .= '</li>';
+	// 		}
+	// 		//$item_output .= $args->after;
+	// 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	// 		$output .= '</ul>';
+	// 	}
+	// }

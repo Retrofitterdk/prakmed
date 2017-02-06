@@ -101,14 +101,14 @@ width: 47%;
 /*=============================================================
 #.# Login
 =============================================================*/
-.login-wrapper.header {
+#header-login > div {
 	position: absolute;
 	right: 4rem;
 	width: 290px;
 	z-index: 99;
 	padding: 1.2rem;
 	& form {
-		margin-bottom: 1rem;
+		margin: 1rem 0;
 		& label {
 			color: $color__text-white;
 		}
