@@ -359,7 +359,11 @@ address {
   margin: 0 0 1.5em; }
 
 /* Code
+<<<<<<< HEAD
  * ------------------------------- */
+=======
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+>>>>>>> master
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -542,6 +546,7 @@ li.outofstock::before {
   width: 290px;
   z-index: 99;
   padding: 1.2rem; }
+<<<<<<< HEAD
 
 div#login-box {
   color: #fff; }
@@ -556,6 +561,17 @@ div#login-box {
       margin: 0;
       width: auto; }
   div#login-box a {
+=======
+  #header-login > div form {
+    margin: 1rem 0; }
+    #header-login > div form label {
+      color: #fff; }
+    #header-login > div form input[type="submit"].button-primary {
+      border-color: #00F072;
+      background-color: #fff;
+      margin: 0; }
+  #header-login > div a {
+>>>>>>> master
     color: #fff; }
 
 #user-box .button, #user-box ul#header-menu li, ul#header-menu #user-box li {
@@ -1708,4 +1724,8 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 /*# sourceMappingURL=theme.css.map */

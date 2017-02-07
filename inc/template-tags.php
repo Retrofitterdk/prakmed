@@ -189,6 +189,36 @@ if ( ! function_exists( 'prakmed_entry_footer' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'prakmed_login_box' ) ) :
+	function prakmed_login_box() {
+		if ( ! is_user_logged_in() ) { // Display WordPress login form:
+			$args = array(
+				'form_id' => 'loginform',
+				'label_username' => __( 'E-mail' ),
+				'label_password' => __( 'Password' ),
+				'label_remember' => __( 'Husk mig' ),
+				'label_log_in' => __( 'Log ind' ),
+				'remember' => true
+			);
+			wp_login_form( $args );
+			echo '<a class="lost_password" class="button" href="' . esc_url( wc_lostpassword_url() ) . '">' . __( 'Lost your password?', 'prakmed' ) . '</a>';
+		}
+}
+endif;
+
+add_shortcode( 'prakmed_login_box', 'prakmed_login_box' );
+
+if ( ! function_exists( 'prakmed_logout_box' ) ) :
+	function prakmed_logout_box() {
+if ( is_user_logged_in() ) { // If logged in:
+			echo '<div id="user-box" class="login-wrapper header bg dark">';
+			echo '<a class="button" href="' . get_permalink( get_option('woocommerce_myaccount_page_id') ) ." title=" . __('My Account','prakmed') . '">' . __('My Account','dagens') . '</a>';
+			echo '<div class="button">'. wp_loginout( home_url(), false ) . '</div>'; // Display "Log Out" link.
+			echo '</div></div>';
+		}
+	}
+endif;
+
 /**
 * Returns true if a blog has more than 1 category.
 *

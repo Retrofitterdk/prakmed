@@ -2,6 +2,7 @@
 /**
 * @package dagens
 */
+<<<<<<< HEAD
 if ( ! is_user_logged_in() ) { // Display WordPress login form:	?>
 	<div id="login-box" class="wrapper header bg dark">
 		<?php
@@ -22,3 +23,12 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:	?>
 			<div class="button"><?php wp_loginout( home_url() ) // Display "Log Out" link. ?></div>
 		</div>
 		<?php } ?>
+=======
+?>
+<div id="login-box" class="login-wrapper header bg dark">
+	<?php prakmed_login_box(); ?>
+</div>
+<div id="user-box" class="login-wrapper header bg dark">
+	<?php prakmed_logout_box(); ?>
+</div>
+>>>>>>> master
