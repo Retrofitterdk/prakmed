@@ -21,6 +21,17 @@ address {
 	margin: 0 0 1.5em;
 }
 
+/* Ads
+ * ------------------------------- */
+.widget_ad_widget h2 {
+	font-family: $font__code;
+    font-size: 1.2rem;
+		text-transform: uppercase;
+		margin: 0.1rem 0;
+		letter-spacing: 0;
+		font-weight: 300;
+}
+
 /* Code
  * ------------------------------- */
 pre {

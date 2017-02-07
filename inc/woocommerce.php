@@ -12,7 +12,7 @@ function prakmed_get_access() {
   if ( ! function_exists( 'wc_memberships' ) ) {
     return;
   }
-  
+
   $user_id = get_current_user_id();
   $_get_access_product_id = get_option( 'woocommerce_prakmed_access_with_code', 1 );
 
@@ -43,7 +43,6 @@ function prakmed_get_access() {
 
 add_filter( 'woocommerce_product_settings', 'prakmed_add_a_setting' );
 function prakmed_add_a_setting( $settings ) {
-
   $settings[] = array( 'name' => __( 'Featured products', 'prakmed' ), 'type' => 'title', 'desc' => '', 'id' => 'woocommerce_prakmed_settings' );
 
   $settings[] = array(
