@@ -15,7 +15,6 @@ body {
 
 blockquote, q {
 	quotes: "" "";
-
 	&:before,
 	&:after {
 		content: "";
@@ -113,14 +112,9 @@ div#login-box {
 	color: $color__text-white;
 	& form {
 		margin: 1rem 0;
-<<<<<<< HEAD
 		& input[type="text"],
 		& input[type="password"] {
 			width: 100%;
-=======
-		& label {
-			color: $color__text-white;
->>>>>>> master
 		}
 		& input[type="submit"] {
 			&.button-primary {
