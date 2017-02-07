@@ -58,7 +58,7 @@
 </header><!-- #masthead -->
 <div id="header-login" class="login-container wrap toggle hide">
 		<?php get_template_part( 'template-parts/login', 'header' ); ?>
-</div>
+</div><!-- #header-login -->
 <nav id="primary-menu-container" class="mobile hide menu" role="navigation">
 <?php get_template_part( 'template-parts/menu', 'primary' ); ?>
 </nav><!-- #primary-navigation -->

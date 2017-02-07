@@ -358,8 +358,18 @@ blockquote {
 address {
   margin: 0 0 1.5em; }
 
+/* Ads
+ * ------------------------------- */
+.widget_ad_widget h2 {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0.1rem 0;
+  letter-spacing: 0;
+  font-weight: 300; }
+
 /* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ * ------------------------------- */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -542,22 +552,30 @@ li.outofstock::before {
   width: 290px;
   z-index: 99;
   padding: 1.2rem; }
-  #header-login > div form {
+
+div#login-box {
+  color: #fff; }
+  div#login-box form {
     margin: 1rem 0; }
-    #header-login > div form label {
-      color: #fff; }
-    #header-login > div form input[type="submit"].button-primary {
+    div#login-box form input[type="text"],
+    div#login-box form input[type="password"] {
+      width: 100%; }
+    div#login-box form input[type="submit"].button-primary {
       border-color: #00F072;
       background-color: #fff;
-      margin: 0; }
-  #header-login > div a {
+      margin: 0;
+      width: auto; }
+  div#login-box a {
     color: #fff; }
 
 #user-box .button, #user-box ul#header-menu li, ul#header-menu #user-box li {
+  color: #fff;
   width: 100%;
   margin-left: 0; }
-  #user-box .button:hover, #user-box ul#header-menu li:hover, ul#header-menu #user-box li:hover, #user-box .button:active, #user-box ul#header-menu li:active, ul#header-menu #user-box li:active, #user-box .button:focus, #user-box ul#header-menu li:focus, ul#header-menu #user-box li:focus {
-    border-color: #36B371; }
+  #user-box .button a, #user-box ul#header-menu li a, ul#header-menu #user-box li a {
+    color: #fff; }
+    #user-box .button a:hover, #user-box ul#header-menu li a:hover, ul#header-menu #user-box li a:hover, #user-box .button a:active, #user-box ul#header-menu li a:active, ul#header-menu #user-box li a:active, #user-box .button a:focus, #user-box ul#header-menu li a:focus, ul#header-menu #user-box li a:focus {
+      border-color: #36B371; }
 
 /*=============================================================
 #.# Responsive ads
@@ -853,7 +871,9 @@ input.search-field {
   border-radius: 2px 0 0 2px;
   outline: none; }
 
-.search-submit {
+input.search-submit,
+button.search-submit,
+input[type="submit"] {
   width: 20%;
   margin: 0;
   height: auto;
@@ -861,9 +881,11 @@ input.search-field {
   border-radius: 0 2px 2px 0;
   border: none;
   vertical-align: top;
-  background: #00A44E; }
+  background: #00A44E;
+  height: 4rem; }
 
-.search-submit:before {
+input.search-submit:before,
+button.search-submit:before {
   content: '\73';
   display: inline-block;
   padding: 0 .5rem;
@@ -1050,7 +1072,8 @@ body.active-course-progress-bar .site-content {
   .footer-navigation ul li {
     display: inline-block;
     float: left;
-    width: 20%; }
+    width: 25%;
+    margin: 0; }
     .footer-navigation ul li a {
       position: relative;
       display: block;
@@ -1114,9 +1137,7 @@ footer.site-footer > .search-box-wrapper {
 
 footer.site-footer .sharepanel-wrapper,
 footer.site-footer .search-box-wrapper {
-  text-align: center;
-  border-bottom: 1px solid #222;
-  outline: 1px solid #030303; }
+  text-align: center; }
 
 #sections ul li.button, #sections ul#header-menu li {
   width: 100%;
