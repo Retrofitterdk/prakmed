@@ -60,21 +60,21 @@ li.product-item label {
 
 .out-of-stock::before,
 li.outofstock::before {
-    content: 'Udsolgt';
-    position: absolute;
-    background: red;
-    padding: 0 2rem;
-    color: #fff;
-    text-transform: uppercase;
-	}
+	content: 'Udsolgt';
+	position: absolute;
+	background: red;
+	padding: 0 2rem;
+	color: #fff;
+	text-transform: uppercase;
+}
 
-	.woocommerce form .form-row-first,
-	.woocommerce form .form-row-last,
-	.woocommerce-page form .form-row-first,
-	.woocommerce-page form .form-row-last {
-		width:100%;
-		@media screen and (min-width: $tablet) {
-width: 47%;
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+	width:100%;
+	@media screen and (min-width: $tablet) {
+		width: 47%;
 	}
 }
 
@@ -82,7 +82,7 @@ width: 47%;
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    background-color: $color__brand;
+	background-color: $color__brand;
 }
 
 .woocommerce #respond input#submit.alt:hover,
@@ -95,7 +95,7 @@ width: 47%;
 #add_payment_method #payment,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
-    border-radius: 2px;
+	border-radius: 2px;
 }
 
 /*=============================================================
@@ -107,16 +107,22 @@ width: 47%;
 	width: 290px;
 	z-index: 99;
 	padding: 1.2rem;
+}
+
+div#login-box {
+	color: $color__text-white;
 	& form {
 		margin: 1rem 0;
-		& label {
-			color: $color__text-white;
+		& input[type="text"],
+		& input[type="password"] {
+			width: 100%;
 		}
 		& input[type="submit"] {
 			&.button-primary {
 				border-color: $color__brand-lighter;
 				background-color: #fff;
 				margin: 0;
+				width: auto;
 			}
 		}
 	}
@@ -126,14 +132,17 @@ width: 47%;
 }
 
 #user-box .button {
-    width: 100%;
-    margin-left: 0;
+	color: $color__text-white;
+	width: 100%;
+	margin-left: 0;
+	& a {
+		color: $color__text-white;
 		&:hover,
 		&:active,
 		&:focus {
 			border-color: $color__brand-light;
 		}
-
+	}
 }
 
 /*=============================================================

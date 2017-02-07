@@ -359,7 +359,7 @@ address {
   margin: 0 0 1.5em; }
 
 /* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ * ------------------------------- */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -542,22 +542,30 @@ li.outofstock::before {
   width: 290px;
   z-index: 99;
   padding: 1.2rem; }
-  #header-login > div form {
+
+div#login-box {
+  color: #fff; }
+  div#login-box form {
     margin: 1rem 0; }
-    #header-login > div form label {
-      color: #fff; }
-    #header-login > div form input[type="submit"].button-primary {
+    div#login-box form input[type="text"],
+    div#login-box form input[type="password"] {
+      width: 100%; }
+    div#login-box form input[type="submit"].button-primary {
       border-color: #00F072;
       background-color: #fff;
-      margin: 0; }
-  #header-login > div a {
+      margin: 0;
+      width: auto; }
+  div#login-box a {
     color: #fff; }
 
 #user-box .button, #user-box ul#header-menu li, ul#header-menu #user-box li {
+  color: #fff;
   width: 100%;
   margin-left: 0; }
-  #user-box .button:hover, #user-box ul#header-menu li:hover, ul#header-menu #user-box li:hover, #user-box .button:active, #user-box ul#header-menu li:active, ul#header-menu #user-box li:active, #user-box .button:focus, #user-box ul#header-menu li:focus, ul#header-menu #user-box li:focus {
-    border-color: #36B371; }
+  #user-box .button a, #user-box ul#header-menu li a, ul#header-menu #user-box li a {
+    color: #fff; }
+    #user-box .button a:hover, #user-box ul#header-menu li a:hover, ul#header-menu #user-box li a:hover, #user-box .button a:active, #user-box ul#header-menu li a:active, ul#header-menu #user-box li a:active, #user-box .button a:focus, #user-box ul#header-menu li a:focus, ul#header-menu #user-box li a:focus {
+      border-color: #36B371; }
 
 /*=============================================================
 #.# Responsive ads
