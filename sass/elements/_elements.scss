@@ -46,10 +46,10 @@ figure {
 /*=============================================================
 #.# Woocommerce
 =============================================================*/
-.claim-access .checkout_coupon,
-.buy-book .checkout_coupon, {
+.checkout_coupon, {
 	display: block !important;
 }
+
 li.product-item {
 	list-style: none;
 }
@@ -58,17 +58,57 @@ li.product-item label {
 	display: inline-block;
 }
 
+.out-of-stock::before,
+li.outofstock::before {
+    content: 'Udsolgt';
+    position: absolute;
+    background: red;
+    padding: 0 2rem;
+    color: #fff;
+    text-transform: uppercase;
+	}
+
+	.woocommerce form .form-row-first,
+	.woocommerce form .form-row-last,
+	.woocommerce-page form .form-row-first,
+	.woocommerce-page form .form-row-last {
+		width:100%;
+		@media screen and (min-width: $tablet) {
+width: 47%;
+	}
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: $color__brand;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: $color__brand-light;
+}
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+    border-radius: 2px;
+}
+
 /*=============================================================
 #.# Login
 =============================================================*/
-.login-wrapper.header {
+#header-login > div {
 	position: absolute;
 	right: 4rem;
 	width: 290px;
 	z-index: 99;
 	padding: 1.2rem;
 	& form {
-		margin-bottom: 1rem;
+		margin: 1rem 0;
 		& label {
 			color: $color__text-white;
 		}
