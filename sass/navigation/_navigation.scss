@@ -43,6 +43,10 @@ footer.site-footer {
   bottom: 0;
   height: auto;
   z-index: 9999;
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    background: #444444;
+  }
 }
 
 footer.site-footer > .search-box-wrapper {

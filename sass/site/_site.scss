@@ -100,6 +100,36 @@ header.site-header {
   }
 }
 
+// Footer
+#footer-info {
+  color: $color__text-white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  & div {
+    & h3 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    & p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      & a {
+      color: $color__text-white;
+      text-decoration: none;
+}
+      & span {
+        display: block;
+      }
+    }
+  }
+  #book_cover {
+    width: 20rem;
+  }
+}
+
+
+
 /*==============================================================
 Larger than tablet
 ==============================================================*/
@@ -153,6 +183,7 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   .columns {
     margin-left: $columnMargin;
     box-sizing: border-box;
+    float: left;
   }
   .column:first-child,
   .columns:first-child,
