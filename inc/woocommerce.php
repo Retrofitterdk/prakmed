@@ -15,8 +15,8 @@ function prakmed_get_access() {
 
   $user_id = get_current_user_id();
   $_get_access_product_id = get_option( 'woocommerce_prakmed_access_with_code', 1 );
-
-  add_action( 'before_main_content', 'prakmed_get_access' );
+  $_get_access_path = '/faa-adgang/?add-to-cart=' . $_get_access_product_id;
+  $_get_access_url = site_url( $_get_access_path );
 
   // Bail if the user already has active membership
   if ( wc_memberships_is_user_active_member( $user_id, 'access' )) {
@@ -29,12 +29,12 @@ function prakmed_get_access() {
     $get_access  = '<h1>' . esc_html__( 'How to get access', 'prakmed' ) . '</h1>';
     $get_access .= '<p>';
     $get_access .= '<span>' . esc_html__('If you have code from book', 'prakmed');
-    $get_access .= '</span><a href="http://prakmed.dev/faa-adgang/?add-to-cart=' . $_get_access_product_id . '" class="button">' . esc_html__('Get access here', 'prakmed') . '</a>';
+    $get_access .= '</span><a href="' . $_get_access_url . '" class="button get_access">' . esc_html__('Get access here', 'prakmed') . '</a>';
     $get_access .= '</p>';
 
     $get_access .= '<p>';
     $get_access .= '<span>' . esc_html__('If you want to buy access', 'prakmed');
-    $get_access .= '</span><a href="http://prakmed.dev/koeb-bogen/" class="button">' . esc_html__('Get access here', 'prakmed') . '</a>';
+    $get_access .= '</span><a href="http://prakmed.dev/koeb-bogen/" class="button buy_access">' . esc_html__('Get access here', 'prakmed') . '</a>';
     $get_access .= '</p>';
     echo $get_access;
 

@@ -253,7 +253,7 @@ textarea {
   font-size: 1.7em;
   line-height: 1.5; }
 
-.site-branding {
+.site-branding .site-title {
   font-family: "trajan-pro-3", Georgia, serif;
   font-size: 2.6rem;
   text-transform: uppercase; }
@@ -1131,6 +1131,10 @@ footer.site-footer {
   bottom: 0;
   height: auto;
   z-index: 9999; }
+  @media screen and (min-width: 960px) {
+    footer.site-footer {
+      position: relative;
+      background: #444444; } }
 
 footer.site-footer > .search-box-wrapper {
   padding: 15px; }
@@ -1406,6 +1410,25 @@ header.site-header {
     .pagination a[rel="next"] {
       float: right; }
 
+#footer-info {
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  #footer-info div h3 {
+    font-size: 2rem;
+    margin: 0; }
+  #footer-info div p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem; }
+    #footer-info div p a {
+      color: #fff;
+      text-decoration: none; }
+    #footer-info div p span {
+      display: block; }
+  #footer-info #book_cover {
+    width: 20rem; }
+
 /*==============================================================
 Larger than tablet
 ==============================================================*/
@@ -1420,7 +1443,8 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   .column,
   .columns {
     margin-left: 4%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    float: left; }
   .column:first-child,
   .columns:first-child,
   #content-column {
