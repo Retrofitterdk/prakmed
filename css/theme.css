@@ -1564,6 +1564,7 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
 .updated:not(.published) {
   display: none; }
 
+.singular-prakmed_article .byline,
 .single .byline,
 .group-blog .byline {
   display: inline; }
