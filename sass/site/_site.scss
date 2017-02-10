@@ -70,10 +70,10 @@ header.site-header {
 }
 
 #sidebar-top {
-    margin-top: 5rem;
-    @media screen and (min-width: $desktop) {
-      margin-top: 1rem;
-}
+  margin-top: 5rem;
+  @media screen and (min-width: $desktop) {
+    margin-top: 1rem;
+  }
 }
 
 .site-content {
@@ -115,11 +115,15 @@ header.site-header {
       margin-bottom: 1rem;
       font-size: 1.4rem;
       & a {
-      color: $color__text-white;
-      text-decoration: none;
-}
+        color: $color__text-white;
+        text-decoration: none;
+      }
       & span {
         display: block;
+      }
+      & span#postal_locality,
+      & span#postal_code {
+        display: inline;
       }
     }
   }
