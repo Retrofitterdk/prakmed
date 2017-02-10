@@ -60,6 +60,16 @@ if ( ! function_exists( 'prakmed_posted_on' ) ) :
 }
 endif;
 
+if ( ! function_exists( 'prakmed_last_edit' ) ) :
+	function prakmed_last_edit() {
+		// Modified date
+		$edited_on  = '<strong>' . esc_html__( 'Last Modified Date', 'prakmed' ) . '</strong>: ';
+		$edited_on .=	'<span itemprop="dateModified"><time datetime="' . esc_attr( get_the_modified_time( 'Y-m-d' ) ) . '" pubdate>';
+		$edited_on .= esc_attr(get_the_modified_date()) .	'</time></span>';
+		echo '<div class="last_edit">' . $edited_on . '</div>';
+	}
+endif;
+
 if ( ! function_exists( 'prakmed_posted_by' ) ) :
 	/**
 	* Prints HTML with meta information for the current author.
@@ -74,7 +84,7 @@ if ( ! function_exists( 'prakmed_posted_by' ) ) :
 			);
 			$byline = coauthors_posts_links( $between, $betweenLast, '<span class="author vcard">', '</span>', false );
 		} else {
-			$byline = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+			$byline = '<span class="author vcard" itemprop="author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 		}
 		echo '<div class="byline">' . sprintf( _x( '<strong>Editor:</strong> %s', 'post author', 'prakmed' ),$byline ) . '</div>';
 	}
@@ -118,7 +128,7 @@ if ( ! function_exists( 'prakmed_the_sections' ) ) :
 			'orderby' => 'name',
 			'order'   => 'ASC'
 		) );
-		echo '<ul>';
+		echo '<div id="sections" class="taxonomy-list"><ul>';
 		foreach( $sections as $section ) {
 
 			$section_link = get_term_link( $section );
@@ -132,8 +142,16 @@ if ( ! function_exists( 'prakmed_the_sections' ) ) :
 			echo '<li class="button primary"><a href="' . esc_url( $section_link ) . '">' . $section->name . '</a></li>';
 		}
 
-		echo '</ul>';
+		echo '</ul></div>';
 	}
+endif;
+
+if ( ! function_exists( 'prakmed_the_search' ) ) :
+	function prakmed_the_search() {
+		echo '<div id="search" class="search">';
+		get_search_form();
+		echo '</div>';
+}
 endif;
 
 if ( ! function_exists( 'prakmed_entry_footer' ) ) :

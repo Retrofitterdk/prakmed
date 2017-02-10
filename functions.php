@@ -55,3 +55,8 @@ require get_template_directory() . '/inc/sidebars.php';
  * Load custom functions for Woocommerce.
  */
 require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Load custom functions for Homepage Control.
+ */
+require get_template_directory() . '/inc/homepage.php';

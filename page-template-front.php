@@ -14,14 +14,15 @@ get_header(); ?>
 <div id="primary" class="content-area nine columns">
 	<main id="main" class="site-main" role="main">
 		<?php
-		do_action('before_main_content');
+		do_action( 'homepage' );
 		 ?>
-		<div id="search" class="search">
-			<?php get_search_form(); ?>
-		</div>
-		<div id="sections" class="taxonomy-list">
-			<?php prakmed_the_sections(); ?>
-			</div
+		 <?php
+		 while ( have_posts() ) : the_post();
+
+			 get_template_part( 'template-parts/content', 'frontpage' );
+
+		 endwhile; // End of the loop.
+		 ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
