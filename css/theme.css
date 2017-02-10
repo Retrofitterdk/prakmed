@@ -166,7 +166,10 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-button,
+button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary,
 input,
 optgroup,
 select,
@@ -175,25 +178,36 @@ textarea {
   font: inherit;
   margin: 0; }
 
-button {
+button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary {
   overflow: visible; }
 
-button,
+button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary,
 select {
   text-transform: none; }
 
-button,
+button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled],
+button[disabled], .woocommerce [disabled].button, .woocommerce ul#header-menu li[disabled], ul#header-menu .woocommerce li[disabled],
+.woocommerce [disabled].button-primary,
 html input[disabled] {
   cursor: default; }
 
-button::-moz-focus-inner,
+button::-moz-focus-inner, .woocommerce .button::-moz-focus-inner, .woocommerce ul#header-menu li::-moz-focus-inner, ul#header-menu .woocommerce li::-moz-focus-inner,
+.woocommerce .button-primary::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -245,6 +259,12 @@ html {
 
 body,
 button,
+.woocommerce .button,
+.woocommerce ul#header-menu li,
+ul#header-menu .woocommerce li,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary,
 input,
 select,
 textarea {
@@ -285,20 +305,28 @@ h2 {
   line-height: 1.25;
   letter-spacing: -.1rem; }
 
-.singular-prakmed_article h1.entry-title,
-.singular-prakmed_article h2.entry-title,
-.singular-prakmed_article .entry-meta {
+article.prakmed_article .entry-header, article.prakmed_article h1, article.prakmed_article h2, article.prakmed_article h3, article.prakmed_article h4, article.prakmed_article h5, article.prakmed_article h6 {
   font-weight: 400; }
+  article.prakmed_article .entry-header h1.entry-title a, article.prakmed_article h1 h1.entry-title a, article.prakmed_article h2 h1.entry-title a, article.prakmed_article h3 h1.entry-title a, article.prakmed_article h4 h1.entry-title a, article.prakmed_article h5 h1.entry-title a, article.prakmed_article h6 h1.entry-title a,
+  article.prakmed_article .entry-header h2.entry-title a,
+  article.prakmed_article h1 h2.entry-title a,
+  article.prakmed_article h2 h2.entry-title a,
+  article.prakmed_article h3 h2.entry-title a,
+  article.prakmed_article h4 h2.entry-title a,
+  article.prakmed_article h5 h2.entry-title a,
+  article.prakmed_article h6 h2.entry-title a {
+    text-decoration: none;
+    color: #404040; }
 
-#toc-title, .article-content h2 {
+#toc-title, .article-content h2, h2.widget-title {
   font-size: 1.8rem;
   line-height: 1;
   margin: 0.8rem 0 1.8rem 0;
   text-transform: uppercase;
   text-decoration: underline;
-  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  text-decoration-color: #00A44E;
+  -webkit-text-decoration-color: #00A44E;
+          text-decoration-color: #00A44E;
   font-weight: 600;
   letter-spacing: 0; }
 
@@ -437,11 +465,15 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem; }
 
-ul {
-  list-style: circle inside; }
-
+ul,
 ol {
-  list-style: decimal inside; }
+  list-style: none inside; }
+
+article ul {
+  list-style: circle; }
+
+article ol {
+  list-style: decimal; }
 
 ol, ul {
   padding-left: 0;
@@ -474,7 +506,7 @@ figure {
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
 /* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -528,13 +560,13 @@ li.outofstock::before {
 
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
-.woocommerce button.button.alt,
+.woocommerce button.button.alt, .woocommerce .button.alt, .woocommerce ul#header-menu li.alt, ul#header-menu .woocommerce li.alt,
 .woocommerce input.button.alt {
   background-color: #00A44E; }
 
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
+.woocommerce button.button.alt:hover, .woocommerce .button.alt:hover, .woocommerce ul#header-menu li.alt:hover, ul#header-menu .woocommerce li.alt:hover,
 .woocommerce input.button.alt:hover {
   background-color: #36B371; }
 
@@ -542,6 +574,26 @@ li.outofstock::before {
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
   border-radius: 2px; }
+
+.woocommerce-info {
+  border-top-color: #00A44E; }
+
+.article-content .wc-memberships-content-restricted-message {
+  padding: 2rem !important; }
+  .article-content .wc-memberships-content-restricted-message:before {
+    content: ''; }
+  .article-content .wc-memberships-content-restricted-message form {
+    margin: 1rem 0; }
+    .article-content .wc-memberships-content-restricted-message form p {
+      font-family: "franklin-gothic-urw", "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
+    .article-content .wc-memberships-content-restricted-message form input[type="text"],
+    .article-content .wc-memberships-content-restricted-message form input[type="password"] {
+      width: 100%;
+      max-width: 100%; }
+    .article-content .wc-memberships-content-restricted-message form input[type="submit"].button-primary {
+      border-color: #00A44E;
+      margin: 0;
+      width: auto; }
 
 /*=============================================================
 #.# Login
@@ -667,6 +719,12 @@ Desktop (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 --------------------------------------------------------------*/
 .button, ul#header-menu li,
 button,
+.woocommerce .button,
+.woocommerce ul#header-menu li,
+ul#header-menu .woocommerce li,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -674,6 +732,7 @@ input[type="button"] {
   border-color: #00A44E;
   border-radius: 2px;
   background: transparent;
+  float: none;
   margin: 0.5rem;
   padding: .7rem 2rem;
   display: inline-block;
@@ -691,6 +750,10 @@ input[type="button"] {
   box-sizing: border-box; }
   .button:hover, ul#header-menu li:hover,
   button:hover,
+  .woocommerce .button:hover,
+  .woocommerce ul#header-menu li:hover,
+  ul#header-menu .woocommerce li:hover,
+  .woocommerce .button-primary:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover {
@@ -698,7 +761,15 @@ input[type="button"] {
     opacity: .8; }
   .button:active, ul#header-menu li:active, .button:focus, ul#header-menu li:focus,
   button:active,
+  .woocommerce .button:active,
+  .woocommerce ul#header-menu li:active,
+  ul#header-menu .woocommerce li:active,
+  .woocommerce .button-primary:active,
   button:focus,
+  .woocommerce .button:focus,
+  .woocommerce ul#header-menu li:focus,
+  ul#header-menu .woocommerce li:focus,
+  .woocommerce .button-primary:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus,
   input[type="reset"]:active,
@@ -708,7 +779,8 @@ input[type="button"] {
     border-color: #007136;
     opacity: .8; }
   .button a, ul#header-menu li a,
-  button a,
+  button a, .woocommerce .button a, .woocommerce ul#header-menu li a, ul#header-menu .woocommerce li a,
+  .woocommerce .button-primary a,
   input[type="submit"] a,
   input[type="reset"] a,
   input[type="button"] a {
@@ -716,6 +788,10 @@ input[type="button"] {
 
 .button.primary, ul#header-menu li.primary,
 button.primary,
+.woocommerce .primary.button,
+.woocommerce ul#header-menu li.primary,
+ul#header-menu .woocommerce li.primary,
+.woocommerce .primary.button-primary,
 input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary {
@@ -723,8 +799,20 @@ input[type="button"].primary {
   background-color: #00A44E; }
   .button.primary:hover, ul#header-menu li.primary:hover, .button.primary:active, ul#header-menu li.primary:active, .button.primary:focus, ul#header-menu li.primary:focus,
   button.primary:hover,
+  .woocommerce .primary.button:hover,
+  .woocommerce ul#header-menu li.primary:hover,
+  ul#header-menu .woocommerce li.primary:hover,
+  .woocommerce .primary.button-primary:hover,
   button.primary:active,
+  .woocommerce .primary.button:active,
+  .woocommerce ul#header-menu li.primary:active,
+  ul#header-menu .woocommerce li.primary:active,
+  .woocommerce .primary.button-primary:active,
   button.primary:focus,
+  .woocommerce .primary.button:focus,
+  .woocommerce ul#header-menu li.primary:focus,
+  ul#header-menu .woocommerce li.primary:focus,
+  .woocommerce .primary.button-primary:focus,
   input[type="submit"].primary:hover,
   input[type="submit"].primary:active,
   input[type="submit"].primary:focus,
@@ -739,9 +827,12 @@ input[type="button"].primary {
   .button.primary a, ul#header-menu li.primary a,
   .button.primary a:visited, ul#header-menu li.primary a:visited,
   .button.primary a:hover, ul#header-menu li.primary a:hover,
-  button.primary a,
-  button.primary a:visited,
-  button.primary a:hover,
+  button.primary a, .woocommerce .primary.button a, .woocommerce ul#header-menu li.primary a, ul#header-menu .woocommerce li.primary a,
+  .woocommerce .primary.button-primary a,
+  button.primary a:visited, .woocommerce .primary.button a:visited, .woocommerce ul#header-menu li.primary a:visited, ul#header-menu .woocommerce li.primary a:visited,
+  .woocommerce .primary.button-primary a:visited,
+  button.primary a:hover, .woocommerce .primary.button a:hover, .woocommerce ul#header-menu li.primary a:hover, ul#header-menu .woocommerce li.primary a:hover,
+  .woocommerce .primary.button-primary a:hover,
   input[type="submit"].primary a,
   input[type="submit"].primary a:visited,
   input[type="submit"].primary a:hover,
@@ -873,6 +964,10 @@ input.search-field {
 
 input.search-submit,
 button.search-submit,
+.woocommerce .search-submit.button,
+.woocommerce ul#header-menu li.search-submit,
+ul#header-menu .woocommerce li.search-submit,
+.woocommerce .search-submit.button-primary,
 input[type="submit"] {
   width: 20%;
   margin: 0;
@@ -885,7 +980,11 @@ input[type="submit"] {
   height: 4rem; }
 
 input.search-submit:before,
-button.search-submit:before {
+button.search-submit:before,
+.woocommerce .search-submit.button:before,
+.woocommerce ul#header-menu li.search-submit:before,
+ul#header-menu .woocommerce li.search-submit:before,
+.woocommerce .search-submit.button-primary:before {
   content: '\73';
   display: inline-block;
   padding: 0 .5rem;
@@ -1426,6 +1525,9 @@ header.site-header {
       text-decoration: none; }
     #footer-info div p span {
       display: block; }
+    #footer-info div p span#postal_locality,
+    #footer-info div p span#postal_code {
+      display: inline; }
   #footer-info #book_cover {
     width: 20rem; }
 
@@ -1564,6 +1666,7 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
 .updated:not(.published) {
   display: none; }
 
+article.prakmed_article .byline,
 .singular-prakmed_article .byline,
 .single .byline,
 .group-blog .byline {
@@ -1743,5 +1846,4 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
-
 /*# sourceMappingURL=theme.css.map */
