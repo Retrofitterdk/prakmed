@@ -24,6 +24,10 @@ function prakmed_get_access() {
   $_get_access_path = '/faa-adgang/?add-to-cart=' . $_get_access_product_id;
   $_get_access_url = site_url( $_get_access_path );
 
+  $_buy_access_path = '/koeb-bogen/';
+  $_buy_access_url = site_url( $_get_access_path );
+
+
   // Bail if the user already has active membership
   if ( wc_memberships_is_user_active_member( $user_id, 'access' )) {
     return;
@@ -39,7 +43,7 @@ function prakmed_get_access() {
     $get_access .= '</span><a href="' . $_get_access_url . '" class="button">' . esc_html__('Use code here', 'prakmed') . '</a>';
     $get_access .= '</p></div>';
     $get_access .= '<div class="buy_access six columns"><p><span>' . esc_html__('If you want digital access', 'prakmed');
-    $get_access .= '</span><a href="http://prakmed.dev/koeb-bogen/" class="button">' . esc_html__('Buy access here', 'prakmed') . '</a>';
+    $get_access .= '</span><a href="' . $_buy_access_url . '" class="button">' . esc_html__('Buy access here', 'prakmed') . '</a>';
     $get_access .= '</p></div></div></div>';
     echo $get_access;
 
