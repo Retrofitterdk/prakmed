@@ -25,7 +25,7 @@ function prakmed_get_access() {
   $_get_access_url = site_url( $_get_access_path );
 
   $_buy_access_path = '/koeb-bogen/';
-  $_buy_access_url = site_url( $_get_access_path );
+  $_buy_access_url = site_url( $_buy_access_path );
 
 
   // Bail if the user already has active membership
