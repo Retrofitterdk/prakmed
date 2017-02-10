@@ -1,9 +1,15 @@
-ul {
-	list-style: circle inside;
+ul,
+ol {
+	list-style: none inside;
 }
 
-ol {
-	list-style: decimal inside;
+
+article ul {
+	list-style: circle;
+}
+
+article ol {
+	list-style: decimal;
 }
 
 ol, ul {
