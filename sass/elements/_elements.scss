@@ -97,6 +97,35 @@ li.outofstock::before {
 	border-radius: 2px;
 }
 
+.woocommerce-info {
+	border-top-color: $color__brand;
+}
+
+.article-content .wc-memberships-content-restricted-message {
+	padding: 2rem !important;
+	&:before {
+		content: '';
+	}
+	& form {
+		margin: 1rem 0;
+		& p {
+			font-family: $font__heading;
+		}
+		& input[type="text"],
+		& input[type="password"] {
+			width: 100%;
+			max-width: 100%;
+		}
+		& input[type="submit"] {
+			&.button-primary {
+				border-color: $color__brand;
+				margin: 0;
+				width: auto;
+			}
+		}
+	}
+}
+
 /*=============================================================
 #.# Login
 =============================================================*/

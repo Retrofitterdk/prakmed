@@ -14,6 +14,7 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:	?>
 			'remember'       => true
 		);
 		wp_login_form( $args );
+		echo '<a class="lost_password" class="button" href="' . esc_url( wc_lostpassword_url() ) . '">' . __( 'Lost your password?', 'prakmed' ) . '</a>';
 		?>
 	</div>
 	<?php	} else { ?>

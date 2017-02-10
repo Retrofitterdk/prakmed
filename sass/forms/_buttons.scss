@@ -7,6 +7,7 @@ input[type="button"] {
 	border-color: $color__border-button;
 	border-radius: 2px;
 	background: $color__background-button;
+	float: none;
 	margin: 0.5rem;
 	padding: .7rem 2rem;
 	display: inline-block;
@@ -59,4 +60,11 @@ input[type="button"] {
 			color: #FFF;
 		}
 	}
+}
+
+.woocommerce .button,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary {
+	@extend button;
 }
