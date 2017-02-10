@@ -7,27 +7,6 @@
 * @package PrakMed
 */
 
-add_shortcode( 'prakmed_login', 'prakmed_login_box' );
-
-if ( ! function_exists( 'prakmed_login_box' ) ) :
-	function prakmed_login_box() {
-		if ( ! is_user_logged_in() ) { // Display WordPress login form:
-			$args = array(
-				'echo'           => false,
-				'form_id' => 'loginform-entry',
-				'label_username' => __( 'E-mail' ),
-				'label_password' => __( 'Password' ),
-				'label_remember' => __( 'Husk mig' ),
-				'label_log_in' => __( 'Log ind' ),
-				'remember' => true
-			);
-			$loginform  = wp_login_form( $args );
-			$loginform .= '<a class="lost_password" class="button" href="' . esc_url( wc_lostpassword_url() ) . '">' . __( 'Lost your password?', 'prakmed' ) . '</a>';
-			return $loginform;
-		}
-	}
-endif;
-
 if ( ! function_exists( 'prakmed_posted_on' ) ) :
 	/**
 	* Prints HTML with meta information for the current post-date/time and author.

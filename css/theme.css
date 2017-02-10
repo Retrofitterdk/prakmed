@@ -324,9 +324,9 @@ article.prakmed_article .entry-header, article.prakmed_article h1, article.prakm
   margin: 0.8rem 0 1.8rem 0;
   text-transform: uppercase;
   text-decoration: underline;
+  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  -webkit-text-decoration-color: #00A44E;
-          text-decoration-color: #00A44E;
+  text-decoration-color: #00A44E;
   font-weight: 600;
   letter-spacing: 0; }
 
@@ -578,22 +578,53 @@ li.outofstock::before {
 .woocommerce-info {
   border-top-color: #00A44E; }
 
-.article-content .wc-memberships-content-restricted-message {
+.content-area .wc-memberships-content-restricted-message {
   padding: 2rem !important; }
-  .article-content .wc-memberships-content-restricted-message:before {
+  .content-area .wc-memberships-content-restricted-message:before {
     content: ''; }
-  .article-content .wc-memberships-content-restricted-message form {
-    margin: 1rem 0; }
-    .article-content .wc-memberships-content-restricted-message form p {
-      font-family: "franklin-gothic-urw", "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
-    .article-content .wc-memberships-content-restricted-message form input[type="text"],
-    .article-content .wc-memberships-content-restricted-message form input[type="password"] {
-      width: 100%;
-      max-width: 100%; }
-    .article-content .wc-memberships-content-restricted-message form input[type="submit"].button-primary {
-      border-color: #00A44E;
-      margin: 0;
-      width: auto; }
+  .content-area .wc-memberships-content-restricted-message p {
+    font-family: "franklin-gothic-urw", "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
+  .content-area .wc-memberships-content-restricted-message div.login-box {
+    margin-top: 2rem;
+    clear: both;
+    float: left; }
+    .content-area .wc-memberships-content-restricted-message div.login-box form {
+      margin: 1rem 0; }
+      .content-area .wc-memberships-content-restricted-message div.login-box form p {
+        font-family: "franklin-gothic-urw", "Century Gothic", CenturyGothic, AppleGothic, sans-serif; }
+      .content-area .wc-memberships-content-restricted-message div.login-box form input[type="text"],
+      .content-area .wc-memberships-content-restricted-message div.login-box form input[type="password"] {
+        width: 100%;
+        max-width: 100%; }
+      .content-area .wc-memberships-content-restricted-message div.login-box form input[type="submit"].button-primary {
+        border-color: #00A44E;
+        margin: 0;
+        width: auto; }
+  .content-area .wc-memberships-content-restricted-message div.get_access,
+  .content-area .wc-memberships-content-restricted-message div.buy_access {
+    border: 1px solid;
+    border-color: #36B371;
+    border-radius: 2px;
+    background-color: #36B371;
+    padding: 3rem; }
+    .content-area .wc-memberships-content-restricted-message div.get_access p,
+    .content-area .wc-memberships-content-restricted-message div.buy_access p {
+      text-align: center; }
+      .content-area .wc-memberships-content-restricted-message div.get_access p span,
+      .content-area .wc-memberships-content-restricted-message div.buy_access p span {
+        display: block;
+        color: #fff;
+        margin-bottom: 1rem;
+        font-weight: 600; }
+      .content-area .wc-memberships-content-restricted-message div.get_access p a.button,
+      .content-area .wc-memberships-content-restricted-message div.buy_access p a.button {
+        border: 1px solid #00A44E;
+        margin: 0;
+        width: auto;
+        font-weight: 400;
+        background: #fff; }
+  .content-area .wc-memberships-content-restricted-message .get_access {
+    margin-left: 0; }
 
 /*=============================================================
 #.# Login
@@ -1846,4 +1877,5 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
+
 /*# sourceMappingURL=theme.css.map */

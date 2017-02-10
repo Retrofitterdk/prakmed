@@ -99,7 +99,7 @@ msgstr "Søgeord"
 #: searchform.php:10
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Søg"
 
 #: inc/setup.php:39
 msgid "Primary Menu"

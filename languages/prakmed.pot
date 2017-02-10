@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-02-02 22:32+0000\n"
+"POT-Creation-Date: 2017-02-10 12:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,11 +58,31 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: footer.php:58
+msgid "Address:"
+msgstr ""
+
+#: footer.php:68
+msgid "Phone:"
+msgstr ""
+
+#: footer.php:72
+msgid "E-mail:"
+msgstr ""
+
+#: footer.php:78
+msgid "Disclaimer"
+msgstr ""
+
+#: footer.php:86
+msgid "Copyright"
+msgstr ""
+
 #: header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:51 template-parts/toc-sidebar.php:3
+#: header.php:53 template-parts/toc-sidebar.php:3
 msgid "Table of content"
 msgstr ""
 
@@ -82,7 +102,7 @@ msgstr ""
 msgid "Frontpage"
 msgstr ""
 
-#: search.php:19
+#: search.php:24
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
@@ -102,6 +122,32 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
+#: inc/homepage.php:36 inc/shortcodes.php:47
+msgid "How to get access"
+msgstr ""
+
+#: inc/homepage.php:37 inc/shortcodes.php:48
+msgid ""
+"In order to read articles, you need to either have the book Praktisk Medicin "
+"2017 or buy digital subscription."
+msgstr ""
+
+#: inc/homepage.php:38 inc/shortcodes.php:49
+msgid "If you have the book"
+msgstr ""
+
+#: inc/homepage.php:39 inc/shortcodes.php:50
+msgid "Use code here"
+msgstr ""
+
+#: inc/homepage.php:41 inc/shortcodes.php:52
+msgid "If you want digital access"
+msgstr ""
+
+#: inc/homepage.php:42 inc/shortcodes.php:53
+msgid "Buy access here"
+msgstr ""
+
 #: inc/setup.php:39
 msgid "Primary Menu"
 msgstr ""
@@ -112,6 +158,18 @@ msgstr ""
 
 #: inc/setup.php:41
 msgid "Footer Menu"
+msgstr ""
+
+#: inc/shortcodes.php:17
+msgid "Do you have account?"
+msgstr ""
+
+#: inc/shortcodes.php:18
+msgid "Log in here."
+msgstr ""
+
+#: inc/shortcodes.php:21 template-parts/login.php:17
+msgid "Lost your password?"
 msgstr ""
 
 #: inc/sidebars.php:9
@@ -166,107 +224,101 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:49
+#: inc/template-tags.php:45
+msgid "Last Modified Date"
+msgstr ""
+
+#: inc/template-tags.php:59
 #, php-format
 msgctxt "before last post author"
 msgid "%s og %s"
 msgstr ""
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:62
 #, php-format
 msgctxt "between post authors"
 msgid "%s, %s"
 msgstr ""
 
-#: inc/template-tags.php:58
+#: inc/template-tags.php:68
 #, php-format
 msgctxt "post author"
 msgid "<strong>Editor:</strong> %s"
 msgstr ""
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:75
 msgid "<strong>Section: </strong>"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:76
 msgid "<strong>Subjects: </strong>"
 msgstr ""
 
-#: inc/template-tags.php:67
+#: inc/template-tags.php:77
 msgid "<strong>ICD-10: </strong>"
 msgstr ""
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:78
 msgid "<strong>ICPC-2: </strong>"
 msgstr ""
 
-#: inc/template-tags.php:69
+#: inc/template-tags.php:79
 msgid "<strong>DSM-5: </strong>"
 msgstr ""
 
-#: inc/template-tags.php:72 inc/template-tags.php:75 inc/template-tags.php:78
-#: inc/template-tags.php:81 inc/template-tags.php:84
+#: inc/template-tags.php:82 inc/template-tags.php:85 inc/template-tags.php:88
+#: inc/template-tags.php:91 inc/template-tags.php:94
 #, php-format
 msgid "%1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:126 inc/template-tags.php:132
+#: inc/template-tags.php:144 inc/template-tags.php:150
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:128
+#: inc/template-tags.php:146
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:134
+#: inc/template-tags.php:152
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. %s: post title
-#: inc/template-tags.php:141
+#: inc/template-tags.php:159
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:148 template-parts/content-page.php:34
+#: inc/template-tags.php:166 template-parts/content-frontpage.php:30
+#: template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: inc/woocommerce.php:29
-msgid "How to get access"
-msgstr ""
-
-#: inc/woocommerce.php:31
-msgid "If you have code from book"
-msgstr ""
-
-#: inc/woocommerce.php:32 inc/woocommerce.php:37
-msgid "Get access here"
-msgstr ""
-
-#: inc/woocommerce.php:36
-msgid "If you want to buy access"
-msgstr ""
-
-#: inc/woocommerce.php:47
+#: inc/woocommerce.php:10
 msgid "Featured products"
 msgstr ""
 
-#: inc/woocommerce.php:50
+#: inc/woocommerce.php:13
 msgid "Product to buy with code from book"
 msgstr ""
 
-#: inc/woocommerce.php:53
+#: inc/woocommerce.php:16
 msgid "Add ID for product, that can be bought for free with book code"
 msgstr ""
 
-#: inc/woocommerce.php:57
+#: inc/woocommerce.php:20
 msgid "Product ID"
+msgstr ""
+
+#: template-parts/content-frontpage.php:18 template-parts/content-page.php:22
+#: template-parts/entrycontent.php:10
+msgid "Pages:"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -291,21 +343,13 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22 template-parts/entrycontent.php:10
-msgid "Pages:"
-msgstr ""
-
 #. translators: %s: Name of current post.
 #: template-parts/entrycontent.php:5
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/login.php:20
-msgid "Lost your password?"
-msgstr ""
-
-#: template-parts/login.php:25
+#: template-parts/login.php:22
 msgid "My Account"
 msgstr ""
 

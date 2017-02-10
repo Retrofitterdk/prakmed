@@ -60,3 +60,8 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load custom functions for Homepage Control.
  */
 require get_template_directory() . '/inc/homepage.php';
+
+/**
+ * Load shortcodes.
+ */
+require get_template_directory() . '/inc/shortcodes.php';
