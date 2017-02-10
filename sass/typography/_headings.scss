@@ -22,10 +22,15 @@ h2 {
 	letter-spacing: -.1rem;
 }
 
-.singular-prakmed_article h1.entry-title,
-.singular-prakmed_article h2.entry-title,
-.singular-prakmed_article .entry-meta {
+article.prakmed_article .entry-header {
 	font-weight: 400;
+	& h1.entry-title,
+	& h2.entry-title {
+		& a {
+			text-decoration: none;
+			color: #404040;
+		}
+	}
 }
 
 #toc-title {

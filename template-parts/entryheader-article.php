@@ -15,6 +15,7 @@ if ( is_singular() ) :
 				<?php
 				prakmed_entry_meta();
 				prakmed_posted_by();
-				?>
+prakmed_last_edit()
+?>	
 			</div>
 		</header>
