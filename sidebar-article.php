@@ -15,4 +15,5 @@
     }
     dynamic_sidebar( 'sidebar-3' );
     ?>
-  </aside><!-- #secondary -->
+
+</aside><!-- #secondary -->
