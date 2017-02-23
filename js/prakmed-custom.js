@@ -45,13 +45,15 @@ if( $(target).is('.hide') ) {
 
 
 /* ===== MAKE TABLE OF CONTENT IN DESKTOP FOLLOW SCROLL ==== */
-	var stickySidebar = $('#secondary').offset().top;
+	var stickySidebar = $('#secondary.sidebar').offset().top;
 	$(window).scroll(function() {
+    var outerDiv = $('#secondary.sidebar').width();
 	    if ($(window).scrollTop() > stickySidebar) {
-	        $('#secondary').addClass('follow-me');
+	        $('#follow-me').addClass('following');
+          $('#follow-me').css("width", outerDiv);
 	    }
 	    else {
-	        $('#secondary').removeClass('follow-me');
+	        $('#follow-me').removeClass('following');
 	    }
 	});
 
