@@ -45,8 +45,15 @@ figure {
 /*=============================================================
 #.# Woocommerce
 =============================================================*/
-.checkout_coupon, {
+.wcopc form.checkout_coupon, {
 	display: block !important;
+	border: 0;
+	margin-top: -2em;
+	background-color: #f7f6f7;
+	& input[type="submit"] {
+		width: auto;
+		margin: 0
+	}
 }
 
 li.product-item {
@@ -75,6 +82,17 @@ li.outofstock::before {
 	@media screen and (min-width: $tablet) {
 		width: 47%;
 	}
+}
+
+.woocommerce .button,
+.woocommerce .button-primary,
+.woocommerce input.button,
+.woocommerce input.button-primary,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	@extend button;
 }
 
 .woocommerce #respond input#submit.alt,

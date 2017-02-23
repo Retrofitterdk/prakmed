@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area buy-book columns">
+	<div id="primary" class="content-area buy-book one-page-checkout twelve columns">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

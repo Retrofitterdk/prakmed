@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area claim-access columns">
+	<div id="primary" class="content-area claim-access one-page-checkout twelve columns">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
