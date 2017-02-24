@@ -35,6 +35,12 @@ ul#header-menu {
 ## Footer navigation
 --------------------------------------------------------------*/
 footer.site-footer {
+  @media screen and (min-width: $desktop) {
+    background: #444444;
+  }
+}
+
+nav.footer-navigation {
   display: block;
   width: 100%;
   background: #030303;
@@ -45,19 +51,14 @@ footer.site-footer {
   z-index: 9999;
   @media screen and (min-width: $desktop) {
     position: relative;
-    background: #444444;
+    background: transparent;
   }
 }
 
-footer.site-footer > .search-box-wrapper {
-  padding: 15px;
-}
-
-footer.site-footer .sharepanel-wrapper,
-footer.site-footer .search-box-wrapper {
+footer.site-footer .sharepanel,
+footer.site-footer .searchbox {
   text-align: center;
-  // border-bottom: 1px solid #222;
-  // outline: 1px solid #030303;
+  padding-top: 1rem;
 }
 
 #sections ul li.button {
