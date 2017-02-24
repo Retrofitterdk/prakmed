@@ -99,11 +99,11 @@ if ( ! function_exists( 'prakmed_setup' ) ) :
 
 	function prakmed_add_footer_navitem($items, $args ) {
 		if( $args->theme_location == 'footer' ) {
-			$login_item  = '<li class="activate share menu-item menu-item-type-post_type menu-item-object-page menu-item-sharepanel menu-item-sharepanel">';
+			$login_item  = '<li class="activate share menu-item menu-item-type-post_type menu-item-object-page menu-item-sharepanel menu-item-sharepanel desktop hide">';
 			$login_item .= '<a href="javascript: return false;" data-toggled="sharepanel-container" class="" aria-controls="article-menu" aria-expanded="false">';
 			$login_item .= '<span class="screen-reader-text">' . __( 'sharepanel', 'prakmed' ) . '</span>';
 			$login_item .= '</a></li>';
-			$login_item .= '<li class="activate search menu-item menu-item-type-post_type menu-item-object-page menu-item-search menu-item-search">';
+			$login_item .= '<li class="activate search menu-item menu-item-type-post_type menu-item-object-page menu-item-search menu-item-search desktop hide">';
 			$login_item .= '<a href="javascript: return false;" data-toggled="search-container" class="" aria-controls="article-menu" aria-expanded="false">';
 			$login_item .= '<span class="screen-reader-text">' . __( 'search', 'prakmed' ) . '</span>';
 			$login_item .= '</a></li>';

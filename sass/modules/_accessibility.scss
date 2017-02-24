@@ -27,6 +27,16 @@
 	}
 }
 
+.mobile.screen-reader-text {
+	@media screen and (min-width: $desktop) {
+		clip: auto;
+		position: relative !important;
+		height: auto;
+		width: auto;
+		overflow: auto;
+	}
+}
+
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
