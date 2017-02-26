@@ -44,8 +44,8 @@
 		</div><!-- .site-branding -->
 
 		<nav id="header-menu-container" class="mobile hide menu" role="navigation">
-		<?php get_template_part( 'template-parts/menu', 'header' ); ?>
-	</nav><!-- #primary-navigation -->
+			<?php get_template_part( 'template-parts/menu', 'header' ); ?>
+		</nav><!-- #primary-navigation -->
 
 		<?php if ( is_singular('prakmed_article') ) : ?>
 			<nav id="article-navigation" class="desktop hide main-navigation activate" role="navigation">
@@ -57,10 +57,10 @@
 	</div><!-- .wrap -->
 </header><!-- #masthead -->
 <div id="header-login" class="login-container wrap toggle hide">
-		<?php get_template_part( 'template-parts/login', 'header' ); ?>
+	<?php get_template_part( 'template-parts/login', 'header' ); ?>
 </div><!-- #header-login -->
 <nav id="primary-menu-container" class="mobile hide menu" role="navigation">
-<?php get_template_part( 'template-parts/menu', 'primary' ); ?>
+	<?php get_template_part( 'template-parts/menu', 'primary' ); ?>
 </nav><!-- #primary-navigation -->
 <?php get_template_part( 'template-parts/toc', 'header' ); ?>
 <div id="content" class="site-content wrap">

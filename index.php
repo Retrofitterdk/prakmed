@@ -11,7 +11,11 @@
  *
  * @package PrakMed
  */
-
+ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+ 	$content_width = 'twelve';
+ } else {
+ 	$content_width = 'nine';
+ }
 get_header(); ?>
 
 	<div id="primary" class="content-area nine columns">
