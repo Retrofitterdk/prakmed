@@ -73,6 +73,9 @@ if ( ! function_exists( 'prakmed_entry_meta' ) ) :
 	function prakmed_entry_meta() {
 		if ( 'prakmed_article' === get_post_type() ) {
 			$prakmed_section = get_the_term_list( get_the_ID(), 'section', __( '<strong>Section: </strong>', 'prakmed' ),', ','' );
+			if ( !is_singular() ) :
+$prakmed_section = strip_tags( $prakmed_section );
+endif;
 			$prakmed_subjects = get_the_term_list( get_the_ID(), 'prakmed_subjects', __( '<strong>Subjects: </strong>', 'prakmed' ),', ','' );
 			$IDC_10_terms = get_the_term_list( get_the_ID(), 'ICD-10', __( '<strong>ICD-10: </strong>', 'prakmed' ),', ','' );
 			$ICPC_2_terms = get_the_term_list( get_the_ID(), 'ICPC-2', __( '<strong>ICPC-2: </strong>', 'prakmed' ),', ','' );
