@@ -11,7 +11,8 @@
 /*--------------------------------------------------------------
 ## Header navigation
 --------------------------------------------------------------*/
-ul#header-menu {
+ul#header-menu,
+.woocommerce ul#header-menu {
   list-style-type: none;
   margin: 0 0 0 0;
   padding: 0;

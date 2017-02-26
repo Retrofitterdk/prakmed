@@ -64,6 +64,10 @@ input[type="button"] {
 
 // Woocommerce
 
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
 .woocommerce .button,
 .woocommerce .button-primary,
 .woocommerce input.button,
@@ -75,18 +79,26 @@ input[type="button"] {
 	@extend button;
 }
 
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
+.woocommerce .site-content #respond input#submit,
+.woocommerce .site-content a.button,
+.woocommerce .site-content button.button,
+.woocommerce .site-content input.button,
+.woocommerce .site-content #respond input#submit.alt,
+.woocommerce .site-content a.button.alt,
+.woocommerce .site-content button.button.alt,
+.woocommerce .site-content input.button.alt {
 	background-color: $color__brand;
 	color: #FFF;
 	line-height: 2;
 }
 
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
+.woocommerce .site-content #respond input#submit,
+.woocommerce .site-content a.button,
+.woocommerce .site-content button.button,
+.woocommerce .site-content input.button,
+.woocommerce .site-content #respond input#submit.alt:hover,
+.woocommerce .site-content a.button.alt:hover,
+.woocommerce .site-content button.button.alt:hover,
+.woocommerce .site-content input.button.alt:hover {
 	background-color: $color__brand-light;
 }

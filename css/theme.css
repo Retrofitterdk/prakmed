@@ -166,14 +166,14 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+button, .woocommerce .button, ul#header-menu .woocommerce li, .woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
+.woocommerce a.button.alt, .woocommerce input.button.alt, .woocommerce button.button.alt, .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button, .woocommerce .button.button-primary,
 input,
 optgroup,
 select,
@@ -182,56 +182,50 @@ textarea {
   font: inherit;
   margin: 0; }
 
-button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+button, .woocommerce .button, ul#header-menu .woocommerce li, .woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
+.woocommerce a.button.alt, .woocommerce input.button.alt, .woocommerce button.button.alt, .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button, .woocommerce .button.button-primary {
   overflow: visible; }
 
-button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+button, .woocommerce .button, ul#header-menu .woocommerce li, .woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
+.woocommerce a.button.alt, .woocommerce input.button.alt, .woocommerce button.button.alt, .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button, .woocommerce .button.button-primary,
 select {
   text-transform: none; }
 
-button, .woocommerce .button, .woocommerce ul#header-menu li, ul#header-menu .woocommerce li,
+button, .woocommerce .button, ul#header-menu .woocommerce li, .woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
+.woocommerce a.button.alt, .woocommerce input.button.alt, .woocommerce button.button.alt, .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button, .woocommerce .button.button-primary,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled], .woocommerce [disabled].button, .woocommerce ul#header-menu li[disabled], ul#header-menu .woocommerce li[disabled],
-.woocommerce [disabled].button-primary,
-.woocommerce #respond input[disabled]#submit.alt,
-.woocommerce a[disabled].button.alt,
-.woocommerce button[disabled].button.alt,
-.woocommerce input[disabled].button.alt,
+button[disabled], .woocommerce [disabled].button, ul#header-menu .woocommerce li[disabled], .woocommerce ul#header-menu li[disabled],
+.woocommerce [disabled].button-primary, .woocommerce input[disabled].button.alt, .woocommerce button[disabled].button.alt, .woocommerce #respond input[disabled]#submit,
 html input[disabled] {
   cursor: default; }
 
-button::-moz-focus-inner, .woocommerce .button::-moz-focus-inner, .woocommerce ul#header-menu li::-moz-focus-inner, ul#header-menu .woocommerce li::-moz-focus-inner,
+button::-moz-focus-inner, .woocommerce .button::-moz-focus-inner, ul#header-menu .woocommerce li::-moz-focus-inner, .woocommerce ul#header-menu li::-moz-focus-inner,
 .woocommerce .button-primary::-moz-focus-inner,
 .woocommerce #respond input#submit.alt::-moz-focus-inner,
-.woocommerce a.button.alt::-moz-focus-inner,
-.woocommerce button.button.alt::-moz-focus-inner,
-.woocommerce input.button.alt::-moz-focus-inner,
+.woocommerce a.button.alt::-moz-focus-inner, .woocommerce input.button.alt::-moz-focus-inner, .woocommerce button.button.alt::-moz-focus-inner, .woocommerce #respond input#submit::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -284,15 +278,19 @@ html {
 body,
 button,
 .woocommerce .button,
-.woocommerce ul#header-menu li,
 ul#header-menu .woocommerce li,
+.woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
-.woocommerce button.button.alt,
 .woocommerce input.button.alt,
+.woocommerce button.button.alt,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce .button.button-primary,
 input,
 select,
 textarea {
@@ -352,9 +350,9 @@ article.prakmed_article .entry-header, article.prakmed_article h1, article.prakm
   margin: 0.8rem 0 1.8rem 0;
   text-transform: uppercase;
   text-decoration: underline;
-  -moz-text-decoration-color: #00A44E;
   /* Code for Firefox */
-  text-decoration-color: #00A44E;
+  -webkit-text-decoration-color: #00A44E;
+          text-decoration-color: #00A44E;
   font-weight: 600;
   letter-spacing: 0; }
 
@@ -593,7 +591,7 @@ li.outofstock::before {
       width: 47%; } }
 
 .woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt, .woocommerce .button.alt, .woocommerce ul#header-menu li.alt, ul#header-menu .woocommerce li.alt, .woocommerce #respond input.button.alt#submit, .woocommerce a.button.alt, .woocommerce button.button.alt,
+.woocommerce a.button.alt, .woocommerce .button.alt, ul#header-menu .woocommerce li.alt, .woocommerce ul#header-menu li.alt, .woocommerce #respond input.button.alt#submit, .woocommerce a.button.alt, .woocommerce button.button.alt,
 .woocommerce input.button.alt {
   background-color: #00A44E; }
 
@@ -782,17 +780,22 @@ Desktop (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 # Forms
 --------------------------------------------------------------*/
 .button, ul#header-menu li,
+.woocommerce ul#header-menu li,
 button,
 .woocommerce .button,
-.woocommerce ul#header-menu li,
 ul#header-menu .woocommerce li,
+.woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
-.woocommerce button.button.alt,
 .woocommerce input.button.alt,
+.woocommerce button.button.alt,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce .button.button-primary,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -819,13 +822,12 @@ input[type="button"] {
   .button:hover, ul#header-menu li:hover,
   button:hover,
   .woocommerce .button:hover,
-  .woocommerce ul#header-menu li:hover,
   ul#header-menu .woocommerce li:hover,
+  .woocommerce ul#header-menu li:hover,
   .woocommerce .button-primary:hover,
-  .woocommerce #respond input#submit.alt:hover,
-  .woocommerce a.button.alt:hover,
-  .woocommerce button.button.alt:hover,
   .woocommerce input.button.alt:hover,
+  .woocommerce button.button.alt:hover,
+  .woocommerce #respond input#submit:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover {
@@ -834,22 +836,20 @@ input[type="button"] {
   .button:active, ul#header-menu li:active, .button:focus, ul#header-menu li:focus,
   button:active,
   .woocommerce .button:active,
-  .woocommerce ul#header-menu li:active,
   ul#header-menu .woocommerce li:active,
+  .woocommerce ul#header-menu li:active,
   .woocommerce .button-primary:active,
-  .woocommerce #respond input#submit.alt:active,
-  .woocommerce a.button.alt:active,
-  .woocommerce button.button.alt:active,
   .woocommerce input.button.alt:active,
+  .woocommerce button.button.alt:active,
+  .woocommerce #respond input#submit:active,
   button:focus,
   .woocommerce .button:focus,
-  .woocommerce ul#header-menu li:focus,
   ul#header-menu .woocommerce li:focus,
+  .woocommerce ul#header-menu li:focus,
   .woocommerce .button-primary:focus,
-  .woocommerce #respond input#submit.alt:focus,
-  .woocommerce a.button.alt:focus,
-  .woocommerce button.button.alt:focus,
   .woocommerce input.button.alt:focus,
+  .woocommerce button.button.alt:focus,
+  .woocommerce #respond input#submit:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus,
   input[type="reset"]:active,
@@ -859,12 +859,11 @@ input[type="button"] {
     border-color: #007136;
     opacity: .8; }
   .button a, ul#header-menu li a,
-  button a, .woocommerce .button a, .woocommerce ul#header-menu li a, ul#header-menu .woocommerce li a,
+  .woocommerce ul#header-menu li a,
+  button a, .woocommerce .button a, ul#header-menu .woocommerce li a, .woocommerce ul#header-menu li a,
   .woocommerce .button-primary a,
   .woocommerce #respond input#submit.alt a,
-  .woocommerce a.button.alt a,
-  .woocommerce button.button.alt a,
-  .woocommerce input.button.alt a,
+  .woocommerce a.button.alt a, .woocommerce input.button.alt a, .woocommerce button.button.alt a, .woocommerce #respond input#submit a,
   input[type="submit"] a,
   input[type="reset"] a,
   input[type="button"] a {
@@ -873,13 +872,12 @@ input[type="button"] {
 .button.primary, ul#header-menu li.primary,
 button.primary,
 .woocommerce .primary.button,
-.woocommerce ul#header-menu li.primary,
 ul#header-menu .woocommerce li.primary,
+.woocommerce ul#header-menu li.primary,
 .woocommerce .primary.button-primary,
-.woocommerce #respond input.primary#submit.alt,
-.woocommerce a.primary.button.alt,
-.woocommerce button.primary.button.alt,
 .woocommerce input.primary.button.alt,
+.woocommerce button.primary.button.alt,
+.woocommerce #respond input.primary#submit,
 input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary {
@@ -888,22 +886,22 @@ input[type="button"].primary {
   .button.primary:hover, ul#header-menu li.primary:hover, .button.primary:active, ul#header-menu li.primary:active, .button.primary:focus, ul#header-menu li.primary:focus,
   button.primary:hover,
   .woocommerce .primary.button:hover,
-  .woocommerce ul#header-menu li.primary:hover,
   ul#header-menu .woocommerce li.primary:hover,
+  .woocommerce ul#header-menu li.primary:hover,
   .woocommerce .primary.button-primary:hover,
-  .woocommerce #respond input.primary#submit.alt:hover,
+  .woocommerce #respond input.primary#submit:hover,
   button.primary:active,
   .woocommerce .primary.button:active,
-  .woocommerce ul#header-menu li.primary:active,
   ul#header-menu .woocommerce li.primary:active,
+  .woocommerce ul#header-menu li.primary:active,
   .woocommerce .primary.button-primary:active,
-  .woocommerce #respond input.primary#submit.alt:active,
+  .woocommerce #respond input.primary#submit:active,
   button.primary:focus,
   .woocommerce .primary.button:focus,
-  .woocommerce ul#header-menu li.primary:focus,
   ul#header-menu .woocommerce li.primary:focus,
+  .woocommerce ul#header-menu li.primary:focus,
   .woocommerce .primary.button-primary:focus,
-  .woocommerce #respond input.primary#submit.alt:focus,
+  .woocommerce #respond input.primary#submit:focus,
   input[type="submit"].primary:hover,
   input[type="submit"].primary:active,
   input[type="submit"].primary:focus,
@@ -918,15 +916,12 @@ input[type="button"].primary {
   .button.primary a, ul#header-menu li.primary a,
   .button.primary a:visited, ul#header-menu li.primary a:visited,
   .button.primary a:hover, ul#header-menu li.primary a:hover,
-  button.primary a, .woocommerce .primary.button a, .woocommerce ul#header-menu li.primary a, ul#header-menu .woocommerce li.primary a,
-  .woocommerce .primary.button-primary a,
-  .woocommerce #respond input.primary#submit.alt a,
-  button.primary a:visited, .woocommerce .primary.button a:visited, .woocommerce ul#header-menu li.primary a:visited, ul#header-menu .woocommerce li.primary a:visited,
-  .woocommerce .primary.button-primary a:visited,
-  .woocommerce #respond input.primary#submit.alt a:visited,
-  button.primary a:hover, .woocommerce .primary.button a:hover, .woocommerce ul#header-menu li.primary a:hover, ul#header-menu .woocommerce li.primary a:hover,
-  .woocommerce .primary.button-primary a:hover,
-  .woocommerce #respond input.primary#submit.alt a:hover,
+  button.primary a, .woocommerce .primary.button a, ul#header-menu .woocommerce li.primary a, .woocommerce ul#header-menu li.primary a,
+  .woocommerce .primary.button-primary a, .woocommerce #respond input.primary#submit a,
+  button.primary a:visited, .woocommerce .primary.button a:visited, ul#header-menu .woocommerce li.primary a:visited, .woocommerce ul#header-menu li.primary a:visited,
+  .woocommerce .primary.button-primary a:visited, .woocommerce #respond input.primary#submit a:visited,
+  button.primary a:hover, .woocommerce .primary.button a:hover, ul#header-menu .woocommerce li.primary a:hover, .woocommerce ul#header-menu li.primary a:hover,
+  .woocommerce .primary.button-primary a:hover, .woocommerce #respond input.primary#submit a:hover,
   input[type="submit"].primary a,
   input[type="submit"].primary a:visited,
   input[type="submit"].primary a:hover,
@@ -938,17 +933,22 @@ input[type="button"].primary {
   input[type="button"].primary a:hover {
     color: #FFF; }
 
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt, .woocommerce .button.alt, .woocommerce ul#header-menu li.alt, ul#header-menu .woocommerce li.alt, .woocommerce #respond input.button.alt#submit, .woocommerce a.button.alt, .woocommerce button.button.alt,
-.woocommerce input.button.alt {
+.woocommerce .site-content #respond input#submit,
+.woocommerce .site-content a.button, .woocommerce .site-content .button, ul#header-menu .woocommerce .site-content li, .woocommerce .site-content ul#header-menu li, .woocommerce ul#header-menu .site-content li, .woocommerce .site-content .button.button-primary, .woocommerce .site-content input.button, .woocommerce .site-content #respond input.button#submit, .woocommerce #respond .site-content input.button#submit, .woocommerce .site-content a.button, .woocommerce .site-content button.button,
+.woocommerce .site-content input.button,
+.woocommerce .site-content #respond input#submit.alt,
+.woocommerce .site-content a.button.alt, .woocommerce .site-content .button.alt, ul#header-menu .woocommerce .site-content li.alt, .woocommerce .site-content ul#header-menu li.alt, .woocommerce ul#header-menu .site-content li.alt, .woocommerce .site-content .button.alt.button-primary, .woocommerce .site-content input.button.alt, .woocommerce .site-content #respond input.button.alt#submit, .woocommerce #respond .site-content input.button.alt#submit, .woocommerce .site-content a.button.alt, .woocommerce .site-content button.button.alt,
+.woocommerce .site-content input.button.alt {
   background-color: #00A44E;
   color: #FFF;
   line-height: 2; }
 
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
+.woocommerce .site-content #respond input#submit,
+.woocommerce .site-content a.button, .woocommerce .site-content .button, ul#header-menu .woocommerce .site-content li, .woocommerce .site-content ul#header-menu li, .woocommerce ul#header-menu .site-content li, .woocommerce .site-content .button.button-primary, .woocommerce .site-content input.button, .woocommerce .site-content #respond input.button#submit, .woocommerce #respond .site-content input.button#submit, .woocommerce .site-content a.button, .woocommerce .site-content button.button,
+.woocommerce .site-content input.button,
+.woocommerce .site-content #respond input#submit.alt:hover,
+.woocommerce .site-content a.button.alt:hover, .woocommerce .site-content .button.alt:hover, ul#header-menu .woocommerce .site-content li.alt:hover, .woocommerce .site-content ul#header-menu li.alt:hover, .woocommerce ul#header-menu .site-content li.alt:hover, .woocommerce .site-content .button.alt.button-primary:hover, .woocommerce .site-content input.button.alt:hover, .woocommerce .site-content #respond input.button.alt#submit:hover, .woocommerce #respond .site-content input.button.alt#submit:hover, .woocommerce .site-content a.button.alt:hover, .woocommerce .site-content button.button.alt:hover,
+.woocommerce .site-content input.button.alt:hover {
   background-color: #36B371; }
 
 form p {
@@ -1072,13 +1072,12 @@ input.search-field {
 input.search-submit,
 button.search-submit,
 .woocommerce .search-submit.button,
-.woocommerce ul#header-menu li.search-submit,
 ul#header-menu .woocommerce li.search-submit,
+.woocommerce ul#header-menu li.search-submit,
 .woocommerce .search-submit.button-primary,
-.woocommerce #respond input.search-submit#submit.alt,
-.woocommerce a.search-submit.button.alt,
-.woocommerce button.search-submit.button.alt,
 .woocommerce input.search-submit.button.alt,
+.woocommerce button.search-submit.button.alt,
+.woocommerce #respond input.search-submit#submit,
 input[type="submit"] {
   width: 20%;
   margin: 0;
@@ -1093,10 +1092,10 @@ input[type="submit"] {
 input.search-submit:before,
 button.search-submit:before,
 .woocommerce .search-submit.button:before,
-.woocommerce ul#header-menu li.search-submit:before,
 ul#header-menu .woocommerce li.search-submit:before,
+.woocommerce ul#header-menu li.search-submit:before,
 .woocommerce .search-submit.button-primary:before,
-.woocommerce #respond input.search-submit#submit.alt:before {
+.woocommerce #respond input.search-submit#submit:before {
   content: '\73';
   display: inline-block;
   padding: 0 .5rem;
@@ -1370,17 +1369,21 @@ body.active-course-progress-bar .site-content {
 /*--------------------------------------------------------------
 ## Header navigation
 --------------------------------------------------------------*/
-ul#header-menu {
+ul#header-menu,
+.woocommerce ul#header-menu {
   list-style-type: none;
   margin: 0 0 0 0;
   padding: 0;
   float: right; }
-  ul#header-menu li {
+  ul#header-menu li,
+  .woocommerce ul#header-menu li {
     border-color: #fff;
     margin-top: 1.55rem; }
-    ul#header-menu li.login-toggle {
+    ul#header-menu li.login-toggle,
+    .woocommerce ul#header-menu li.login-toggle {
       margin-right: 0; }
-    ul#header-menu li a {
+    ul#header-menu li a,
+    .woocommerce ul#header-menu li a {
       display: block;
       color: #fff; }
 
@@ -2027,5 +2030,4 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /*--------------------------------------------------------------
 # Skeleton themes [sphenoid] folder
 --------------------------------------------------------------*/
-
 /*# sourceMappingURL=theme.css.map */
