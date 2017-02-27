@@ -84,31 +84,6 @@ li.outofstock::before {
 	}
 }
 
-.woocommerce .button,
-.woocommerce .button-primary,
-.woocommerce input.button,
-.woocommerce input.button-primary,
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-	@extend button;
-}
-
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-	background-color: $color__brand;
-}
-
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
-	background-color: $color__brand-light;
-}
-
 #add_payment_method #payment,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
