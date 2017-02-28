@@ -16,6 +16,36 @@
 	margin: 0 0 1.5em;
 }
 
+.search,
+.archive  {
+	& header.page-header {
+		margin-bottom: 2rem;
+	}
+	& article {
+		margin: 0;
+		border-top: 3px solid $color__brand;
+		& a {
+			color: $color__text-main;
+			text-decoration: none;
+			& header.entry-header {
+				padding-top: 2rem;
+			}
+			& div.entry-meta {
+				padding-bottom: 2rem;
+			}
+			&:hover,
+			&:active,
+			&:focus {
+				& div,
+				& header {
+					background: $color__brand-grey;
+					opacity: .8;
+				}
+			}
+		}
+	}
+}
+
 .byline,
 .updated:not(.published){
 	display: none;
