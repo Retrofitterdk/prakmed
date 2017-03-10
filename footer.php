@@ -14,23 +14,21 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div id="search-container" class="search-box-wrapper toggle hide">
-		<div class="search-box">
-			<?php get_search_form(); ?>
+	<nav id="footer-menu-container" class="footer-navigation menu" role="navigation">
+		<div id="search-container" class="searchbox wrap toggle hide">
+				<?php get_search_form(); ?>
 		</div>
-	</div>
-	<div id="sharepanel-container" class="sharepanel-wrapper toggle hide">
-		<?php
-		if ( function_exists( 'sharing_display' ) ) {
-			sharing_display( '', true );
-		}
-		?>
-	</div>
-	<nav id="footer-menu-container" class="footer-navigation menu wrap desktop hide" role="navigation">
+		<div id="sharepanel-container" class="sharepanel wrap toggle hide">
+			<?php
+			if ( function_exists( 'sharing_display' ) ) {
+				sharing_display( '', true );
+			}
+			?>
+		</div>
 		<?php get_template_part( 'template-parts/menu', 'footer' ); ?>
 	</nav><!-- #footer-navigation -->
-	<div id="footer-info" class="site-info wrap mobile hide">
-		<div id="book" class="three columns">
+	<div id="footer-info" class="site-info wrap">
+		<div id="book" class="three columns mobile hide">
 			<?php
 			$book_cover_id = get_theme_mod('book_cover_id');
 			echo wp_get_attachment_image( $book_cover_id, 'full', "", array( "id" => "book_cover", "class" => "img" ) );

@@ -6,9 +6,14 @@
 *
 * @package PrakMed
 */
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	$content_width = 'twelve';
+} else {
+	$content_width = 'nine';
+}
 
 get_header(); ?>
-<div id="primary" class="content-area nine columns">
+<div id="primary" class="content-area <?php echo $content_width ?> columns">
 	<main id="main" class="site-main" role="main">
 		<?php
 		while ( have_posts() ) : the_post();
@@ -26,5 +31,5 @@ get_header(); ?>
 	?>
 </main><!-- #main -->
 </div><!-- #primary -->
-<?php get_sidebar(); ?>
-<?php get_footer();
+<?php get_sidebar();
+get_footer();

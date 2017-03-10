@@ -1,17 +1,16 @@
 <?php
 /**
-* The sidebar containing the main widget area.
+* The sidebar containing the main widget area for archives.
 *
 * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
 *
 * @package PrakMed
 */
+
+if ( ! is_active_sidebar( 'sidebar-2' ) ) {
+  return;
+}
 ?>
 <aside id="secondary" class="sidebar widget-area three columns" role="complementary">
-    <?php
-    if ( ! is_active_sidebar( 'sidebar-2' ) ) {
-      return;
-    }
-    dynamic_sidebar( 'sidebar-2' );
-    ?>
-  </aside><!-- #secondary -->
+  <?php dynamic_sidebar( 'sidebar-2' ); ?>
+</aside><!-- #secondary -->

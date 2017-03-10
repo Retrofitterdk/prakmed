@@ -6,12 +6,11 @@
 *
 * @package PrakMed
 */
+
+if ( ! is_active_sidebar( 'sidebar-4' ) ) {
+  return;
+}
 ?>
 <aside id="tertiary" class="sidebar widget-area" role="complementary">
-  <?php
-  if ( ! is_active_sidebar( 'sidebar-4' ) ) {
-    return;
-  }
-  dynamic_sidebar( 'sidebar-4' );
-  ?>
+  <?php dynamic_sidebar( 'sidebar-4' ); ?>
 </aside><!-- #secondary -->

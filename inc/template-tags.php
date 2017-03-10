@@ -65,6 +65,10 @@ if ( ! function_exists( 'prakmed_posted_by' ) ) :
 		} else {
 			$byline = '<span class="author vcard" itemprop="author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 		}
+		if ( !is_singular() ) :
+			$byline = strip_tags( $byline );
+		endif;
+
 		echo '<div class="byline">' . sprintf( _x( '<strong>Editor:</strong> %s', 'post author', 'prakmed' ),$byline ) . '</div>';
 	}
 endif;
@@ -72,26 +76,33 @@ endif;
 if ( ! function_exists( 'prakmed_entry_meta' ) ) :
 	function prakmed_entry_meta() {
 		if ( 'prakmed_article' === get_post_type() ) {
-			$prakmed_section = get_the_term_list( get_the_ID(), 'section', __( '<strong>Section: </strong>', 'prakmed' ),', ','' );
-			$prakmed_subjects = get_the_term_list( get_the_ID(), 'prakmed_subjects', __( '<strong>Subjects: </strong>', 'prakmed' ),', ','' );
-			$IDC_10_terms = get_the_term_list( get_the_ID(), 'ICD-10', __( '<strong>ICD-10: </strong>', 'prakmed' ),', ','' );
-			$ICPC_2_terms = get_the_term_list( get_the_ID(), 'ICPC-2', __( '<strong>ICPC-2: </strong>', 'prakmed' ),', ','' );
-			$DSM_5_terms = get_the_term_list( get_the_ID(), 'DSM-5', __( '<strong>DSM-5: </strong>', 'prakmed' ),', ','' );
+			$prakmed_section = get_the_term_list( get_the_ID(), 'section','',', ','' );
+			$prakmed_subjects = get_the_term_list( get_the_ID(), 'prakmed_subjects', '',', ','' );
+			$IDC_10_terms = get_the_term_list( get_the_ID(), 'ICD-10', '',', ','' );
+			$ICPC_2_terms = get_the_term_list( get_the_ID(), 'ICPC-2', '',', ','' );
+			$DSM_5_terms = get_the_term_list( get_the_ID(), 'DSM-5', '',', ','' );
+			if ( !is_singular() ) :
+				$prakmed_section = strip_tags( $prakmed_section );
+				$prakmed_subjects = strip_tags( $prakmed_subjects );
+				$IDC_10_terms = strip_tags( $IDC_10_terms );
+				$ICPC_2_terms = strip_tags( $ICPC_2_terms );
+				$DSM_5_terms = strip_tags( $DSM_5_terms );
+			endif;
 			echo '<div class="taxonomies">';
 			if ( $prakmed_section ) {
-				printf( '<span id="Section" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_section );
+				printf( '<span id="Section" class="taxonomy"><strong>' . __( 'Section: ', 'prakmed' ) . '</strong>' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_section );
 			}
 			if ( $prakmed_subjects ) {
-				printf( '<span id="Subjects" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_subjects );
+				printf( '<span id="Subjects" class="taxonomy"><strong>' . __( 'Subjects: ', 'prakmed' ) . '</strong>' . __( '%1$s', 'prakmed' ) . '</span>', $prakmed_subjects );
 			}
 			if ( $IDC_10_terms ) {
-				printf( '<span id="ICD-10" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $IDC_10_terms );
+				printf( '<span id="ICD-10" class="taxonomy"><strong>' . __( 'ICD-10: ', 'prakmed' ) . '</strong>' . __( '%1$s', 'prakmed' ) . '</span>', $IDC_10_terms );
 			}
 			if ( $ICPC_2_terms ) {
-				printf( '<span id="ICPC-2" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $ICPC_2_terms );
+				printf( '<span id="ICPC-2" class="taxonomy"><strong>' . __( 'ICPC-2: ', 'prakmed' ) . '</strong>' . __( '%1$s', 'prakmed' ) . '</span>', $ICPC_2_terms );
 			}
 			if ( $DSM_5_terms ) {
-				printf( '<span id="DSM-5" class="taxonomy">' . __( '%1$s', 'prakmed' ) . '</span>', $DSM_5_terms );
+				printf( '<span id="DSM-5" class="taxonomy"><strong>' . __( 'DSM-5: ', 'prakmed' ) . '</strong>' . __( '%1$s', 'prakmed' ) . '</span>', $DSM_5_terms );
 			}
 			echo '</div>';
 		}
@@ -130,7 +141,7 @@ if ( ! function_exists( 'prakmed_the_search' ) ) :
 		echo '<div id="search" class="search">';
 		get_search_form();
 		echo '</div>';
-}
+	}
 endif;
 
 if ( ! function_exists( 'prakmed_entry_footer' ) ) :

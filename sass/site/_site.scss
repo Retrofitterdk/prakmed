@@ -102,9 +102,13 @@ header.site-header {
 
 // Footer
 #footer-info {
-  color: $color__text-white;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  @media screen and (min-width: $desktop) {
+    color: $color__text-white;
+    margin-bottom: 0;
+  }
   & div {
     & h3 {
       font-size: 2rem;
@@ -127,8 +131,11 @@ header.site-header {
       }
     }
   }
-  #book_cover {
+  #book {
     width: 20rem;
+    margin-bottom: 3rem;
+    & img {
+    }
   }
 }
 

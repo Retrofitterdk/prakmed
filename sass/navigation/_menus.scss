@@ -218,19 +218,20 @@ body.active-course-progress-bar .site-content {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	@media screen and (min-width: $desktop) {
+		float: right;
+	}
 	& li {
-		display: inline-block;
 		float: left;
 		width: 25%;
 		margin: 0;
 		& a {
 			position: relative;
 			display: block;
-			padding: 0.5rem 0;
+			padding: 0.8rem 0 0.5rem 0;
 			text-align: center;
 			color: #fff;
 			border-bottom: 4px solid transparent;
-
 			&:before {
 				content: '\f107';
 				display: inline-block;
@@ -238,31 +239,63 @@ body.active-course-progress-bar .site-content {
 				font-size: 25px;
 				vertical-align: middle;
 			}
-
 			&:hover {
 				background: rgba(255,255,255, 0.1);
 			}
-
 		} // a-tag
-
 		&.current-menu-item a {
 			border-bottom: 4px solid #00a44e;
+			@media screen and (min-width: $desktop) {
+				border-bottom-color: transparent;
+			}
 		}
-
 	} // li-tag
-	& li.home a:before {
-		content: '\68';
-	}
-	& li.dashboard a:before {
-		content: '\64';
-	}
-	& li.user a:before {
-		content: '\75';
-	}
-	& li.share a:before {
-		content: '\6f';
-	}
-	& li.search a:before {
-		content: '\73';
+	& li,
+	& li.home,
+	& li.dashboard,
+	& li.user,
+	& li.share,
+	& li.search {
+		@media screen and (min-width: $desktop) {
+			color: #fff;
+			padding: 1rem 0 1rem 1rem;
+			width: auto;
+		}
+		&:before {
+			@media screen and (min-width: $desktop) {
+				font-family: $font__heading;
+				content: '/';
+				font-size: 1.4rem;
+				vertical-align: top;
+				padding-right: 1rem;
+			}
+		}
+		& a {
+			@media screen and (min-width: $desktop) {
+				display: inline;
+				padding: .4rem;
+				margin: 0;
+			}
+			&:before {
+				@media screen and (min-width: $desktop) {
+					content: '';
+					padding: 0;
+					margin: 0;
+				}
+			}
+			& span {
+				@media screen and (min-width: $desktop) {
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+		&:first-of-type {
+			&:before {
+				@media screen and (min-width: $desktop) {
+					content: '';
+				}
+			}
+		}
 	}
 } // ul-tag
