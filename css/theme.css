@@ -222,7 +222,7 @@ button, .woocommerce #respond input#submit,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: none;
   cursor: pointer; }
 
 button[disabled], .woocommerce #respond input[disabled]#submit,
@@ -290,22 +290,16 @@ th {
 html {
   font-size: 62.5%; }
 
-body,
-button,
-.woocommerce #respond input#submit,
+body, button, .woocommerce #respond input#submit,
 .woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button,
-.woocommerce .button,
-ul#header-menu
-.woocommerce li,
-.woocommerce ul#header-menu li,
+.woocommerce button.button, .woocommerce input.button,
+.woocommerce .button, ul#header-menu
+.woocommerce li, .woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
+.woocommerce button.button.alt, .woocommerce input.button.alt,
 input,
 select,
 textarea {
@@ -794,29 +788,23 @@ Desktop (mixin prakmed_ads can be found in mixin/_mixins-master.scss)
 # Forms
 --------------------------------------------------------------*/
 .button, ul#header-menu li,
-.woocommerce ul#header-menu li,
-button,
-.woocommerce #respond input#submit,
+.woocommerce ul#header-menu li, button, .woocommerce #respond input#submit,
 .woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button,
-.woocommerce .button,
-ul#header-menu
-.woocommerce li,
-.woocommerce ul#header-menu li,
+.woocommerce button.button, .woocommerce input.button,
+.woocommerce .button, ul#header-menu
+.woocommerce li, .woocommerce ul#header-menu li,
 .woocommerce .button-primary,
 .woocommerce input.button-primary,
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
+.woocommerce button.button.alt, .woocommerce input.button.alt,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   border: 1px solid;
   border-color: #00A44E;
   border-radius: 2px;
-  background: transparent;
+  background-color: transparent;
   float: none;
   margin: 0.5rem;
   padding: .7rem 2rem;
