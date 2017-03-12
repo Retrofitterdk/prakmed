@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-02-10 13:13+0000\n"
+"POT-Creation-Date: 2017-03-12 21:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-10 13:13+0000\n"
+"PO-Revision-Date: 2017-03-12 21:05+0000\n"
 "Last-Translator: prakmed <sbn@praktiskmedicin.dk>\n"
 "Language-Team: Danish\n"
 "Language: da-DK\n"
@@ -47,17 +47,13 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/setup.php:84
-msgid "Login"
-msgstr "Log ind"
-
 #: inc/setup.php:104
 msgid "sharepanel"
 msgstr ""
 
 #: inc/setup.php:108
 msgid "search"
-msgstr ""
+msgstr "søg"
 
 #: inc/sidebars.php:11
 msgid "Main sidebar, that appears to the left of content."
@@ -97,7 +93,7 @@ msgstr ""
 
 #: inc/template-tags.php:45
 msgid "Last Modified Date"
-msgstr ""
+msgstr "Seneste ændring"
 
 #: inc/template-tags.php:59
 #, php-format
@@ -111,41 +107,49 @@ msgctxt "between post authors"
 msgid "%s, %s"
 msgstr ""
 
-#: inc/template-tags.php:77
-msgid "<strong>ICD-10: </strong>"
-msgstr ""
+#: inc/template-tags.php:93
+msgid "Section: "
+msgstr "Sektion:"
 
-#: inc/template-tags.php:78
-msgid "<strong>ICPC-2: </strong>"
-msgstr ""
-
-#: inc/template-tags.php:79
-msgid "<strong>DSM-5: </strong>"
-msgstr ""
-
-#: inc/template-tags.php:82 inc/template-tags.php:85 inc/template-tags.php:88
-#: inc/template-tags.php:91 inc/template-tags.php:94
+#: inc/template-tags.php:93 inc/template-tags.php:96 inc/template-tags.php:99
+#: inc/template-tags.php:102 inc/template-tags.php:105
 #, php-format
 msgid "%1$s"
 msgstr ""
 
+#: inc/template-tags.php:96
+msgid "Subjects: "
+msgstr "Emner"
+
+#: inc/template-tags.php:99
+msgid "ICD-10: "
+msgstr ""
+
+#: inc/template-tags.php:102
+msgid "ICPC-2: "
+msgstr ""
+
+#: inc/template-tags.php:105
+msgid "DSM-5: "
+msgstr ""
+
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:144 inc/template-tags.php:150
+#: inc/template-tags.php:155 inc/template-tags.php:161
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:146
+#: inc/template-tags.php:157
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:152
+#: inc/template-tags.php:163
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. %s: post title
-#: inc/template-tags.php:159
+#: inc/template-tags.php:170
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
@@ -161,12 +165,15 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Beklager, men ingen resultater matcher dine søgekriterier. Vær venlig at "
+"prøve igen med andre søgeord."
 
 #: template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Vi kan ikke finde, hvad du efterspørger. Måske kan søgefunktionen hjælpe."
 
 #. Theme URI of the plugin/theme
 msgid "http://underscores.me/"
@@ -208,23 +215,23 @@ msgid "Comments are closed."
 msgstr ""
 "Kommentarfunktionen er lukket\n"
 
-#: footer.php:58
+#: footer.php:56
 msgid "Address:"
 msgstr "Adresse"
 
-#: footer.php:68
+#: footer.php:66
 msgid "Phone:"
 msgstr "Telefon"
 
-#: footer.php:72
+#: footer.php:70
 msgid "E-mail:"
 msgstr "E-mail"
 
-#: footer.php:78
+#: footer.php:76
 msgid "Disclaimer"
 msgstr "Ansvar"
 
-#: footer.php:86
+#: footer.php:84
 msgid "Copyright"
 msgstr "Ophavsret"
 
@@ -232,7 +239,7 @@ msgstr "Ophavsret"
 msgid "Skip to content"
 msgstr "Gå til indhold"
 
-#: header.php:53 template-parts/toc-sidebar.php:3
+#: header.php:53 template-parts/toc-sidebar.php:4
 msgid "Table of content"
 msgstr ""
 "Indholdsfortegnelse\n"
@@ -250,7 +257,7 @@ msgstr "Køb bog"
 msgid "Frontpage"
 msgstr "Forside"
 
-#: search.php:24
+#: search.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Søgeresultater for: %s"
@@ -270,11 +277,11 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Søg"
 
-#: inc/homepage.php:36 inc/shortcodes.php:47
+#: inc/homepage.php:40 inc/shortcodes.php:51
 msgid "How to get access"
 msgstr "Sådan får du adgang til Praktisk Medicin"
 
-#: inc/homepage.php:37 inc/shortcodes.php:48
+#: inc/homepage.php:41 inc/shortcodes.php:52
 msgid ""
 "In order to read articles, you need to either have the book Praktisk Medicin "
 "2017 or buy digital subscription."
@@ -282,26 +289,30 @@ msgstr ""
 "For at kunne læse artikel, skal du have kode fra bogen Praktisk Medicin 2017 "
 "eller køb digital adgang. "
 
-#: inc/homepage.php:38 inc/shortcodes.php:49
+#: inc/homepage.php:42 inc/shortcodes.php:53
 msgid "If you have the book"
 msgstr ""
 "Hvis du har en bog\n"
 
-#: inc/homepage.php:39 inc/shortcodes.php:50
+#: inc/homepage.php:43 inc/shortcodes.php:54
 msgid "Use code here"
 msgstr "Brug kode her"
 
-#: inc/homepage.php:41 inc/shortcodes.php:52
+#: inc/homepage.php:45 inc/shortcodes.php:56
 msgid "If you want digital access"
 msgstr "Hvis du ønsker digital adgang"
 
-#: inc/homepage.php:42 inc/shortcodes.php:53
+#: inc/homepage.php:46 inc/shortcodes.php:57
 msgid "Buy access here"
 msgstr "Køb adgang her"
 
 #: inc/setup.php:39
 msgid "Primary Menu"
 msgstr "Primær menu"
+
+#: inc/setup.php:84
+msgid "Login"
+msgstr "Log ind"
 
 #: inc/shortcodes.php:17
 msgid "Do you have account?"
@@ -332,22 +343,14 @@ msgctxt "post author"
 msgid "by %s"
 msgstr "af %s"
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:72
 #, php-format
 msgctxt "post author"
 msgid "<strong>Editor:</strong> %s"
 msgstr "<strong>Redaktør:</strong> %s"
 
-#: inc/template-tags.php:75
-msgid "<strong>Section: </strong>"
-msgstr "<strong>Sektion: </strong>"
-
-#: inc/template-tags.php:76
-msgid "<strong>Subjects: </strong>"
-msgstr "<strong>Emner: </strong>"
-
 #. translators: %s: Name of current post
-#: inc/template-tags.php:166 template-parts/content-frontpage.php:30
+#: inc/template-tags.php:177 template-parts/content-frontpage.php:30
 #: template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
@@ -384,7 +387,7 @@ msgstr "Ikke fundet"
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Læs mere %s <span class=\"meta-nav\">&rarr;</span>"
 
-#: template-parts/login.php:22
+#: template-parts/login.php:22 template-parts/login.php:22
 msgid "My Account"
 msgstr "Min konto"
 
@@ -402,7 +405,7 @@ msgstr "Brug kode"
 
 #. Name of the theme
 msgid "PrakMed"
-msgstr "Brug kode"
+msgstr ""
 
 #. Description of the theme
 msgid "Theme for medical handbook"

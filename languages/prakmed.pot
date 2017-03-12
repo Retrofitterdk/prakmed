@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-02-10 13:13+0000\n"
+"POT-Creation-Date: 2017-03-12 21:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,23 +58,23 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:58
+#: footer.php:56
 msgid "Address:"
 msgstr ""
 
-#: footer.php:68
+#: footer.php:66
 msgid "Phone:"
 msgstr ""
 
-#: footer.php:72
+#: footer.php:70
 msgid "E-mail:"
 msgstr ""
 
-#: footer.php:78
+#: footer.php:76
 msgid "Disclaimer"
 msgstr ""
 
-#: footer.php:86
+#: footer.php:84
 msgid "Copyright"
 msgstr ""
 
@@ -82,7 +82,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:53 template-parts/toc-sidebar.php:3
+#: header.php:53 template-parts/toc-sidebar.php:4
 msgid "Table of content"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Frontpage"
 msgstr ""
 
-#: search.php:24
+#: search.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
@@ -122,29 +122,29 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: inc/homepage.php:36 inc/shortcodes.php:47
+#: inc/homepage.php:40 inc/shortcodes.php:51
 msgid "How to get access"
 msgstr ""
 
-#: inc/homepage.php:37 inc/shortcodes.php:48
+#: inc/homepage.php:41 inc/shortcodes.php:52
 msgid ""
 "In order to read articles, you need to either have the book Praktisk Medicin "
 "2017 or buy digital subscription."
 msgstr ""
 
-#: inc/homepage.php:38 inc/shortcodes.php:49
+#: inc/homepage.php:42 inc/shortcodes.php:53
 msgid "If you have the book"
 msgstr ""
 
-#: inc/homepage.php:39 inc/shortcodes.php:50
+#: inc/homepage.php:43 inc/shortcodes.php:54
 msgid "Use code here"
 msgstr ""
 
-#: inc/homepage.php:41 inc/shortcodes.php:52
+#: inc/homepage.php:45 inc/shortcodes.php:56
 msgid "If you want digital access"
 msgstr ""
 
-#: inc/homepage.php:42 inc/shortcodes.php:53
+#: inc/homepage.php:46 inc/shortcodes.php:57
 msgid "Buy access here"
 msgstr ""
 
@@ -252,61 +252,61 @@ msgctxt "between post authors"
 msgid "%s, %s"
 msgstr ""
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:72
 #, php-format
 msgctxt "post author"
 msgid "<strong>Editor:</strong> %s"
 msgstr ""
 
-#: inc/template-tags.php:75
-msgid "<strong>Section: </strong>"
+#: inc/template-tags.php:93
+msgid "Section: "
 msgstr ""
 
-#: inc/template-tags.php:76
-msgid "<strong>Subjects: </strong>"
-msgstr ""
-
-#: inc/template-tags.php:77
-msgid "<strong>ICD-10: </strong>"
-msgstr ""
-
-#: inc/template-tags.php:78
-msgid "<strong>ICPC-2: </strong>"
-msgstr ""
-
-#: inc/template-tags.php:79
-msgid "<strong>DSM-5: </strong>"
-msgstr ""
-
-#: inc/template-tags.php:82 inc/template-tags.php:85 inc/template-tags.php:88
-#: inc/template-tags.php:91 inc/template-tags.php:94
+#: inc/template-tags.php:93 inc/template-tags.php:96 inc/template-tags.php:99
+#: inc/template-tags.php:102 inc/template-tags.php:105
 #, php-format
 msgid "%1$s"
 msgstr ""
 
+#: inc/template-tags.php:96
+msgid "Subjects: "
+msgstr ""
+
+#: inc/template-tags.php:99
+msgid "ICD-10: "
+msgstr ""
+
+#: inc/template-tags.php:102
+msgid "ICPC-2: "
+msgstr ""
+
+#: inc/template-tags.php:105
+msgid "DSM-5: "
+msgstr ""
+
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:144 inc/template-tags.php:150
+#: inc/template-tags.php:155 inc/template-tags.php:161
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:146
+#: inc/template-tags.php:157
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:152
+#: inc/template-tags.php:163
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. %s: post title
-#: inc/template-tags.php:159
+#: inc/template-tags.php:170
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:166 template-parts/content-frontpage.php:30
+#: inc/template-tags.php:177 template-parts/content-frontpage.php:30
 #: template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
@@ -361,7 +361,7 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/login.php:22
+#: template-parts/login.php:22 template-parts/login.php:22
 msgid "My Account"
 msgstr ""
 
