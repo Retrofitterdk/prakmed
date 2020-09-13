@@ -1131,6 +1131,16 @@ ul#header-menu
   text-transform: none;
   font-weight: normal; }
 
+.launchcourse__input {
+  padding-right: 1rem;
+}
+.launchcourse__label {
+  display: inline;
+}
+.launchcourse__submit {
+  display: inline-block;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
