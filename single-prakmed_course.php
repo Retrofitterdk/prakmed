@@ -6,5 +6,6 @@
 *
 * @package PrakMed
 */
-$hello_function = new CourseController();
-$hello_function->course();
+$course_folder = get_post_meta( get_the_ID(), 'prakmed_course_folder', true );
+$course_launcher = new CourseController();
+$course_launcher->course($course_folder);
