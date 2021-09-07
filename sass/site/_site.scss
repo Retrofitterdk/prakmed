@@ -113,9 +113,12 @@ header.site-header {
     & h3 {
       font-size: 2rem;
       margin: 0;
-      a {
-        color: $color__text-white;
+      &.privacy-policy-link,
+      &.cookie-policy-link {
         margin-bottom: 1rem;
+        a {
+          color: $color__text-white;
+        }
       }
     }
     & p {

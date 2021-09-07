@@ -1977,9 +1977,11 @@ header.site-header .site-branding .site-title a {
   font-size: 2rem;
   margin: 0;
 }
-#footer-info div h3 a {
-  color: #fff;
+#footer-info div h3.privacy-policy-link, #footer-info div h3.cookie-policy-link {
   margin-bottom: 1rem;
+}
+#footer-info div h3.privacy-policy-link a, #footer-info div h3.cookie-policy-link a {
+  color: #fff;
 }
 #footer-info div p {
   margin-top: 0;
