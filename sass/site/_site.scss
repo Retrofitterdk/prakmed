@@ -113,6 +113,10 @@ header.site-header {
     & h3 {
       font-size: 2rem;
       margin: 0;
+      a {
+        color: $color__text-white;
+        margin-bottom: 1rem;
+      }
     }
     & p {
       margin-top: 0;
