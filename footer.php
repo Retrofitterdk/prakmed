@@ -80,12 +80,33 @@
 			<p><?php echo $liability_disclaimer ?></p>
 		</div>
 
-		<div id="copyright" class="three columns">
-			<h3><?php esc_html_e( 'Copyright', 'prakmed' ); ?></h3>
-			<?php
-			$copyright_message = get_theme_mod('copyright_message');
-			?>
-			<p><?php echo $copyright_message ?></p>
+		<div class="three columns">
+
+			<div id="copyright">
+				<h3><?php esc_html_e( 'Copyright', 'prakmed' ); ?></h3>
+				<?php
+				$copyright_message = get_theme_mod('copyright_message');
+				?>
+				<p><?php echo $copyright_message ?></p>
+			</div>
+			<div id="privacy-policy" class="privacy-policy-link-wrapper">
+				<?php
+					if ( function_exists( 'the_privacy_policy_link' ) ) {
+						the_privacy_policy_link( '<h3 class="privacy-policy-link">', '</h3>' );
+					}
+				?>
+			</div>
+			<div id="cookie-policy" class="cookie-policy-link-wrapper">
+				<?php
+					// get blog page id
+					$cookie_page = get_option( 'prakmed_cookie_page' );
+				?>
+				<h3 class="privacy-policy-link">
+					<a href="<?php echo esc_url( get_page_link( $cookie_page ) ); ?>">
+						<?php esc_html_e( 'Cookie policy', 'prakmed' ); ?>
+					</a>
+				<h3p>
+			</div>
 		</div>
 
 	</div><!-- .site-info -->
