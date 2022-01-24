@@ -6,94 +6,43 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-12 21:05+0000\n"
+"PO-Revision-Date: 2022-01-24 20:39+0000\n"
 "Last-Translator: prakmed <sbn@praktiskmedicin.dk>\n"
-"Language-Team: Danish\n"
-"Language: da-DK\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
-"X-Generator: Loco - https://localise.biz/"
+"Language-Team: Dansk\n"
+"Language: da_DK\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz/"
 
-#: 404.php:33
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:51
+#: inc/template-tags.php:93 inc/template-tags.php:96 inc/template-tags.php:99
+#: inc/template-tags.php:102 inc/template-tags.php:105
 #, php-format
-msgid "Try looking in the monthly archives. %1$s"
+msgid "%1$s"
 msgstr ""
 
-#: comments.php:31
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:40 comments.php:61
-msgid "Comment navigation"
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:155 inc/template-tags.php:161
+msgid ", "
 msgstr ""
 
-#. Name of the template
-msgid "form-template"
-msgstr ""
-
-#: inc/setup.php:40
-msgid "Header Menu"
-msgstr ""
-
-#: inc/setup.php:41
-msgid "Footer Menu"
-msgstr ""
-
-#: inc/setup.php:104
-msgid "sharepanel"
-msgstr ""
-
-#: inc/setup.php:108
-msgid "search"
-msgstr "søg"
-
-#: inc/sidebars.php:11
-msgid "Main sidebar, that appears to the left of content."
-msgstr ""
-
-#: inc/sidebars.php:18
-msgid "Archive Sidebar"
-msgstr ""
-
-#: inc/sidebars.php:20
-msgid "Sidebar, that replaces main sidebar on archive pages."
-msgstr ""
-
-#: inc/sidebars.php:27
-msgid "Article Sidebar"
-msgstr ""
-
-#: inc/sidebars.php:29
-msgid "Sidebar, that replaces main sidebar on article pages."
-msgstr ""
-
-#: inc/sidebars.php:36
-msgid "Top Sidebar"
-msgstr ""
+#: inc/woocommerce.php:16
+msgid "Add ID for product, that can be bought for free with book code"
+msgstr "Tilføj id for det produkt, som kan købes med kode fra bogen"
 
 #: inc/sidebars.php:38
 msgid "Additional sidebar that appear above the header."
 msgstr ""
 
-#: inc/sidebars.php:45
-msgid "Search Sidebar"
+#: footer.php:56
+msgid "Address:"
+msgstr "Adresse"
+
+#: inc/sidebars.php:18
+msgid "Archive Sidebar"
 msgstr ""
 
-#: inc/sidebars.php:47
-msgid "Sidebar, that replaces main sidebar on search pages."
+#: inc/sidebars.php:27
+msgid "Article Sidebar"
 msgstr ""
-
-#: inc/template-tags.php:45
-msgid "Last Modified Date"
-msgstr "Seneste ændring"
 
 #: inc/template-tags.php:59
 #, php-format
@@ -107,19 +56,112 @@ msgctxt "between post authors"
 msgid "%s, %s"
 msgstr ""
 
-#: inc/template-tags.php:93
-msgid "Section: "
-msgstr "Sektion:"
+#: inc/shortcodes.php:57 inc/homepage.php:46
+msgid "Buy access here"
+msgstr "Køb adgang her"
 
-#: inc/template-tags.php:93 inc/template-tags.php:96 inc/template-tags.php:99
-#: inc/template-tags.php:102 inc/template-tags.php:105
-#, php-format
-msgid "%1$s"
+#. Name of the template
+msgid "Buy Book"
+msgstr "Køb bog"
+
+#. Name of the template
+msgid "Claim Access"
+msgstr ""
+"Få adgang\n"
+
+#: woocommerce/checkout/form-coupon.php:36
+msgid "Code from book"
+msgstr "Kode fra bog"
+
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
 msgstr ""
 
-#: inc/template-tags.php:96
-msgid "Subjects: "
-msgstr "Emner"
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+"Kommentarfunktionen er lukket\n"
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#. %s: Name of current post.
+#: template-parts/entrycontent.php:5
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Læs mere %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: footer.php:106
+msgid "Cookie policy"
+msgstr ""
+
+#: footer.php:86
+msgid "Copyright"
+msgstr "Ophavsret"
+
+#: footer.php:76
+msgid "Disclaimer"
+msgstr "Ansvar"
+
+#: inc/shortcodes.php:17
+msgid "Do you have account?"
+msgstr "Har du allerede et login"
+
+#: inc/template-tags.php:105
+msgid "DSM-5: "
+msgstr ""
+
+#: footer.php:70
+msgid "E-mail:"
+msgstr "E-mail"
+
+#. %s: Name of current post
+#: inc/template-tags.php:177 template-parts/content-page.php:34
+#: template-parts/content-frontpage.php:30
+#, php-format
+msgid "Edit %s"
+msgstr "Rediger %s"
+
+#: inc/woocommerce.php:10
+msgid "Featured products"
+msgstr "Udvalgte produkter"
+
+#: inc/setup.php:41
+msgid "Footer Menu"
+msgstr ""
+
+#. Name of the template
+msgid "form-template"
+msgstr ""
+
+#. Name of the template
+msgid "Frontpage"
+msgstr "Forside"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Have a coupon from the book? – enter it below"
+msgstr "Har du en kode fra bogen - indsæt herunder"
+
+#: inc/setup.php:40
+msgid "Header Menu"
+msgstr ""
+
+#: inc/shortcodes.php:51 inc/homepage.php:40
+msgid "How to get access"
+msgstr "Sådan får du adgang til Praktisk Medicin"
+
+#. Author URI of the theme
+msgid "http://retrofitter.dk"
+msgstr ""
+
+#. URI of the theme
+msgid "http://underscores.me/"
+msgstr ""
 
 #: inc/template-tags.php:99
 msgid "ICD-10: "
@@ -129,68 +171,30 @@ msgstr ""
 msgid "ICPC-2: "
 msgstr ""
 
-#: inc/template-tags.php:105
-msgid "DSM-5: "
+#: inc/shortcodes.php:53 inc/homepage.php:42
+msgid "If you have the book"
 msgstr ""
+"Hvis du har en bog\n"
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:155 inc/template-tags.php:161
-msgid ", "
-msgstr ""
+#: inc/shortcodes.php:56 inc/homepage.php:45
+msgid "If you want digital access"
+msgstr "Hvis du ønsker digital adgang"
 
-#: inc/template-tags.php:157
-#, php-format
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:163
-#, php-format
-msgid "Tagged %1$s"
-msgstr ""
-
-#. %s: post title
-#: inc/template-tags.php:170
-#, php-format
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-
-#: template-parts/content-none.php:21
-#, php-format
+#: inc/shortcodes.php:52
 msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+"In order to read articles, you need to either have the book Praktisk Medicin "
+"2017 or buy digital subscription."
 msgstr ""
+"For at kunne læse artikel, skal du have kode fra bogen Praktisk Medicin 2017 "
+"eller køb digital adgang. "
 
-#: template-parts/content-none.php:25
+#: inc/homepage.php:41
 msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+"In order to read articles, you need to either have the book Praktisk Medicin "
+"or buy digital subscription."
 msgstr ""
-"Beklager, men ingen resultater matcher dine søgekriterier. Vær venlig at "
-"prøve igen med andre søgeord."
-
-#: template-parts/content-none.php:31
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Vi kan ikke finde, hvad du efterspørger. Måske kan søgefunktionen hjælpe."
-
-#. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
-msgstr ""
-
-#. Author of the theme
-msgid "Steffen Bang Nielsen"
-msgstr ""
-
-#. Author URI of the theme
-msgid "http://retrofitter.dk"
-msgstr ""
-
-#: 404.php:17
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-"Ups, den side findes ikke\n"
+"For at kunne læse artikel, skal du have kode fra bogen Praktisk Medicin 2017 "
+"eller købe digital adgang."
 
 #: 404.php:21
 msgid ""
@@ -200,148 +204,84 @@ msgstr ""
 "Det ser ud som om, at der ikke findes noget indhold. Prøv at søge eller vælg "
 "et link herunder."
 
-#: comments.php:43 comments.php:64
-msgid "Older Comments"
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
-"Ældre kommentarer\n"
-
-#: comments.php:44 comments.php:65
-msgid "Newer Comments"
-msgstr ""
-"Nyere kommentarer\n"
-
-#: comments.php:78
-msgid "Comments are closed."
-msgstr ""
-"Kommentarfunktionen er lukket\n"
-
-#: footer.php:56
-msgid "Address:"
-msgstr "Adresse"
-
-#: footer.php:66
-msgid "Phone:"
-msgstr "Telefon"
-
-#: footer.php:70
-msgid "E-mail:"
-msgstr "E-mail"
-
-#: footer.php:76
-msgid "Disclaimer"
-msgstr "Ansvar"
-
-#: footer.php:84
-msgid "Copyright"
-msgstr "Ophavsret"
-
-#: header.php:24
-msgid "Skip to content"
-msgstr "Gå til indhold"
-
-#: header.php:53 template-parts/toc-sidebar.php:4
-msgid "Table of content"
-msgstr ""
-"Indholdsfortegnelse\n"
-
-#. Name of the template
-msgid "Claim Access"
-msgstr ""
-"Få adgang\n"
-
-#. Name of the template
-msgid "Buy Book"
-msgstr "Køb bog"
-
-#. Name of the template
-msgid "Frontpage"
-msgstr "Forside"
-
-#: search.php:28
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Søgeresultater for: %s"
+"Vi kan ikke finde, hvad du efterspørger. Måske kan søgefunktionen hjælpe."
 
 #: searchform.php:3 searchform.php:7
 msgctxt "label"
 msgid "Search for:"
 msgstr "Søg efter:"
 
-#: searchform.php:5
-msgctxt "placeholder"
-msgid "Search phrase"
-msgstr "Søgeord"
+#: inc/template-tags.php:45
+msgid "Last Modified Date"
+msgstr "Seneste ændring"
 
-#: searchform.php:10
-msgctxt "submit button"
-msgid "Search"
-msgstr "Søg"
-
-#: inc/homepage.php:40 inc/shortcodes.php:51
-msgid "How to get access"
-msgstr "Sådan får du adgang til Praktisk Medicin"
-
-#: inc/homepage.php:41 inc/shortcodes.php:52
-msgid ""
-"In order to read articles, you need to either have the book Praktisk Medicin "
-"2017 or buy digital subscription."
+#. %s: post title
+#: inc/template-tags.php:170
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
-"For at kunne læse artikel, skal du have kode fra bogen Praktisk Medicin 2017 "
-"eller køb digital adgang. "
-
-#: inc/homepage.php:42 inc/shortcodes.php:53
-msgid "If you have the book"
-msgstr ""
-"Hvis du har en bog\n"
-
-#: inc/homepage.php:43 inc/shortcodes.php:54
-msgid "Use code here"
-msgstr "Brug kode her"
-
-#: inc/homepage.php:45 inc/shortcodes.php:56
-msgid "If you want digital access"
-msgstr "Hvis du ønsker digital adgang"
-
-#: inc/homepage.php:46 inc/shortcodes.php:57
-msgid "Buy access here"
-msgstr "Køb adgang her"
-
-#: inc/setup.php:39
-msgid "Primary Menu"
-msgstr "Primær menu"
-
-#: inc/setup.php:84
-msgid "Login"
-msgstr "Log ind"
-
-#: inc/shortcodes.php:17
-msgid "Do you have account?"
-msgstr "Har du allerede et login"
 
 #: inc/shortcodes.php:18
 msgid "Log in here."
 msgstr "Log ind her"
 
+#: inc/setup.php:84
+msgid "Login"
+msgstr "Log ind"
+
 #: inc/shortcodes.php:21 template-parts/login.php:17
 msgid "Lost your password?"
 msgstr "Glemt dit password?"
 
-#: inc/sidebars.php:9
-msgid "Primary Sidebar"
+#: inc/sidebars.php:11
+msgid "Main sidebar, that appears to the left of content."
 msgstr ""
-"Primær sidebar\n"
 
-#: inc/template-tags.php:28
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Publiceret:"
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr ""
 
-#: inc/template-tags.php:33
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "af %s"
+#: template-parts/login.php:22
+msgid "My Account"
+msgstr "Min konto"
+
+#: comments.php:44 comments.php:65
+msgid "Newer Comments"
+msgstr ""
+"Nyere kommentarer\n"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Ikke fundet"
+
+#: comments.php:43 comments.php:64
+msgid "Older Comments"
+msgstr ""
+"Ældre kommentarer\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+"Ups, den side findes ikke\n"
+
+#: template-parts/content-page.php:22 template-parts/content-frontpage.php:18
+#: template-parts/entrycontent.php:10
+msgid "Pages:"
+msgstr "Sider:"
+
+#: footer.php:66
+msgid "Phone:"
+msgstr "Telefon"
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search phrase"
+msgstr "Søgeord"
 
 #: inc/template-tags.php:72
 #, php-format
@@ -349,64 +289,136 @@ msgctxt "post author"
 msgid "<strong>Editor:</strong> %s"
 msgstr "<strong>Redaktør:</strong> %s"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:177 template-parts/content-frontpage.php:30
-#: template-parts/content-page.php:34
+#: inc/template-tags.php:33
 #, php-format
-msgid "Edit %s"
-msgstr "Rediger %s"
+msgctxt "post author"
+msgid "by %s"
+msgstr "af %s"
 
-#: inc/woocommerce.php:10
-msgid "Featured products"
-msgstr "Udvalgte produkter"
-
-#: inc/woocommerce.php:13
-msgid "Product to buy with code from book"
-msgstr "Produkt, som kan købes med kode fra bogen"
-
-#: inc/woocommerce.php:16
-msgid "Add ID for product, that can be bought for free with book code"
-msgstr "Tilføj id for det produkt, som kan købes med kode fra bogen"
-
-#: inc/woocommerce.php:20
-msgid "Product ID"
-msgstr "Produkt ID"
-
-#: template-parts/content-frontpage.php:18 template-parts/content-page.php:22
-#: template-parts/entrycontent.php:10
-msgid "Pages:"
-msgstr "Sider:"
-
-#: template-parts/content-none.php:14
-msgid "Nothing Found"
-msgstr "Ikke fundet"
-
-#. translators: %s: Name of current post.
-#: template-parts/entrycontent.php:5
+#: inc/template-tags.php:28
 #, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Læs mere %s <span class=\"meta-nav\">&rarr;</span>"
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publiceret:"
 
-#: template-parts/login.php:22 template-parts/login.php:22
-msgid "My Account"
-msgstr "Min konto"
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Have a coupon from the book? – enter it below"
-msgstr "Har du en kode fra bogen - indsæt herunder"
-
-#: woocommerce/checkout/form-coupon.php:36
-msgid "Code from book"
-msgstr "Kode fra bog"
-
-#: woocommerce/checkout/form-coupon.php:40
-msgid "Use code"
-msgstr "Brug kode"
+#: inc/template-tags.php:157
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
 
 #. Name of the theme
 msgid "PrakMed"
 msgstr ""
 
+#: inc/setup.php:39
+msgid "Primary Menu"
+msgstr "Primær menu"
+
+#: inc/sidebars.php:9
+msgid "Primary Sidebar"
+msgstr ""
+"Primær sidebar\n"
+
+#: inc/woocommerce.php:20
+msgid "Product ID"
+msgstr "Produkt ID"
+
+#: inc/woocommerce.php:13
+msgid "Product to buy with code from book"
+msgstr "Produkt, som kan købes med kode fra bogen"
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: inc/setup.php:108
+msgid "search"
+msgstr "søg"
+
+#: search.php:28
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søgeresultater for: %s"
+
+#: inc/sidebars.php:45
+msgid "Search Sidebar"
+msgstr ""
+
+#: inc/template-tags.php:93
+msgid "Section: "
+msgstr "Sektion:"
+
+#: inc/setup.php:104
+msgid "sharepanel"
+msgstr ""
+
+#: inc/sidebars.php:20
+msgid "Sidebar, that replaces main sidebar on archive pages."
+msgstr ""
+
+#: inc/sidebars.php:29
+msgid "Sidebar, that replaces main sidebar on article pages."
+msgstr ""
+
+#: inc/sidebars.php:47
+msgid "Sidebar, that replaces main sidebar on search pages."
+msgstr ""
+
+#: header.php:29
+msgid "Skip to content"
+msgstr "Gå til indhold"
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Beklager, men ingen resultater matcher dine søgekriterier. Vær venlig at "
+"prøve igen med andre søgeord."
+
+#. Author of the theme
+msgid "Steffen Bang Nielsen"
+msgstr ""
+
+#: inc/template-tags.php:96
+msgid "Subjects: "
+msgstr "Emner"
+
+#: searchform.php:10
+msgctxt "submit button"
+msgid "Search"
+msgstr "Søg"
+
+#: header.php:58 template-parts/toc-sidebar.php:4
+msgid "Table of content"
+msgstr ""
+"Indholdsfortegnelse\n"
+
+#: inc/template-tags.php:163
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
 #. Description of the theme
 msgid "Theme for medical handbook"
 msgstr "Tema for medicinsk håndbog"
+
+#: inc/sidebars.php:36
+msgid "Top Sidebar"
+msgstr ""
+
+#. %1$s: smiley
+#: 404.php:51
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:40
+msgid "Use code"
+msgstr "Brug kode"
+
+#: inc/shortcodes.php:54 inc/homepage.php:43
+msgid "Use code here"
+msgstr "Brug kode her"
