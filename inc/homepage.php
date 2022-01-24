@@ -34,7 +34,7 @@ function prakmed_get_access() {
   }
 
   // Add our top notice if purchasing is restricted
-  if (is_front_page() ) {
+  if (is_front_page() || is_page( 'artikler' )) {
 
     $get_access  = '<div class="woocommerce"><div class="woocommerce-info wc-memberships-content-restricted-message">';
     $get_access .= '<h1>' . esc_html__( 'How to get access', 'prakmed' ) . '</h1>';
