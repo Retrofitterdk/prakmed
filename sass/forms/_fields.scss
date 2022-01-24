@@ -1,4 +1,10 @@
 form {
+	.launchcourse & {
+		input, label {
+			display: inline;
+			margin-right: .3em;
+		}
+	}
 	& p {
 		margin: 0;
 	}

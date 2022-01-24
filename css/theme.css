@@ -1116,6 +1116,10 @@ ul#header-menu .woocommerce .site-content li,
   background-color: #36B371;
 }
 
+.launchcourse form input, .launchcourse form label {
+  display: inline;
+  margin-right: 0.3em;
+}
 form p {
   margin: 0;
 }
@@ -1512,7 +1516,7 @@ body.active-course-progress-bar .site-content {
   border-bottom: 4px solid transparent;
 }
 .footer-navigation ul li a:before {
-  content: "";
+  content: "\f107";
   display: inline-block;
   padding: 0 5px;
   font-size: 25px;
