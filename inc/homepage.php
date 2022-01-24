@@ -38,7 +38,7 @@ function prakmed_get_access() {
 
     $get_access  = '<div class="woocommerce"><div class="woocommerce-info wc-memberships-content-restricted-message">';
     $get_access .= '<h1>' . esc_html__( 'How to get access', 'prakmed' ) . '</h1>';
-    $get_access .= '<p>' . esc_html__( 'In order to read articles, you need to either have the book Praktisk Medicin 2017 or buy digital subscription.', 'prakmed' ) . '</p>';
+    $get_access .= '<p>' . esc_html__( 'In order to read articles, you need to either have the book Praktisk Medicin or buy digital subscription.', 'prakmed' ) . '</p>';
     $get_access .= '<div class="get_access six columns"><p><span>' . esc_html__('If you have the book', 'prakmed');
     $get_access .= '</span><a href="' . $_get_access_url . '" class="button">' . esc_html__('Use code here', 'prakmed') . '</a>';
     $get_access .= '</p></div>';
