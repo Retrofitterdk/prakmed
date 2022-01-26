@@ -49,6 +49,16 @@
 	}
 }
 
+.search {
+	p.label {
+		background: $color__brand;
+		display: inline-block;
+		padding: .5rem 1rem;
+		color: $color__text-white;
+		margin: 2rem 0 0 0;
+	}
+}
+
 .course-archive {
 	display: flex;
 	gap: 4rem;

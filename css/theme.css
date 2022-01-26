@@ -2242,6 +2242,14 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   opacity: 0.8;
 }
 
+.search p.label {
+  background: #00A44E;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin: 2rem 0 0 0;
+}
+
 .course-archive {
   display: flex;
   gap: 4rem;
