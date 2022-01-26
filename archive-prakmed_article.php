@@ -25,7 +25,7 @@ get_header(); ?>
 			the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
 		</header><!-- .page-header -->
-		<div id="content" class="course-archive">
+		<div id="content" class="article-archive">
 
 		<?php
 		/* Start the Loop */
