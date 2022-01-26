@@ -730,6 +730,7 @@ li.outofstock::before {
 }
 
 .content-area .wc-memberships-content-restricted-message {
+  margin: 2rem 0;
   padding: 2rem !important;
 }
 .content-area .wc-memberships-content-restricted-message:before {
@@ -764,12 +765,13 @@ li.outofstock::before {
   border-radius: 2px;
   background-color: #36B371;
   padding: 3rem;
+  margin-bottom: 2rem;
 }
 .content-area .wc-memberships-content-restricted-message div.get_access p, .content-area .wc-memberships-content-restricted-message div.buy_access p {
   text-align: center;
 }
 .content-area .wc-memberships-content-restricted-message div.get_access p span, .content-area .wc-memberships-content-restricted-message div.buy_access p span {
-  display: block;
+  display: inline-block;
   color: #fff;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -780,6 +782,7 @@ li.outofstock::before {
   width: auto;
   font-weight: 400;
   background: #fff;
+  display: block;
 }
 .content-area .wc-memberships-content-restricted-message .get_access {
   margin-left: 0;
@@ -2209,21 +2212,24 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
 }
 .search article,
 .archive article {
-  margin: 0;
+  margin: 2rem 0;
   border-top: 3px solid #00A44E;
+}
+.search article .entry-media, .search article .entry-header, .search article h1, .search article h2, .search article h3, .search article h4, .search article h5, .search article h6,
+.archive article .entry-media,
+.archive article .entry-header,
+.archive article h1,
+.archive article h2,
+.archive article h3,
+.archive article h4,
+.archive article h5,
+.archive article h6 {
+  margin-top: 2rem;
 }
 .search article a,
 .archive article a {
   color: #404040;
   text-decoration: none;
-}
-.search article a header.entry-header,
-.archive article a header.entry-header {
-  padding-top: 2rem;
-}
-.search article a div.entry-meta,
-.archive article a div.entry-meta {
-  padding-bottom: 2rem;
 }
 .search article a:hover div, .search article a:hover header, .search article a:active div, .search article a:active header, .search article a:focus div, .search article a:focus header,
 .archive article a:hover div,
@@ -2234,6 +2240,20 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
 .archive article a:focus header {
   background: #E3E3E3;
   opacity: 0.8;
+}
+
+.course-archive {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.course-archive article {
+  flex: 1 1 100%;
+}
+@media screen and (min-width: 960px) {
+  .course-archive article {
+    flex: 0 0 calc(50% - 4rem);
+  }
 }
 
 .byline,

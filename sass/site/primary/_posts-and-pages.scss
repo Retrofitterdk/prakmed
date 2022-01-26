@@ -22,16 +22,19 @@
 		margin-bottom: 2rem;
 	}
 	& article {
-		margin: 0;
+		margin: 2rem 0;
 		border-top: 3px solid $color__brand;
+		& .entry-media, .entry-header {
+			margin-top: 2rem;
+		}
 		& a {
 			color: $color__text-main;
 			text-decoration: none;
 			& header.entry-header {
-				padding-top: 2rem;
+				// padding-top: 2rem;
 			}
 			& div.entry-meta {
-				padding-bottom: 2rem;
+				// padding-bottom: 2rem;
 			}
 			&:hover,
 			&:active,
@@ -42,6 +45,18 @@
 					opacity: .8;
 				}
 			}
+		}
+	}
+}
+
+.course-archive {
+	display: flex;
+	gap: 4rem;
+	flex-wrap: wrap;
+	& article {
+		flex: 1 1 100%;
+		@media screen and (min-width: $desktop) {
+			flex: 0 0 calc(50% - 4rem);
 		}
 	}
 }
