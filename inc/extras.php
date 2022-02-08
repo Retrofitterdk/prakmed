@@ -24,6 +24,16 @@ function prakmed_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Adds a class of hfeed to non-singular pages.
+	if ( is_front_page() ) {
+		$classes[] = 'frontpage';
+	}
+
+	// Adds a class of hfeed to non-singular pages.
+	if ( is_home() ) {
+		$classes[] = 'home';
+	}
+	
 	return $classes;
 }
 add_filter( 'body_class', 'prakmed_body_classes' );
