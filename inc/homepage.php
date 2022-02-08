@@ -53,9 +53,13 @@ function prakmed_get_access() {
 
 
 function prakmed_get_courses() {
+
+  $options = get_option( 'prakmed_course_settings' );
+	$courses_per_page = $options['courses_per_page'] ? $options['courses_per_page'] : 4;
+
   if (is_front_page()) { ?>
   <div>
-    <?php echo do_shortcode( '[course-display  numberposts=2]' ); ?>
+    <?php echo do_shortcode( '[course-display  numberposts=' . $courses_per_page . ']' ); ?>
   </div>
   <?php
   }
