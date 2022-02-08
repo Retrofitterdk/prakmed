@@ -3,6 +3,7 @@ add_action( 'after_setup_theme', 'homepage_setup' );
 
 function homepage_setup () {
   add_action( 'homepage', 'prakmed_the_search', 10 );
+  add_action( 'homepage', 'prakmed_get_courses', 15 );
   add_action( 'homepage', 'prakmed_the_sections', 20 );
   add_action( 'homepage', 'prakmed_get_access', 30 );
 }
@@ -34,7 +35,7 @@ function prakmed_get_access() {
   }
 
   // Add our top notice if purchasing is restricted
-  if (is_front_page() || is_page( 'artikler' )) {
+  if (is_page( 'artikler' )) {
 
     $get_access  = '<div class="woocommerce"><div class="woocommerce-info wc-memberships-content-restricted-message">';
     $get_access .= '<h1>' . esc_html__( 'How to get access', 'prakmed' ) . '</h1>';
@@ -47,5 +48,15 @@ function prakmed_get_access() {
     $get_access .= '</p></div></div></div>';
     echo $get_access;
 
+  }
+}
+
+
+function prakmed_get_courses() {
+  if (is_front_page()) { ?>
+  <div>
+    <?php echo do_shortcode( '[course-display  numberposts=2]' ); ?>
+  </div>
+  <?php
   }
 }
