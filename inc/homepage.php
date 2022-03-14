@@ -3,6 +3,7 @@ add_action( 'after_setup_theme', 'homepage_setup' );
 
 function homepage_setup () {
   add_action( 'homepage', 'prakmed_the_search', 10 );
+  add_action( 'homepage', 'prakmed_get_courses', 15 );
   add_action( 'homepage', 'prakmed_the_sections', 20 );
   add_action( 'homepage', 'prakmed_get_access', 30 );
 }
@@ -34,11 +35,11 @@ function prakmed_get_access() {
   }
 
   // Add our top notice if purchasing is restricted
-  if (is_front_page() || is_page( 'artikler' )) {
+  if (is_page( 'artikler' )) {
 
     $get_access  = '<div class="woocommerce"><div class="woocommerce-info wc-memberships-content-restricted-message">';
     $get_access .= '<h1>' . esc_html__( 'How to get access', 'prakmed' ) . '</h1>';
-    $get_access .= '<p>' . esc_html__( 'In order to read articles, you need to either have the book Praktisk Medicin 2017 or buy digital subscription.', 'prakmed' ) . '</p>';
+    $get_access .= '<p>' . esc_html__( 'In order to read articles, you need to either have the book Praktisk Medicin or buy digital subscription.', 'prakmed' ) . '</p>';
     $get_access .= '<div class="get_access six columns"><p><span>' . esc_html__('If you have the book', 'prakmed');
     $get_access .= '</span><a href="' . $_get_access_url . '" class="button">' . esc_html__('Use code here', 'prakmed') . '</a>';
     $get_access .= '</p></div>';
@@ -47,5 +48,19 @@ function prakmed_get_access() {
     $get_access .= '</p></div></div></div>';
     echo $get_access;
 
+  }
+}
+
+
+function prakmed_get_courses() {
+
+  $options = get_option( 'prakmed_course_settings' );
+	$courses_per_page = $options['courses_per_page'] ? $options['courses_per_page'] : 4;
+
+  if (is_front_page()) { ?>
+  <div>
+    <?php echo do_shortcode( '[course-display  numberposts=' . $courses_per_page . ']' ); ?>
+  </div>
+  <?php
   }
 }

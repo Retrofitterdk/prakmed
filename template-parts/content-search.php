@@ -11,7 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	if ( 'prakmed_article' === get_post_type() ) :
+	$post_type = get_post_type();
+	$post_type_obj = get_post_type_object($post_type);
+	$post_type_label = $post_type_obj->labels->singular_name;
+	?>
+	<p class="label"><?php echo esc_html( $post_type_label ); ?></p>
+	<?php
+		if ( 'prakmed_article' === $post_type ) :
 		get_template_part( 'template-parts/entrymedia', 'article' );
 		get_template_part( 'template-parts/entryheader', 'article' );
 		else : ?>

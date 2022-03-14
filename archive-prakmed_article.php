@@ -25,6 +25,7 @@ get_header(); ?>
 			the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
 		</header><!-- .page-header -->
+		<div id="content" class="article-archive">
 
 		<?php
 		/* Start the Loop */
@@ -38,7 +39,9 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', 'article-archive' );
 
 	endwhile;
-
+	?>
+	</div>
+	<?php
 	the_posts_navigation();
 
 	else :

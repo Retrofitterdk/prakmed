@@ -1,8 +1,8 @@
 <?php
 /**
-* Template Name: Frontpage
+* Template Name: Articles
 *
-* This page template is a custom frontpage
+* This page template is a custom page for articles archive
 *
 * @link https://codex.wordpress.org/Template_Hierarchy
 *
@@ -17,7 +17,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area <?php echo $content_width ?> columns">
 	<main id="main" class="site-main" role="main">
-		<?php do_action( 'homepage' ); ?>
+		<?php
+		do_action( 'homepage' );
+		?>
 		<?php
 		while ( have_posts() ) : the_post();
 

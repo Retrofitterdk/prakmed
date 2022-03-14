@@ -95,6 +95,7 @@ li.outofstock::before {
 }
 
 .content-area .wc-memberships-content-restricted-message {
+	margin: 2rem 0;
 	padding: 2rem !important;
 	&:before {
 		content: '';
@@ -132,10 +133,11 @@ li.outofstock::before {
 		border-radius: 2px;
 		background-color: $color__brand-light;
 		padding: 3rem;
+		margin-bottom: 2rem;
 		& p {
 			text-align: center;
 			& span {
-				display: block;
+				display: inline-block;
 				color: $color__text-white;
 				margin-bottom: 1rem;
 				font-weight: 600;
@@ -146,6 +148,7 @@ li.outofstock::before {
 				width: auto;
 				font-weight: 400;
 				background: #fff;
+				display: block;
 			}
 		}
 	}
@@ -223,7 +226,9 @@ div#login-box {
 	margin-right: auto;
 	display: block;
 }
-
+.ad-slot {
+	text-align: center;
+}
 
 /*=============================================================
 Mobile (mixin prakmed_ads can be found in mixin/_mixins-master.scss)

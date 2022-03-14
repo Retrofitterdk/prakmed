@@ -111,6 +111,7 @@ endif;
 
 if ( ! function_exists( 'prakmed_the_sections' ) ) :
 	function prakmed_the_sections() {
+		$taxonomy = get_taxonomy( 'section' );
 		$sections = get_terms( array(
 			'taxonomy' => 'section',
 			'hide_empty' => false,
@@ -118,7 +119,9 @@ if ( ! function_exists( 'prakmed_the_sections' ) ) :
 			'orderby' => 'name',
 			'order'   => 'ASC'
 		) );
+		echo '<h2 class="taxonomy-name">' . $taxonomy->label . '</h2>';
 		echo '<div id="sections" class="taxonomy-list"><ul>';
+		
 		foreach( $sections as $section ) {
 
 			$section_link = get_term_link( $section );

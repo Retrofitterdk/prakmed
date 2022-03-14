@@ -730,6 +730,7 @@ li.outofstock::before {
 }
 
 .content-area .wc-memberships-content-restricted-message {
+  margin: 2rem 0;
   padding: 2rem !important;
 }
 .content-area .wc-memberships-content-restricted-message:before {
@@ -764,12 +765,13 @@ li.outofstock::before {
   border-radius: 2px;
   background-color: #36B371;
   padding: 3rem;
+  margin-bottom: 2rem;
 }
 .content-area .wc-memberships-content-restricted-message div.get_access p, .content-area .wc-memberships-content-restricted-message div.buy_access p {
   text-align: center;
 }
 .content-area .wc-memberships-content-restricted-message div.get_access p span, .content-area .wc-memberships-content-restricted-message div.buy_access p span {
-  display: block;
+  display: inline-block;
   color: #fff;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -780,6 +782,7 @@ li.outofstock::before {
   width: auto;
   font-weight: 400;
   background: #fff;
+  display: block;
 }
 .content-area .wc-memberships-content-restricted-message .get_access {
   margin-left: 0;
@@ -850,6 +853,10 @@ div#login-box a {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.ad-slot {
+  text-align: center;
 }
 
 /*=============================================================
@@ -1116,6 +1123,10 @@ ul#header-menu .woocommerce .site-content li,
   background-color: #36B371;
 }
 
+.launchcourse form input, .launchcourse form label {
+  display: inline;
+  margin-right: 0.3em;
+}
 form p {
   margin: 0;
 }
@@ -1512,7 +1523,7 @@ body.active-course-progress-bar .site-content {
   border-bottom: 4px solid transparent;
 }
 .footer-navigation ul li a:before {
-  content: "";
+  content: "\f107";
   display: inline-block;
   padding: 0 5px;
   font-size: 25px;
@@ -2199,29 +2210,72 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
   margin: 0 0 1.5em;
 }
 
+.frontpage .taxonomy-name {
+  margin: 2rem 0;
+  padding-top: 2rem;
+  border-top: 3px solid #00A44E;
+}
+
+.frontpage header.page-header,
+.hfeed header.page-header,
 .search header.page-header,
 .archive header.page-header {
   margin-bottom: 2rem;
 }
+.frontpage article,
+.hfeed article,
 .search article,
 .archive article {
-  margin: 0;
+  margin: 2rem 0;
   border-top: 3px solid #00A44E;
 }
+.frontpage article .entry-media, .frontpage article .entry-header, .frontpage article h1, .frontpage article h2, .frontpage article h3, .frontpage article h4, .frontpage article h5, .frontpage article h6,
+.hfeed article .entry-media,
+.hfeed article .entry-header,
+.hfeed article h1,
+.hfeed article h2,
+.hfeed article h3,
+.hfeed article h4,
+.hfeed article h5,
+.hfeed article h6,
+.search article .entry-media,
+.search article .entry-header,
+.search article h1,
+.search article h2,
+.search article h3,
+.search article h4,
+.search article h5,
+.search article h6,
+.archive article .entry-media,
+.archive article .entry-header,
+.archive article h1,
+.archive article h2,
+.archive article h3,
+.archive article h4,
+.archive article h5,
+.archive article h6 {
+  margin-top: 2rem;
+}
+.frontpage article a,
+.hfeed article a,
 .search article a,
 .archive article a {
   color: #404040;
   text-decoration: none;
 }
-.search article a header.entry-header,
-.archive article a header.entry-header {
-  padding-top: 2rem;
-}
-.search article a div.entry-meta,
-.archive article a div.entry-meta {
-  padding-bottom: 2rem;
-}
-.search article a:hover div, .search article a:hover header, .search article a:active div, .search article a:active header, .search article a:focus div, .search article a:focus header,
+.frontpage article a:hover div, .frontpage article a:hover header, .frontpage article a:active div, .frontpage article a:active header, .frontpage article a:focus div, .frontpage article a:focus header,
+.hfeed article a:hover div,
+.hfeed article a:hover header,
+.hfeed article a:active div,
+.hfeed article a:active header,
+.hfeed article a:focus div,
+.hfeed article a:focus header,
+.search article a:hover div,
+.search article a:hover header,
+.search article a:active div,
+.search article a:active header,
+.search article a:focus div,
+.search article a:focus header,
 .archive article a:hover div,
 .archive article a:hover header,
 .archive article a:active div,
@@ -2230,6 +2284,30 @@ from https://github.com/atomicpages/skeleton-sass/blob/master/skeleton/core/_dep
 .archive article a:focus header {
   background: #E3E3E3;
   opacity: 0.8;
+}
+
+.search p.label {
+  background: #00A44E;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin: 2rem 0 0 0;
+}
+
+.course-archive {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.course-archive article {
+  flex: 1 1 100%;
+}
+@media screen and (min-width: 960px) {
+  .course-archive article {
+    flex: 0 0 calc(50% - 2rem);
+  }
 }
 
 .byline,
