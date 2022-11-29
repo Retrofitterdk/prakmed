@@ -34,6 +34,14 @@ if ( ! function_exists( 'prakmed_setup' ) ) :
 		*/
 		add_theme_support( 'post-thumbnails' );
 
+		/*
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @link https://developer.wordpress.org/themes/functionality/custom-logo/
+		*/
+		add_theme_support( 'custom-logo' );
+
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary Menu', 'prakmed' ),
