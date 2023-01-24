@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2022-01-24 20:41+0000\n"
+"POT-Creation-Date: 2023-01-24 10:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,14 +14,15 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: inc/template-tags.php:93 inc/template-tags.php:96 inc/template-tags.php:99
-#: inc/template-tags.php:102 inc/template-tags.php:105
+#: inc/template-tags.php:113 inc/template-tags.php:116
+#: inc/template-tags.php:119 inc/template-tags.php:122
+#: inc/template-tags.php:125
 #, php-format
 msgid "%1$s"
 msgstr ""
 
 #. used between list items, there is a space after the comma
-#: inc/template-tags.php:155 inc/template-tags.php:161
+#: inc/template-tags.php:178 inc/template-tags.php:184
 msgid ", "
 msgstr ""
 
@@ -45,6 +46,10 @@ msgstr ""
 msgid "Article Sidebar"
 msgstr ""
 
+#. Name of the template
+msgid "Articles"
+msgstr ""
+
 #: inc/template-tags.php:59
 #, php-format
 msgctxt "before last post author"
@@ -57,7 +62,7 @@ msgctxt "between post authors"
 msgid "%s, %s"
 msgstr ""
 
-#: inc/shortcodes.php:57 inc/homepage.php:46
+#: inc/shortcodes.php:57 inc/homepage.php:47
 msgid "Buy access here"
 msgstr ""
 
@@ -111,7 +116,7 @@ msgstr ""
 msgid "Do you have account?"
 msgstr ""
 
-#: inc/template-tags.php:105
+#: inc/template-tags.php:125
 msgid "DSM-5: "
 msgstr ""
 
@@ -120,7 +125,7 @@ msgid "E-mail:"
 msgstr ""
 
 #. %s: Name of current post
-#: inc/template-tags.php:177 template-parts/content-page.php:34
+#: inc/template-tags.php:200 template-parts/content-page.php:34
 #: template-parts/content-frontpage.php:30
 #, php-format
 msgid "Edit %s"
@@ -130,7 +135,7 @@ msgstr ""
 msgid "Featured products"
 msgstr ""
 
-#: inc/setup.php:41
+#: inc/setup.php:49
 msgid "Footer Menu"
 msgstr ""
 
@@ -146,11 +151,11 @@ msgstr ""
 msgid "Have a coupon from the book? – enter it below"
 msgstr ""
 
-#: inc/setup.php:40
+#: inc/setup.php:48
 msgid "Header Menu"
 msgstr ""
 
-#: inc/shortcodes.php:51 inc/homepage.php:40
+#: inc/shortcodes.php:51 inc/homepage.php:41
 msgid "How to get access"
 msgstr ""
 
@@ -162,23 +167,23 @@ msgstr ""
 msgid "http://underscores.me/"
 msgstr ""
 
-#: inc/template-tags.php:99
+#: inc/template-tags.php:119
 msgid "ICD-10: "
 msgstr ""
 
-#: inc/template-tags.php:102
+#: inc/template-tags.php:122
 msgid "ICPC-2: "
 msgstr ""
 
-#: inc/shortcodes.php:53 inc/homepage.php:42
+#: inc/shortcodes.php:53 inc/homepage.php:43
 msgid "If you have the book"
 msgstr ""
 
-#: inc/shortcodes.php:56 inc/homepage.php:45
+#: inc/shortcodes.php:56 inc/homepage.php:46
 msgid "If you want digital access"
 msgstr ""
 
-#: inc/shortcodes.php:52 inc/homepage.php:41
+#: inc/shortcodes.php:52 inc/homepage.php:42
 msgid ""
 "In order to read articles, you need to either have the book Praktisk Medicin "
 "or buy digital subscription."
@@ -206,7 +211,7 @@ msgid "Last Modified Date"
 msgstr ""
 
 #. %s: post title
-#: inc/template-tags.php:170
+#: inc/template-tags.php:193
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
@@ -215,7 +220,7 @@ msgstr ""
 msgid "Log in here."
 msgstr ""
 
-#: inc/setup.php:84
+#: inc/setup.php:92
 msgid "Login"
 msgstr ""
 
@@ -265,6 +270,12 @@ msgctxt "placeholder"
 msgid "Search phrase"
 msgstr ""
 
+#: inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "<span><strong>Biography:</strong </span> %s"
+msgstr ""
+
 #: inc/template-tags.php:72
 #, php-format
 msgctxt "post author"
@@ -283,7 +294,7 @@ msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:157
+#: inc/template-tags.php:180
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
@@ -292,7 +303,7 @@ msgstr ""
 msgid "PrakMed"
 msgstr ""
 
-#: inc/setup.php:39
+#: inc/setup.php:47
 msgid "Primary Menu"
 msgstr ""
 
@@ -314,7 +325,7 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: inc/setup.php:108
+#: inc/setup.php:116
 msgid "search"
 msgstr ""
 
@@ -327,11 +338,11 @@ msgstr ""
 msgid "Search Sidebar"
 msgstr ""
 
-#: inc/template-tags.php:93
+#: inc/template-tags.php:113
 msgid "Section: "
 msgstr ""
 
-#: inc/setup.php:104
+#: inc/setup.php:112
 msgid "sharepanel"
 msgstr ""
 
@@ -361,7 +372,7 @@ msgstr ""
 msgid "Steffen Bang Nielsen"
 msgstr ""
 
-#: inc/template-tags.php:96
+#: inc/template-tags.php:116
 msgid "Subjects: "
 msgstr ""
 
@@ -374,7 +385,7 @@ msgstr ""
 msgid "Table of content"
 msgstr ""
 
-#: inc/template-tags.php:163
+#: inc/template-tags.php:186
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
@@ -397,6 +408,6 @@ msgstr ""
 msgid "Use code"
 msgstr ""
 
-#: inc/shortcodes.php:54 inc/homepage.php:43
+#: inc/shortcodes.php:54 inc/homepage.php:44
 msgid "Use code here"
 msgstr ""
