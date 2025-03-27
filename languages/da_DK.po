@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2023-01-24 10:34+0000\n"
+"PO-Revision-Date: 2025-03-27 14:08+0000\n"
 "Last-Translator: Steffen Nielsen\n"
 "Language-Team: Dansk\n"
 "Language: da_DK\n"
@@ -62,7 +62,7 @@ msgctxt "between post authors"
 msgid "%s, %s"
 msgstr ""
 
-#: inc/shortcodes.php:57 inc/homepage.php:47
+#: inc/shortcodes.php:83 inc/homepage.php:47
 msgid "Buy access here"
 msgstr "Køb adgang her"
 
@@ -109,6 +109,10 @@ msgstr ""
 #: footer.php:86
 msgid "Copyright"
 msgstr "Ophavsret"
+
+#: inc/shortcodes.php:49
+msgid "Create user"
+msgstr "Opret bruger"
 
 #: footer.php:76
 msgid "Disclaimer"
@@ -157,7 +161,7 @@ msgstr "Har du en kode fra bogen - indsæt herunder"
 msgid "Header Menu"
 msgstr ""
 
-#: inc/shortcodes.php:51 inc/homepage.php:41
+#: inc/shortcodes.php:46 inc/shortcodes.php:77 inc/homepage.php:41
 msgid "How to get access"
 msgstr "Sådan får du adgang til Praktisk Medicin"
 
@@ -177,22 +181,26 @@ msgstr ""
 msgid "ICPC-2: "
 msgstr ""
 
-#: inc/shortcodes.php:53 inc/homepage.php:43
+#: inc/shortcodes.php:79 inc/homepage.php:43
 msgid "If you have the book"
 msgstr ""
 "Hvis du har en bog\n"
 
-#: inc/shortcodes.php:56 inc/homepage.php:46
+#: inc/shortcodes.php:82 inc/homepage.php:46
 msgid "If you want digital access"
 msgstr "Hvis du ønsker digital adgang"
 
-#: inc/shortcodes.php:52 inc/homepage.php:42
+#: inc/shortcodes.php:78 inc/homepage.php:42
 msgid ""
 "In order to read articles, you need to either have the book Praktisk Medicin "
 "or buy digital subscription."
 msgstr ""
-"For at kunne læse artikel, skal du have kode fra bogen Praktisk Medicin "
+"For at kunne læse artikler, skal du have kode fra bogen Praktisk Medicin "
 "eller købe digital adgang."
+
+#: inc/shortcodes.php:47
+msgid "In order to read articles, you need to register as user."
+msgstr "For at kunne læse artikler, skal du oprette dig som bruger."
 
 #: 404.php:21
 msgid ""
@@ -423,6 +431,6 @@ msgstr ""
 msgid "Use code"
 msgstr "Brug kode"
 
-#: inc/shortcodes.php:54 inc/homepage.php:44
+#: inc/shortcodes.php:80 inc/homepage.php:44
 msgid "Use code here"
 msgstr "Brug kode her"
