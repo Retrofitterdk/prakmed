@@ -73,6 +73,26 @@ if ( ! function_exists( 'prakmed_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'prakmed_author_bio' ) ) :
+	function prakmed_author_bio() {
+
+		// Bail if not an author archive template
+		if ( ! is_author() ) {
+			return;
+		}
+		if ( function_exists( 'get_coauthors' ) ) {
+
+			$coauthors = get_coauthors();
+			foreach( $coauthors as $coauthor ) {
+				$author_description = $coauthor->description;
+			}
+		}
+		if ($author_description) {
+			echo '<p class="author biography">' . sprintf( _x( '<span><strong>Biography:</strong </span> %s', 'post author', 'prakmed' ), $author_description ) . '</p>';
+		}
+	}
+endif;
+
 if ( ! function_exists( 'prakmed_entry_meta' ) ) :
 	function prakmed_entry_meta() {
 		if ( 'prakmed_article' === get_post_type() ) {
