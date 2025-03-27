@@ -25,7 +25,33 @@ if ( ! function_exists( 'prakmed_login_box' ) ) :
 	}
 endif;
 
-add_shortcode( 'prakmed_access', 'prakmed_access_box' );
+add_shortcode( 'prakmed_access', 'prakmed_access' );
+
+if ( ! function_exists( 'prakmed_access' ) ) :
+	function prakmed_access() {
+    // bail if Memberships isn't active
+    if ( ! function_exists( 'wc_memberships' ) ) {
+      return;
+    }
+
+    $user_id = get_current_user_id();
+    $_get_access_path = '/faa-adgang/';
+    $_get_access_url = site_url( $_get_access_path );
+
+    // Bail if the user already has active membership
+    if ( wc_memberships_is_user_active_member( $user_id, 'access' )) {
+      return;
+    }
+
+      $get_access  = '<h3>' . esc_html__( 'How to get access', 'prakmed' ) . '</h3>';
+      $get_access .= '<p>' . esc_html__( 'In order to read articles, you need to register as user.', 'prakmed' ) . '</p>';
+      $get_access .= '<div class="get_access twelve columns"><p>';
+      $get_access .= '<span><a href="' . $_get_access_url . '" class="button">' . esc_html__('Create user', 'prakmed') . '</a>';
+      $get_access .= '</span></p></div>';
+      return $get_access;
+
+    }
+endif;
 
 if ( ! function_exists( 'prakmed_access_box' ) ) :
 	function prakmed_access_box() {
